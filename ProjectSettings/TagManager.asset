@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Controllable
   - Interactable
+  - Ladder
   layers:
   - Default
   - TransparentFX

@@ -47,20 +47,4 @@ public class SelectionStateHandler : MonoBehaviour
         CurrentInteractableSelection = interactable;
     }
 
-    //public void SelectObject(GameObject newSelected) {
-    //    var interactor = newSelected.GetComponent<Interactor>();
-    //    // It's an interactor object!
-    //    if(interactor != null) {
-    //        handleInteractorSelection(interactor);
-    //        return;
-    //    } 
-
-    //    var interactable = newSelected.GetComponent<Interactable>();
-    //    // It's something we want to interact with!
-    //    if (interactable != null) {
-    //        handleInteractable(interactable);
-    //        return;
-    //    }
-    //    // TODO: we might need a special case for enemies, maybe
-    //}
 }
