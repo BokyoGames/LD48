@@ -417,16 +417,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 319069292}
     m_Modifications:
-    - target: {fileID: 3170749603328611590, guid: 0679d5a9ab7045142ba493a56e15e039,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7968180182707696968, guid: 0679d5a9ab7045142ba493a56e15e039,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 7968180182707696972, guid: 0679d5a9ab7045142ba493a56e15e039,
         type: 3}
       propertyPath: m_SortingLayer
@@ -441,11 +431,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Interactable (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7968180182726259346, guid: 0679d5a9ab7045142ba493a56e15e039,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7968180182726259346, guid: 0679d5a9ab7045142ba493a56e15e039,
         type: 3}
@@ -506,11 +491,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7968180183308540507, guid: 0679d5a9ab7045142ba493a56e15e039,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7968180182707696974, guid: 0679d5a9ab7045142ba493a56e15e039, type: 3}
@@ -2695,38 +2675,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d44eb31b14911cf42815ce7207dc2363, type: 3}
---- !u!1 &1942133697 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4754311259999164830, guid: d44eb31b14911cf42815ce7207dc2363,
-    type: 3}
-  m_PrefabInstance: {fileID: 1942133696}
-  m_PrefabAsset: {fileID: 0}
---- !u!68 &1942133698 stripped
-EdgeCollider2D:
-  m_CorrespondingSourceObject: {fileID: 4754311260695637930, guid: d44eb31b14911cf42815ce7207dc2363,
-    type: 3}
-  m_PrefabInstance: {fileID: 1942133696}
-  m_PrefabAsset: {fileID: 0}
---- !u!68 &1942133699 stripped
-EdgeCollider2D:
-  m_CorrespondingSourceObject: {fileID: 4754311259545105003, guid: d44eb31b14911cf42815ce7207dc2363,
-    type: 3}
-  m_PrefabInstance: {fileID: 1942133696}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1942133700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1942133697}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 615049d2dd9f65549b6430725e7a8804, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Top: {fileID: 1942133699}
-  Bottom: {fileID: 1942133698}
 --- !u!4 &1942133702 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4754311259999164816, guid: d44eb31b14911cf42815ce7207dc2363,
@@ -2841,11 +2789,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interactable
       objectReference: {fileID: 0}
-    - target: {fileID: 7968180182726259346, guid: 0679d5a9ab7045142ba493a56e15e039,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 7968180182726259347, guid: 0679d5a9ab7045142ba493a56e15e039,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2928,11 +2871,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CaveTemplate
-      objectReference: {fileID: 0}
-    - target: {fileID: 2632458827230950556, guid: 30aa354849fadb342affb4f3f991b9f4,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2632458827230950557, guid: 30aa354849fadb342affb4f3f991b9f4,
         type: 3}
@@ -3200,11 +3138,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Interactable
-      objectReference: {fileID: 0}
-    - target: {fileID: 7968180182726259346, guid: 0679d5a9ab7045142ba493a56e15e039,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7968180182726259347, guid: 0679d5a9ab7045142ba493a56e15e039,
         type: 3}
