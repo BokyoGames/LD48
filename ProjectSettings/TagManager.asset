@@ -43,3 +43,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Backgrounds
+    uniqueID: 682945685
+    locked: 0
+  - name: InteractableSprites
+    uniqueID: 3651501207
+    locked: 0
+  - name: Foregrounds
+    uniqueID: 2427523073
+    locked: 0
+  - name: UISprites
+    uniqueID: 3617462295
+    locked: 0

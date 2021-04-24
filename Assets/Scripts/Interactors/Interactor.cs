@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Component of a (playable) character that can interact with things
-public class Interactor : MonoBehaviour
+public class Interactor : AbstractSelectable
 {
     private bool isInteracting = false;
 
@@ -21,5 +21,19 @@ public class Interactor : MonoBehaviour
 
     public void StopInteraction() {
         isInteracting = false;
+    }
+
+    public override void TriggerSelection() {
+        base.TriggerSelection();
+    }
+
+    public override void TriggerUnselection() {
+        base.TriggerUnselection();
+    }
+
+    void OnMouseDown() {
+        // We have been clicked!
+        var selector = GameObject.FindGameObjectWithTag("Player").GetComponent<SelectionStateHandler>(); 
+        selector.OnClicked(this);
     }
 }
