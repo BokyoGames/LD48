@@ -8,7 +8,7 @@ public class MineInteractor : AbstractInteractableLogic
     public int mine_time = 5;
     public ResourceType type = ResourceType.stone;
 
-    public GameObject obstruction_layer;
+    public Discoverable ObstructionLayer;
 
     private int quantity = 50;
     private ResourceHandler resources;
@@ -18,18 +18,14 @@ public class MineInteractor : AbstractInteractableLogic
     {
         quantity = initial_quantity;
         resources = GameObject.Find("ResourceContainer").GetComponent<ResourceHandler>();
-        
-        if(obstruction_layer)
-            obstruction_layer.SetActive(true);
     }
 
     public override void OnTick() {
         if(interactors.Count > 0) {
-            if(initial_quantity != -1 && quantity <=0)
-            {
-                if(obstruction_layer)
-                {
-                    obstruction_layer.SetActive(false);
+            if(initial_quantity != -1 && quantity <=0) {
+
+                if(ObstructionLayer) {
+                    ObstructionLayer.Discover();
                 }
 
                 Destroy(gameObject);
@@ -40,8 +36,7 @@ public class MineInteractor : AbstractInteractableLogic
             Debug.Log("Ticked!");
             tick_count += interactors.Count;
 
-            if(tick_count > mine_time)
-            {
+            if(tick_count > mine_time) {
                 Debug.Log("We have mined some " + type.ToString() + " interactors.");
                 int unused = resources.addResourceType(type, tick_count/mine_time);
                 quantity -= tick_count/mine_time + unused;
