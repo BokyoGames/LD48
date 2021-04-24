@@ -22,7 +22,7 @@ public class RangeInteractor : MonoBehaviour
         return true;
     }
 
-    void OnTriggerEnter2D(Collider2D col) {
+    void OnTriggerStay2D(Collider2D col) {
         var interactor = col.gameObject.GetComponentInParent<Interactor>();
         if(isRightInteractor(interactor) && !interactor.IsInteracting) {
             // Start interaction sequence
