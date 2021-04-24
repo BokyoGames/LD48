@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4792458229275908923}
   - component: {fileID: 4792458229275908925}
   - component: {fileID: 4792458229275908922}
+  - component: {fileID: 2711594127951248745}
   m_Layer: 9
   m_Name: Dwarf
   m_TagString: Controllable
@@ -69,6 +70,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Depth: 0
   InteractionTarget: {fileID: 0}
+--- !u!114 &2711594127951248745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4792458229275908920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4ef379eaf5bb9e4db19a10256c51ee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4792458229525232278
 GameObject:
   m_ObjectHideFlags: 0

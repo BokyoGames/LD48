@@ -9,6 +9,12 @@ public class Interactor : AbstractSelectable
 
     // The thing we want to interact with
     public UseSelectable InteractionTarget;
+    public DamageReceiver DamageReceiver;
+
+    void Start() {
+        DamageReceiver = GetComponent<DamageReceiver>();
+    }
+
     // If we are already interacting with it or not
     public bool IsInteracting {
         get => isInteracting;

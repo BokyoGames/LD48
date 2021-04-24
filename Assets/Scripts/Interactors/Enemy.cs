@@ -21,11 +21,11 @@ public class Enemy : UseSelectable
     }
 
     public override void ConnectInteractor(Interactor interactor) {
-        //EnemyLogic.OnStart(interactor);
+        EnemyLogic.OnStart(interactor);
     }
 
     public override void DisconnectInteractor(Interactor interactor) {
-        //EnemyLogic.OnStop(interactor);
+        EnemyLogic.OnStop(interactor);
     }
 
     void OnMouseDown() {
@@ -37,8 +37,7 @@ public class Enemy : UseSelectable
     void Update() {
         accumulator +=  (Time.deltaTime * 1000);
         while(accumulator > dataHandler.TickDurationInMilliseconds) {
-            //EnemyLogic.OnTick();
-            //TODO
+            EnemyLogic.OnTick();
             accumulator -= dataHandler.TickDurationInMilliseconds;
         }
     }
