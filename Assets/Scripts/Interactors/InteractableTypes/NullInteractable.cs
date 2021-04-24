@@ -7,7 +7,9 @@ using UnityEngine;
 public class NullInteractable : AbstractInteractableLogic
 {
     public override void OnTick() {
-        Debug.Log("Ticked!");
-        Debug.Log("We have " + interactors.Count + " interactors.");
+        if(interactors.Count > 0) {
+            Debug.Log("Ticked!");
+            Debug.Log("We have " + interactors.Count + " interactors.");
+        }
     }
 }
