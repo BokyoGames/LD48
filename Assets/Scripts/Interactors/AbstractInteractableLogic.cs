@@ -10,19 +10,19 @@ public abstract class AbstractInteractableLogic : MonoBehaviour
     protected HashSet<Interactor> interactors = new HashSet<Interactor>();
 
     // Called when a new interactor is starting to work
-    public void OnStart(Interactor interactor) {
+    virtual public void OnStart(Interactor interactor) {
         interactors.Add(interactor);
         interactor.StartInteraction();
     }
     
     // Called when a certain interactor is stopping to work
-    public void OnStop(Interactor interactor) {
+    virtual public void OnStop(Interactor interactor) {
         interactors.Remove(interactor);
         interactor.StopInteraction();
     }
 
     // Called when everyone needs to stop working
-    public void StopAllWork() {
+    virtual public void StopAllWork() {
         foreach(var i in interactors) {
             i.StopInteraction();
         }

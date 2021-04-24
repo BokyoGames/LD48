@@ -12,4 +12,16 @@ public class NullInteractable : AbstractInteractableLogic
             Debug.Log("We have " + interactors.Count + " interactors.");
         }
     }
+
+    public override void OnStart(Interactor interactor) {
+        base.OnStart(interactor);
+    }
+
+    public override void OnStop(Interactor interactor) {
+        base.OnStop(interactor);
+    }
+
+    public override void StopAllWork() {
+        base.StopAllWork();
+    }
 }
