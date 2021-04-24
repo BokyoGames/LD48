@@ -9,15 +9,32 @@ public class MineInteractor : AbstractInteractableLogic
     public ResourceType type = ResourceType.stone;
     private int quantity = 50;
     private ResourceHandler resources;
+    private int tick_count = 0;
+
     void Start()
     {
+        quantity = initial_quantity;
         resources = GameObject.Find("ResourceContainer").GetComponent<ResourceHandler>();    
     }
+
     public override void OnTick() {
         if(interactors.Count > 0) {
+            if(initial_quantity != -1 && quantity <=0)
+            {
+                StopAllWork();
+                return;
+            }
+
             Debug.Log("Ticked!");
-            Debug.Log("We have mined some " + type.ToString() + " interactors.");
-            resources.setResourceType(type, 1*interactors.Count);
+            tick_count += interactors.Count;
+
+            if(tick_count > mine_time)
+            {
+                Debug.Log("We have mined some " + type.ToString() + " interactors.");
+                int unused = resources.setResourceType(type, tick_count/mine_time);
+                quantity -= tick_count/mine_time + unused;
+                tick_count = tick_count % mine_time;
+            }
         }
     }
 }

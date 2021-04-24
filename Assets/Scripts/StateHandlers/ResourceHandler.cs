@@ -59,33 +59,50 @@ public class ResourceHandler : MonoBehaviour
         }
     }
 
-    public void setResourceType(ResourceType type, int quantity)
+    public int setResourceType(ResourceType type, int quantity)
     {
-        this.setResourceType(type.ToString(), quantity);
+        return this.setResourceType(type.ToString(), quantity);
     }
-    public void setResourceType(string type, int quantity)
+    public int setResourceType(string type, int quantity)
     {
         switch(type)
         {
             case "stone":
-                stone += quantity;
-                break;
+                var x = this.getRemainingResource(stone, max_stone, quantity);
+                stone += x.Item1;
+                return x.Item2;
             case "iron":
-                iron += quantity;  
-                break;
+                var y = this.getRemainingResource(iron, max_iron, quantity);
+                iron += y.Item1;
+                return y.Item2;
             case "gold":
-                gold += quantity;              
-                break;
+                var z = this.getRemainingResource(gold, max_gold, quantity);
+                gold += z.Item1;
+                return z.Item2;
             case "diamond":
-                diamond += quantity;              
-                break;
+                var q = this.getRemainingResource(diamond, max_diamond, quantity);
+                diamond += q.Item1;
+                return q.Item2;
             case "mithril":
-                mithril += quantity;              
-                break;
+                var g = this.getRemainingResource(mithril, max_mithril, quantity);
+                mithril += g.Item1;
+                return g.Item2;
             case "happiness":
-                happiness += quantity;
-                break;  
+                var f = this.getRemainingResource(happiness, max_happiness, quantity);
+                happiness += f.Item1;
+                return f.Item2;
+            default:
+                return quantity;
         }
+    }
+
+    // Return [used, remaining];
+    private (int,int) getRemainingResource(int base_quantity, int max, int quantity)
+    {
+        if(base_quantity + quantity > max)
+            return (max - base_quantity, base_quantity + quantity - max);
+        
+        return (quantity, 0);
     }
 
     public int getResourceMaxType(ResourceType type)
