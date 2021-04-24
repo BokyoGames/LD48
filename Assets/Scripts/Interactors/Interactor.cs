@@ -8,7 +8,7 @@ public class Interactor : AbstractSelectable
     private bool isInteracting = false;
 
     // The thing we want to interact with
-    public GameObject InteractionTarget;
+    public Interactable InteractionTarget;
     // If we are already interacting with it or not
     public bool IsInteracting {
         get => isInteracting;
@@ -35,5 +35,17 @@ public class Interactor : AbstractSelectable
         // We have been clicked!
         var selector = GameObject.FindGameObjectWithTag("Player").GetComponent<SelectionStateHandler>(); 
         selector.OnClicked(this);
+    }
+
+    // Called by the selector when the panel "use" button is clicked
+    public void OnUse(Interactable target) {
+        // TODO handle interrupting animations if necessary
+        if(InteractionTarget != target) {
+            InteractionTarget = target;
+        }
+    }
+
+    public void OnStop() {
+        InteractionTarget = null;
     }
 }

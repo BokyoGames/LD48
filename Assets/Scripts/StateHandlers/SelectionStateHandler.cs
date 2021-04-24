@@ -5,68 +5,68 @@ using UnityEngine;
 // Big class/component that keeps track of what unit is being selected, etc
 public class SelectionStateHandler : MonoBehaviour
 {
-    // Unit that does the interaction
-    public Interactor CurrentInteractorSelection;
-    // Object that is interactable
-    public Interactable CurrentInteractableSelection;
-
-    // TODO: maybe refactor this
     public Camera PreviewTargetCamera;
     public GameObject PreviewTargetCameraGroup;
 
+    private ConsistencyStateHandler consistencyHandler;
+
+    void Start() {
+        consistencyHandler = GetComponent<ConsistencyStateHandler>();
+    }
+
     public void OnClicked(Interactor interactor) {
-        if(CurrentInteractorSelection != null) {
-            CurrentInteractorSelection.TriggerUnselection();
-            if(CurrentInteractorSelection == interactor) { 
+        if(consistencyHandler.CurrentInteractorSelection != null) {
+            consistencyHandler.CurrentInteractorSelection.TriggerUnselection();
+            if(consistencyHandler.CurrentInteractorSelection == interactor) { 
                 // We clicked on the same interactor twice, remove it and leave
-                CurrentInteractorSelection = null;
-                if(CurrentInteractableSelection != null) {
+                consistencyHandler.CurrentInteractorSelection = null;
+                if(consistencyHandler.CurrentInteractableSelection != null) {
                     // We also clean up interactable interaction because we can't
                     // interact without an interactor
-                    CurrentInteractableSelection.TriggerUnselection();
-                    CurrentInteractableSelection = null;
+                    consistencyHandler.CurrentInteractableSelection.TriggerUnselection();
+                    consistencyHandler.CurrentInteractableSelection = null;
                 }
-                previewCameraTargetCheck();
+                consistencyHandler.SetDirty();
                 return;
             }
         }
         // Start new selection
         interactor.TriggerSelection();
-        CurrentInteractorSelection = interactor;
-        previewCameraTargetCheck();
+        consistencyHandler.CurrentInteractorSelection = interactor;
+        consistencyHandler.SetDirty();
     }
 
     public void OnClicked(Interactable interactable) {
-        if(CurrentInteractorSelection == null) {
+        if(consistencyHandler.CurrentInteractorSelection == null) {
             // We can't select an interactable if the interactor is not active
-            previewCameraTargetCheck();
+            consistencyHandler.SetDirty();
             return;
         }
-        if(CurrentInteractableSelection != null) {
-            CurrentInteractableSelection.TriggerUnselection();
-            if(CurrentInteractableSelection == interactable) {
+        if(consistencyHandler.CurrentInteractableSelection != null) {
+            consistencyHandler.CurrentInteractableSelection.TriggerUnselection();
+            if(consistencyHandler.CurrentInteractableSelection == interactable) {
                 // We clicked on the same interactable twice, remove it and leave
-                CurrentInteractableSelection = null;
-                previewCameraTargetCheck();
+                consistencyHandler.CurrentInteractableSelection = null;
+                consistencyHandler.SetDirty();
                 return;
             }
         }
         interactable.TriggerSelection();
-        CurrentInteractableSelection = interactable;
-        previewCameraTargetCheck();
+        consistencyHandler.CurrentInteractableSelection = interactable;
+        consistencyHandler.SetDirty();
     }
 
     // In case the target/interactor has changed, we double check that the 
     // preview camera is being rendered correctly (or we hide it)
-    private void previewCameraTargetCheck() {
-        if(CurrentInteractorSelection != null) {
+    public void PreviewCameraTargetCheck() {
+        if(consistencyHandler.CurrentInteractorSelection != null) {
             // Our selected interactor is not targeting anything, hide the camera preview
-            if(CurrentInteractorSelection.InteractionTarget == null) {
+            if(consistencyHandler.CurrentInteractorSelection.InteractionTarget == null) {
                 PreviewTargetCameraGroup.SetActive(false);
                 return;
             }
             // Make sure the camera is pointing to our interaction target
-            Vector3 newPosition = CurrentInteractorSelection.InteractionTarget.transform.position;
+            Vector3 newPosition = consistencyHandler.CurrentInteractorSelection.InteractionTarget.transform.position;
             newPosition.z = PreviewTargetCamera.transform.position.z;
             PreviewTargetCamera.transform.position = newPosition;
             // Show the camera preview
@@ -76,4 +76,5 @@ public class SelectionStateHandler : MonoBehaviour
             PreviewTargetCameraGroup.SetActive(false);
         }
     }
+
 }
