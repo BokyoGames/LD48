@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class BuildInfo : MonoBehaviour
 {
-    public StructureType type;
+    public GameObject structure;
     private PanelStateHandler player_state_handler;
 
+
     public void OnSelect() {
-        player_state_handler.OnSelect(type);
+        player_state_handler.OnSelect(structure);
     }
 
     // Start is called before the first frame update

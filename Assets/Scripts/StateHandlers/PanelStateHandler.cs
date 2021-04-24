@@ -53,10 +53,10 @@ public class PanelStateHandler : MonoBehaviour
         consistencyHandler.SetDirty();
     }
 
-    public void OnSelect(StructureType type) {
+    public void OnSelect(GameObject obj) {
         Debug.Log("Select element");
         if(BuildPicker.GetComponent<PickerStatus>().build_reference)
-            BuildPicker.GetComponent<PickerStatus>().Build(type);
+            BuildPicker.GetComponent<PickerStatus>().Build(obj);
     }
 
     public void OnStop() {

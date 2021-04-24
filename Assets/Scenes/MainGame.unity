@@ -1381,6 +1381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 605507686}
   - component: {fileID: 605507687}
+  - component: {fileID: 605507688}
   m_Layer: 5
   m_Name: BuildPicker
   m_TagString: Untagged
@@ -1421,6 +1422,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   build_reference: {fileID: 0}
+--- !u!114 &605507688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605507685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ece1a895f2a4e209415bfb3e4396cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  structures: []
 --- !u!1 &608883592 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7968180182726259346, guid: 0679d5a9ab7045142ba493a56e15e039,
@@ -2375,8 +2389,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4ebd50b9caf189ccaf32bd0f2aadf23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  available_structure:
-  - {fileID: 0}
 --- !u!1 &1510909344
 GameObject:
   m_ObjectHideFlags: 0
@@ -2969,7 +2981,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1354093499}
+      - m_Target: {fileID: 1743300040}
         m_MethodName: OnSelect
         m_Mode: 1
         m_Arguments:
@@ -3029,7 +3041,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4547c957f14cd576bb60fb77af515b90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  structure: {fileID: 2397245399099267923, guid: f60a32d1ef7d622ff9dc7d1e4ceee990,
+    type: 3}
 --- !u!1 &1776990575
 GameObject:
   m_ObjectHideFlags: 0
