@@ -57,3 +57,6 @@ TagManager:
   - name: UISprites
     uniqueID: 3617462295
     locked: 0
+  - name: Discoverable
+    uniqueID: 1882961333
+    locked: 0
