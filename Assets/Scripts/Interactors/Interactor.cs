@@ -42,12 +42,16 @@ public class Interactor : AbstractSelectable
         // TODO handle interrupting animations if necessary
         if(InteractionTarget != target) {
             InteractionTarget = target;
+            if(isInteracting) {
+                StopInteraction();
+            }
         }
         GetComponent<MovementAI>().enabled = true;
     }
 
     public void OnStop() {
         InteractionTarget = null;
-        GetComponent<MovementAI>().enabled = false;
+        if(isInteracting)
+            StopInteraction();
     }
 }

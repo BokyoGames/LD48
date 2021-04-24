@@ -14,7 +14,7 @@ public class RangeInteractor : MonoBehaviour
             return false;
         }
 
-        if(interactor.InteractionTarget != gameObject.transform.parent.gameObject) {
+        if(interactor.InteractionTarget.gameObject != gameObject.transform.parent.gameObject) {
             // Nothing to be done, it's not the target that we are looking for
             return false;
         }
@@ -27,6 +27,7 @@ public class RangeInteractor : MonoBehaviour
         if(isRightInteractor(interactor) && !interactor.IsInteracting) {
             // Start interaction sequence
             InteractableParent.ConnectInteractor(interactor);
+            interactor.StartInteraction();
         }
     }
 }

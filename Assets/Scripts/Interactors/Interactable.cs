@@ -14,7 +14,6 @@ public class Interactable : AbstractSelectable
     public void ConnectInteractor(Interactor interactor) {
         this.interactor = interactor;
         interactor.StartInteraction();
-        Debug.Log("Logged!");
     }
 
     public void DisconnectInteractor() {

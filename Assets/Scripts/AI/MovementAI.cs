@@ -17,6 +17,13 @@ public class MovementAI : MonoBehaviour
     }
 
     void Update() {
+        // If we are interacting, it means we reached the target so we don't need
+        // to move anymore.
+        if(interactor.IsInteracting || interactor.InteractionTarget == null) {
+            this.enabled = false;
+            return;
+        }
+
         Interactable interactable = interactor.InteractionTarget;
         Transform target = interactable.transform;
         // We need to go down one layer
