@@ -7,7 +7,7 @@ public class AttackerAI : MonoBehaviour
     Enemy enemy;
 
     void Start() {
-        enemy = gameObject.GetComponentInParent<Enemy>();
+        enemy = gameObject.transform.parent.GetComponentInParent<Enemy>();
     }
 
     void OnTriggerStay2D(Collider2D col) {

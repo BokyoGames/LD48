@@ -6,4 +6,9 @@ public abstract class UseSelectable : AbstractSelectable
 {
     public abstract void ConnectInteractor(Interactor interactor);
     public abstract void DisconnectInteractor(Interactor interactor);
+
+    public void DoMouseDown() {
+        var selector = GameObject.FindGameObjectWithTag("Player").GetComponent<SelectionStateHandler>(); 
+        selector.OnClicked(this);
+    }
 }

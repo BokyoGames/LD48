@@ -24,11 +24,6 @@ public class Enemy : UseSelectable
         EnemyLogic.OnStop(interactor);
     }
 
-    void OnMouseDown() {
-        var selector = GameObject.FindGameObjectWithTag("Player").GetComponent<SelectionStateHandler>(); 
-        selector.OnClicked(this);
-    }
-
     // Enemy AI loop here
     void Update() {
         accumulator +=  (Time.deltaTime * 1000);
