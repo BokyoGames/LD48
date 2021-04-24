@@ -1153,7 +1153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e0bb0ad2a13fc94f927804644fe6743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DragSpeed: 2
+  DragSpeed: 200
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
