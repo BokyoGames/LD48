@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 4792458229275908925}
   - component: {fileID: 4792458229275908922}
   - component: {fileID: 2711594127951248745}
-  m_Layer: 9
+  - component: {fileID: 1645724501}
+  - component: {fileID: 1645724502}
+  m_Layer: 10
   m_Name: Dwarf
   m_TagString: Controllable
   m_Icon: {fileID: 0}
@@ -68,8 +70,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 527b6a11241c12c4ead2427a911f2a7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Depth: 0
   InteractionTarget: {fileID: 0}
+  Depth: 0
+  DamageReceiver: {fileID: 0}
 --- !u!114 &2711594127951248745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,6 +83,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4ef379eaf5bb9e4db19a10256c51ee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 0
+  MaxHealth: 0
+--- !u!114 &1645724501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4792458229275908920}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e97b1042db8d2ce46b895d1ab4602bea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 5
+--- !u!114 &1645724502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4792458229275908920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ba4239ca8830c419948df9ca3306fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4792458229525232278
@@ -93,7 +123,7 @@ GameObject:
   - component: {fileID: 4792458229525232489}
   - component: {fileID: 4792458229525232490}
   - component: {fileID: 4792458229525232491}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: DwarfSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +231,7 @@ GameObject:
   - component: {fileID: 4792458229535942642}
   - component: {fileID: 4792458229535942645}
   - component: {fileID: 4792458229535942644}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: SelectorSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

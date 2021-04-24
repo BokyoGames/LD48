@@ -63,7 +63,9 @@ public class BuildInteractable : AbstractInteractableLogic
         Debug.Log("Complete the building");
         StopAllWork();
         GameObject instance = Instantiate(structure, this.gameObject.transform.position, this.gameObject.transform.rotation) as GameObject;
-        Destroy(this.gameObject);
+
+        instance.GetComponent<Interactable>().Depth = gameObject.GetComponent<Interactable>().Depth;
+        gameObject.SetActive(false);
     }
 
     public override void OnTick() {
