@@ -139,22 +139,22 @@ public class ResourceHandler : MonoBehaviour
         switch(type)
         {
             case "stone":
-                stone += quantity;
+                max_stone += quantity;
                 break;
             case "iron":
-                iron += quantity;
+                max_iron += quantity;
                 break;
             case "gold":
-                gold += quantity;
+                max_gold += quantity;
                 break;
             case "diamond":
-                diamond += quantity;
+                max_diamond += quantity;
                 break;
             case "mithril":
-                mithril += quantity;
+                max_mithril += quantity;
                 break;
             case "happiness":
-                happiness += quantity;
+                max_happiness += quantity;
                 break;
         }
     }

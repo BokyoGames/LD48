@@ -192,8 +192,9 @@ GameObject:
   - component: {fileID: 2220941138523624435}
   - component: {fileID: 6384785775818784437}
   - component: {fileID: 6421449709608381937}
+  - component: {fileID: -5616336160025584828}
   m_Layer: 9
-  m_Name: house
+  m_Name: deposit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -278,8 +279,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   structure_name: house
-  requested_resource_quantity: 0a000000
-  requested_resource_type: 00000000
+  requested_resource_quantity: 0a0000000a000000
+  requested_resource_type: 0000000001000000
   min_level: 0
   expertise_required: 0
   build_time: 20
@@ -294,6 +295,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1720014cd884f644beeec758e3bb0a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-5616336160025584828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6381147485273183930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f33d6667617632752a9129a08d4cce9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6381147485737909875

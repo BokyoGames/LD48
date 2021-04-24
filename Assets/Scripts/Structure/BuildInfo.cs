@@ -32,7 +32,7 @@ public class BuildInfo : MonoBehaviour
         var buildable = true;
         for(int i = 0; i < resource_types.Count; i++)
         {
-            if(resources.getResourceType(resource_types[i]) <= resource_quantities[i])
+            if(resources.getResourceType(resource_types[i]) < resource_quantities[i])
                 buildable = false;
         }
 
