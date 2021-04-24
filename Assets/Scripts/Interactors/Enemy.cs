@@ -16,6 +16,10 @@ public class Enemy : UseSelectable
         dataHandler = GameObject.FindGameObjectWithTag("DataHandler").GetComponent<DataHandler>();
     }
 
+    public override void ConnectOnUse(Interactor interactor) {
+        //EnemyLogic.OnStart(interactor);
+    }
+
     public override void ConnectInteractor(Interactor interactor) {
         //EnemyLogic.OnStart(interactor);
     }

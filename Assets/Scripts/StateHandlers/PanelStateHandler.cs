@@ -9,6 +9,7 @@ public class PanelStateHandler : MonoBehaviour
     public Button UseButton;
     public Button StopButton;
     public GameObject ButtonGroup;
+    public GameObject BuildPicker;
 
     private ConsistencyStateHandler consistencyHandler;
 
@@ -50,6 +51,12 @@ public class PanelStateHandler : MonoBehaviour
         }
         consistencyHandler.CurrentInteractorSelection.OnUse(consistencyHandler.CurrentInteractableSelection);
         consistencyHandler.SetDirty();
+    }
+
+    public void OnSelect(StructureType type) {
+        Debug.Log("Select element");
+        if(BuildPicker.GetComponent<PickerStatus>().build_reference)
+            BuildPicker.GetComponent<PickerStatus>().Build(type);
     }
 
     public void OnStop() {

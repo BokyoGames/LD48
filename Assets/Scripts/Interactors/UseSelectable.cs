@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class UseSelectable : AbstractSelectable
 {
+    public abstract void ConnectOnUse(Interactor interactor);
     public abstract void ConnectInteractor(Interactor interactor);
     public abstract void DisconnectInteractor(Interactor interactor);
 }
