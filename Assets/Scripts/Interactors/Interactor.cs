@@ -43,9 +43,11 @@ public class Interactor : AbstractSelectable
         if(InteractionTarget != target) {
             InteractionTarget = target;
         }
+        GetComponent<MovementAI>().enabled = true;
     }
 
     public void OnStop() {
         InteractionTarget = null;
+        GetComponent<MovementAI>().enabled = false;
     }
 }

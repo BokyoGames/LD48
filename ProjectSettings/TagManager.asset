@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Controllable
   - Interactable
-  - Ladder
+  - LayerHandler
   layers:
   - Default
   - TransparentFX
@@ -18,7 +18,7 @@ TagManager:
   - 
   - CaveWalls
   - AnimateObjects
-  - 
+  - Dwarves
   - 
   - 
   - 
