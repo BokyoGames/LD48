@@ -2,6 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum ResourceType
+{
+    stone,
+    iron,
+    gold,
+    diamond,
+    mithril,
+    happiness
+}
+
 public class ResourceHandler : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -24,6 +34,10 @@ public class ResourceHandler : MonoBehaviour
         
     }
 
+    public int getResourceType(ResourceType type)
+    {
+        return this.getResourceType(type.ToString());
+    }
     public int getResourceType(string type)
     {
         switch(type)
@@ -45,6 +59,39 @@ public class ResourceHandler : MonoBehaviour
         }
     }
 
+    public void setResourceType(ResourceType type, int quantity)
+    {
+        this.setResourceType(type.ToString(), quantity);
+    }
+    public void setResourceType(string type, int quantity)
+    {
+        switch(type)
+        {
+            case "stone":
+                stone += quantity;
+                break;
+            case "iron":
+                iron += quantity;  
+                break;
+            case "gold":
+                gold += quantity;              
+                break;
+            case "diamond":
+                diamond += quantity;              
+                break;
+            case "mithril":
+                mithril += quantity;              
+                break;
+            case "happiness":
+                happiness += quantity;
+                break;  
+        }
+    }
+
+    public int getResourceMaxType(ResourceType type)
+    {
+        return this.getResourceMaxType(type.ToString());
+    }
     public int getResourceMaxType(string type)
     {
         switch(type)
