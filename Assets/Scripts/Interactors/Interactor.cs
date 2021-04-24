@@ -8,7 +8,7 @@ public class Interactor : AbstractSelectable
     private bool isInteracting = false;
 
     // The thing we want to interact with
-    public UseSelectable InteractionTarget;
+    //public UseSelectable InteractionTarget;
     public DamageReceiver DamageReceiver;
 
     void Start() {
@@ -57,7 +57,8 @@ public class Interactor : AbstractSelectable
 
     public void OnStop() {
         if(isInteracting) {
-            InteractionTarget.DisconnectInteractor(this);
+            // Force cast because we can, but we shouldn't
+            ((UseSelectable)InteractionTarget).DisconnectInteractor(this);
         }
         InteractionTarget = null;
     }

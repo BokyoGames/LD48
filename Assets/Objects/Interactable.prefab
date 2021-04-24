@@ -121,7 +121,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7968180182707696968}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -189,6 +189,7 @@ GameObject:
   - component: {fileID: 7968180182726259347}
   - component: {fileID: 7968180182726259344}
   - component: {fileID: 5432075177751420739}
+  - component: {fileID: 2938761820701325275}
   m_Layer: 9
   m_Name: Interactable
   m_TagString: Untagged
@@ -225,6 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a7c774b3119ba24b93c078dc94b1a4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractionTarget: {fileID: 0}
   Depth: 0
   InteractionResponder: {fileID: 0}
 --- !u!50 &5432075177751420739
@@ -248,6 +250,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2938761820701325275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7968180182726259346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80af7dcfc292b142a68cecd97477d94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectable: {fileID: 7968180182726259344}
 --- !u!1 &7968180183308540507
 GameObject:
   m_ObjectHideFlags: 0

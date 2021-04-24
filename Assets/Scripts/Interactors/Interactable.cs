@@ -37,12 +37,6 @@ public class Interactable : UseSelectable
         base.TriggerUnselection();
     }
 
-    void OnMouseDown() {
-        // We have been clicked!
-        var selector = GameObject.FindGameObjectWithTag("Player").GetComponent<SelectionStateHandler>(); 
-        selector.OnClicked(this);
-    }
-
     void Update() {
         accumulator +=  (Time.deltaTime * 1000);
         while(accumulator > dataHandler.TickDurationInMilliseconds) {

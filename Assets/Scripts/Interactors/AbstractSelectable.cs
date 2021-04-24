@@ -5,6 +5,8 @@ using UnityEngine;
 public abstract class AbstractSelectable : MonoBehaviour
 {
 
+    public AbstractSelectable InteractionTarget;
+
     // This value indicates at which depth the object is in the layer hierarchy.
     // This way the AI can decide if they need to use a ladder to go up/down
     // a layer to reach the same depth as the interactable they are trying to

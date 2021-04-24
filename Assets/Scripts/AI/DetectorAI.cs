@@ -8,7 +8,7 @@ public class DetectorAI : MonoBehaviour
     Enemy enemy;
 
     void Start() {
-        enemy = gameObject.GetComponentInParent<Enemy>();
+        enemy = gameObject.transform.parent.GetComponentInParent<Enemy>();
     }
 
     public void TargetDetected(Interactor interactor) {
