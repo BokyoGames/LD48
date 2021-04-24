@@ -16,7 +16,7 @@ public class RangeInteractor : MonoBehaviour
     }
 
     private bool isRightInteractor(Interactor interactor) {
-        if(interactor == null) {
+        if(interactor == null || interactor.InteractionTarget == null) {
             // Nothing to be done, ignore
             return false;
         }
