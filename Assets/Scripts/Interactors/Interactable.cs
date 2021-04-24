@@ -17,6 +17,10 @@ public class Interactable : UseSelectable
         dataHandler = GameObject.FindGameObjectWithTag("DataHandler").GetComponent<DataHandler>();
     }
 
+    public override void ConnectOnUse(Interactor interactor) {
+        InteractionResponder.OnUse(interactor);
+    }
+
     public override void ConnectInteractor(Interactor interactor) {
         InteractionResponder.OnStart(interactor);
     }

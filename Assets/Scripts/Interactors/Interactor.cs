@@ -45,6 +45,8 @@ public class Interactor : AbstractSelectable
 
     // Called by the selector when the panel "use" button is clicked
     public void OnUse(UseSelectable target) {
+        target.ConnectOnUse(this);
+        
         // TODO handle interrupting animations if necessary
         if(InteractionTarget != target) {
             OnStop();

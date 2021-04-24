@@ -59,11 +59,11 @@ public class ResourceHandler : MonoBehaviour
         }
     }
 
-    public int setResourceType(ResourceType type, int quantity)
+    public int addResourceType(ResourceType type, int quantity)
     {
-        return this.setResourceType(type.ToString(), quantity);
+        return this.addResourceType(type.ToString(), quantity);
     }
-    public int setResourceType(string type, int quantity)
+    public int addResourceType(string type, int quantity)
     {
         switch(type)
         {
