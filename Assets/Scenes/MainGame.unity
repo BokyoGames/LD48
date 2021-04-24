@@ -1289,13 +1289,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b2aaeca19c3a5b786d7bcb62c04842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stone: 10
+  stone: 0
   iron: 0
   gold: 0
   diamond: 0
   mithril: 0
   happiness: 0
-  max_stone: 10
+  max_stone: 50
   max_iron: 10
   max_gold: 10
   max_diamond: 10
