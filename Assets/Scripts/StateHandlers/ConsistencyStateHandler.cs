@@ -7,7 +7,7 @@ public class ConsistencyStateHandler : MonoBehaviour
     // Unit that does the interaction
     public Interactor CurrentInteractorSelection;
     // Object that is interactable
-    public Interactable CurrentInteractableSelection;
+    public UseSelectable CurrentInteractableSelection;
 
     private bool isDirty = false;
     public void SetDirty() {

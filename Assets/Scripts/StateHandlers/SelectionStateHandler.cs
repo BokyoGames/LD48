@@ -36,7 +36,7 @@ public class SelectionStateHandler : MonoBehaviour
         consistencyHandler.SetDirty();
     }
 
-    public void OnClicked(Interactable interactable) {
+    public void OnClicked(UseSelectable interactable) {
         if(consistencyHandler.CurrentInteractorSelection == null) {
             // We can't select an interactable if the interactor is not active
             consistencyHandler.SetDirty();
@@ -55,6 +55,7 @@ public class SelectionStateHandler : MonoBehaviour
         consistencyHandler.CurrentInteractableSelection = interactable;
         consistencyHandler.SetDirty();
     }
+
 
     // In case the target/interactor has changed, we double check that the 
     // preview camera is being rendered correctly (or we hide it)

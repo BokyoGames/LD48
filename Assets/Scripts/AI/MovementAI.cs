@@ -24,7 +24,7 @@ public class MovementAI : MonoBehaviour
             return;
         }
 
-        Interactable interactable = interactor.InteractionTarget;
+        UseSelectable interactable = interactor.InteractionTarget;
         Transform target = interactable.transform;
         // We need to go down one layer
         if(interactor.Depth < interactable.Depth) {

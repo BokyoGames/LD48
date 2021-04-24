@@ -6,7 +6,14 @@ using UnityEngine;
 // an interaction
 public class RangeInteractor : MonoBehaviour
 {
-    public Interactable InteractableParent;
+    public UseSelectable InteractableParent;
+
+    void Start() {
+        if (InteractableParent == null) {
+            InteractableParent = gameObject.GetComponentInParent<UseSelectable>();
+        }
+
+    }
 
     private bool isRightInteractor(Interactor interactor) {
         if(interactor == null) {
