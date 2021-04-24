@@ -42,7 +42,5 @@ public abstract class AbstractEnemyLogic : MonoBehaviour
             // Get a new random target
             fightingTarget = interactors.ToList()[Random.Range(0, interactors.Count)];
         }
-
-        // TODO: finish logic here
     }
 }

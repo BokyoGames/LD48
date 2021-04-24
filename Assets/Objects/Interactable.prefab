@@ -188,7 +188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7968180182726259347}
   - component: {fileID: 7968180182726259344}
-  - component: {fileID: 4391824863087371804}
+  - component: {fileID: 5432075177751420739}
   m_Layer: 9
   m_Name: Interactable
   m_TagString: Untagged
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Depth: 0
   InteractionResponder: {fileID: 0}
---- !u!50 &4391824863087371804
+--- !u!50 &5432075177751420739
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
