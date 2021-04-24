@@ -37,6 +37,7 @@ public class BuildInteractable : AbstractInteractableLogic
 
     public override void OnStop(Interactor interactor)
     {
+        base.OnStop(interactor);
         if(structure == null)
         {
             build_picker.SetActive(false);
