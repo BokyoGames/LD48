@@ -31,7 +31,7 @@ public class MineInteractor : AbstractInteractableLogic
             if(tick_count > mine_time)
             {
                 Debug.Log("We have mined some " + type.ToString() + " interactors.");
-                int unused = resources.setResourceType(type, tick_count/mine_time);
+                int unused = resources.addResourceType(type, tick_count/mine_time);
                 quantity -= tick_count/mine_time + unused;
                 tick_count = tick_count % mine_time;
             }
