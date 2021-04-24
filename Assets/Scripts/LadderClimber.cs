@@ -7,10 +7,12 @@ public class LadderClimber : MonoBehaviour
 
     Interactor interactor;
     MovementAI movementAI;
+    LayerHandler layerHandler;
 
     void Start() {
         interactor = GetComponent<Interactor>();
         movementAI = GetComponent<MovementAI>();
+        layerHandler = GameObject.FindGameObjectWithTag("LayerHandler").GetComponent<LayerHandler>();
     }
 
     public void TryClimbLadder(Transform topLadder, Transform bottomLadder) {
@@ -18,13 +20,23 @@ public class LadderClimber : MonoBehaviour
             // Nothing to be done
             return;
         }
-        // Go Up
+
+        var ladderDepth = layerHandler.Layers.FindIndex(l => l == topLadder.parent.transform) + 1;
+
+        // We want to go down
         if(interactor.InteractionTarget.Depth > interactor.Depth) {
+            // Wrong ladder, ignore
+            if(ladderDepth == interactor.Depth) {
+                return;
+            }
             interactor.Depth += 1;
             interactor.transform.position = bottomLadder.position;
         }
-        // Go Down
+        // Go Up
         else if(interactor.InteractionTarget.Depth < interactor.Depth) {
+            if(ladderDepth - 1 == interactor.Depth) {
+                return;
+            }
             interactor.Depth -= 1;
             interactor.transform.position = topLadder.position;
         }

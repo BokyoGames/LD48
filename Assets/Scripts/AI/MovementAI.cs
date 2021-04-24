@@ -28,11 +28,11 @@ public class MovementAI : MonoBehaviour
         Transform target = interactable.transform;
         // We need to go down one layer
         if(interactor.Depth < interactable.Depth) {
-            target = layerHandler.GetLadderOfLayer(interactor.Depth + 1).transform;
+            target = layerHandler.GetLadderOfLayer(interactor.Depth + 1);
         }
         // We need to go up one layer
         else if(interactor.Depth > interactable.Depth) {
-            target = layerHandler.GetLadderOfLayer(interactor.Depth).transform;
+            target = layerHandler.GetLadderOfLayer(interactor.Depth);
         } 
 
         // Go to the target
