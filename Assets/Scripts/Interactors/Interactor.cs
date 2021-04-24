@@ -41,17 +41,16 @@ public class Interactor : AbstractSelectable
     public void OnUse(Interactable target) {
         // TODO handle interrupting animations if necessary
         if(InteractionTarget != target) {
+            OnStop();
             InteractionTarget = target;
-            if(isInteracting) {
-                StopInteraction();
-            }
         }
         GetComponent<MovementAI>().enabled = true;
     }
 
     public void OnStop() {
+        if(isInteracting) {
+            InteractionTarget.DisconnectInteractor(this);
+        }
         InteractionTarget = null;
-        if(isInteracting)
-            StopInteraction();
     }
 }

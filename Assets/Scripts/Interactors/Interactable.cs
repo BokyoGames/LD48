@@ -7,18 +7,18 @@ public class Interactable : AbstractSelectable
 {
     // TODO
     // The piece of logic that triggers an interaction
-    public Component InteractionResponder;
+    public AbstractInteractableLogic InteractionResponder;
 
-    private Interactor interactor;
-
-    public void ConnectInteractor(Interactor interactor) {
-        this.interactor = interactor;
-        interactor.StartInteraction();
+    void Start() {
+        InteractionResponder = GetComponent<AbstractInteractableLogic>();
     }
 
-    public void DisconnectInteractor() {
-        this.interactor.StopInteraction();
-        this.interactor = null;
+    public void ConnectInteractor(Interactor interactor) {
+        InteractionResponder.OnStart(interactor);
+    }
+
+    public void DisconnectInteractor(Interactor interactor) {
+        InteractionResponder.OnStop(interactor);
     }
 
     public override void TriggerSelection() {
@@ -33,5 +33,10 @@ public class Interactable : AbstractSelectable
         // We have been clicked!
         var selector = GameObject.FindGameObjectWithTag("Player").GetComponent<SelectionStateHandler>(); 
         selector.OnClicked(this);
+    }
+
+    void Update() {
+        // TODO implement tick logic / timer
+        InteractionResponder.OnTick();
     }
 }
