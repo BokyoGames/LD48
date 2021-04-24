@@ -129,6 +129,35 @@ public class ResourceHandler : MonoBehaviour
                 return -1;  
         }
     }
+
+    public void addResourceMaxType(ResourceType type, int quantity)
+    {
+        this.addResourceMaxType(type.ToString(), quantity);
+    }
+    public void addResourceMaxType(string type, int quantity)
+    {
+        switch(type)
+        {
+            case "stone":
+                stone += quantity;
+                break;
+            case "iron":
+                iron += quantity;
+                break;
+            case "gold":
+                gold += quantity;
+                break;
+            case "diamond":
+                diamond += quantity;
+                break;
+            case "mithril":
+                mithril += quantity;
+                break;
+            case "happiness":
+                happiness += quantity;
+                break;
+        }
+    }
     // Update is called once per frame
     void Update()
     {
