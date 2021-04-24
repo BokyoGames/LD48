@@ -5,12 +5,16 @@ using UnityEngine;
 // Component on every object that can interact with Interactors
 public class Interactable : AbstractSelectable
 {
-    // TODO
+
+    DataHandler dataHandler;
     // The piece of logic that triggers an interaction
     public AbstractInteractableLogic InteractionResponder;
 
+    float accumulator = 0;
+
     void Start() {
         InteractionResponder = GetComponent<AbstractInteractableLogic>();
+        dataHandler = GameObject.FindGameObjectWithTag("DataHandler").GetComponent<DataHandler>();
     }
 
     public void ConnectInteractor(Interactor interactor) {
@@ -36,7 +40,10 @@ public class Interactable : AbstractSelectable
     }
 
     void Update() {
-        // TODO implement tick logic / timer
-        InteractionResponder.OnTick();
+        accumulator +=  (Time.deltaTime * 1000);
+        while(accumulator > dataHandler.TickDurationInMilliseconds) {
+            InteractionResponder.OnTick();
+            accumulator -= dataHandler.TickDurationInMilliseconds;
+        }
     }
 }
