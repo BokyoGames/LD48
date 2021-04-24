@@ -8,7 +8,7 @@ public class Interactor : AbstractSelectable
     private bool isInteracting = false;
 
     // The thing we want to interact with
-    public Interactable InteractionTarget;
+    public UseSelectable InteractionTarget;
     // If we are already interacting with it or not
     public bool IsInteracting {
         get => isInteracting;
@@ -38,7 +38,7 @@ public class Interactor : AbstractSelectable
     }
 
     // Called by the selector when the panel "use" button is clicked
-    public void OnUse(Interactable target) {
+    public void OnUse(UseSelectable target) {
         // TODO handle interrupting animations if necessary
         if(InteractionTarget != target) {
             OnStop();

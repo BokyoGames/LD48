@@ -2,47 +2,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Component on every object that can interact with Interactors
-public class Interactable : UseSelectable
+public class Enemy : UseSelectable
 {
 
-    DataHandler dataHandler;
-    // The piece of logic that triggers an interaction
-    public AbstractInteractableLogic InteractionResponder;
+    DataHandler dataHandler; 
+
+    public AbstractEnemyLogic EnemyLogic;
 
     float accumulator = 0;
 
     void Start() {
-        InteractionResponder = GetComponent<AbstractInteractableLogic>();
+        EnemyLogic = GetComponent<AbstractEnemyLogic>();
         dataHandler = GameObject.FindGameObjectWithTag("DataHandler").GetComponent<DataHandler>();
     }
 
     public override void ConnectInteractor(Interactor interactor) {
-        InteractionResponder.OnStart(interactor);
+        //EnemyLogic.OnStart(interactor);
     }
 
     public override void DisconnectInteractor(Interactor interactor) {
-        InteractionResponder.OnStop(interactor);
-    }
-
-    public override void TriggerSelection() {
-        base.TriggerSelection();
-    }
-
-    public override void TriggerUnselection() {
-        base.TriggerUnselection();
+        //EnemyLogic.OnStop(interactor);
     }
 
     void OnMouseDown() {
-        // We have been clicked!
         var selector = GameObject.FindGameObjectWithTag("Player").GetComponent<SelectionStateHandler>(); 
         selector.OnClicked(this);
     }
 
+    // Enemy AI loop here
     void Update() {
         accumulator +=  (Time.deltaTime * 1000);
         while(accumulator > dataHandler.TickDurationInMilliseconds) {
-            InteractionResponder.OnTick();
+            //EnemyLogic.OnTick();
+            //TODO
             accumulator -= dataHandler.TickDurationInMilliseconds;
         }
     }
