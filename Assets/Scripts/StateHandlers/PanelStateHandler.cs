@@ -57,12 +57,15 @@ public class PanelStateHandler : MonoBehaviour
             CheckUseButtonAndChangeIcon();
             if(consistencyHandler.CurrentInteractableSelection.IsDestructible) {
                 DestroyButton.interactable = true;
+                DestroyButton.gameObject.SetActive(true);
             } else {
                 DestroyButton.interactable = false;
+                DestroyButton.gameObject.SetActive(false);
             }
         } else {
             UseButton.interactable = false;
             DestroyButton.interactable = false;
+            DestroyButton.gameObject.SetActive(false);
         }
 
         ButtonGroup.SetActive(true);
