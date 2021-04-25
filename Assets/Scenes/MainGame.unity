@@ -1194,6 +1194,7 @@ MonoBehaviour:
   - {fileID: 405569607}
   - {fileID: 405569609}
   - {fileID: 405569608}
+  MusicModifier: 0.6
 --- !u!4 &405569606
 Transform:
   m_ObjectHideFlags: 0
