@@ -7,16 +7,20 @@ public class MouseDraggableCamera : MonoBehaviour
 
     public float DragSpeed = 2;
 
+    public float LimitPerDepth;
+    public float MaxYValue;
+
     void LateUpdate() {
         if (Input.GetMouseButton(1)) {
 
-            var newPosition = new Vector3();
+            var newPosition = transform.position;
 
-            //newPosition.x = Input.GetAxis("Mouse X") * DragSpeed * Time.deltaTime;
-            newPosition.y = Input.GetAxis("Mouse Y") * DragSpeed * Time.deltaTime;
+            newPosition.y -= Input.GetAxis("Mouse Y") * DragSpeed * Time.deltaTime;
+
+            newPosition.y = Mathf.Clamp(newPosition.y, DataHandler.Handler.DepthReached * LimitPerDepth, MaxYValue);
 
             // translates to the opposite direction of mouse position.
-            transform.Translate(-newPosition);
+            transform.position = newPosition;
         }
     }
 }

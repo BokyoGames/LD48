@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Discoverable : MonoBehaviour
 {
-    DataHandler dataHandler; 
     public Rigidbody2D CaveCover;
     public Transform Ladder;
     public Transform ActiveObjects;
@@ -23,13 +22,11 @@ public class Discoverable : MonoBehaviour
         Debug.Log("We've been discovered");
         // Disable the layer, we now have a new discovered object
         if(CaveCover.gameObject.activeInHierarchy) {
-            Debug.Log("Cave Cover");
             CaveCover.gameObject.SetActive(false);
         }
         if(ActiveObjects != null && !ActiveObjects.gameObject.activeInHierarchy) {
-            Debug.Log("Objects");
             ActiveObjects.gameObject.SetActive(true);
-            dataHandler.DepthReached++;
+            DataHandler.Handler.DepthReached++;
         }
         // TODO - Send events to other listeners that the layer has been discovered
     }
