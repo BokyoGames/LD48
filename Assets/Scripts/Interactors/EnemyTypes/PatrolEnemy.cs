@@ -6,16 +6,20 @@ public class PatrolEnemy : AbstractEnemyLogic
 {
 
     Movable movable;
+    [HideInInspector]
+    public Transform PatrolTarget;
+    public PatrolManager PatrolManager;
 
     public override void OnStart() {
         movable = GetComponent<Movable>();
         damageDealer = GetComponent<DamageDealer>();
+        if(PatrolTarget == null) {
+            PatrolTarget = PatrolManager.PointA;
+        }
     }
 
     public override void OnTick() {
-        // Example state machine here
         if(HasFightingTarget && !IsFighting) {
-            // Walk is handled in update out of ticks
             return;
         }
 
@@ -40,6 +44,21 @@ public class PatrolEnemy : AbstractEnemyLogic
         if(IsFighting && movable.IsMoving) {
             movable.StopMovement();
             return;
+        }
+
+        // Not allowed to patrol if we are already moving or fighting >:(
+        if(movable.IsMoving || IsFighting)
+            return;
+
+        // We are patrolling
+        if(this.transform.position.x > PatrolTarget.transform.position.x) {
+            if(movable.IsFacingRight)
+                movable.OnFlip();
+            this.transform.Translate(Vector3.left * Time.deltaTime * (movable.MovementSpeed * 0.5f));
+        } else {
+            if(!movable.IsFacingRight)
+                movable.OnFlip();
+            this.transform.Translate(Vector3.right * Time.deltaTime * (movable.MovementSpeed * 0.5f));
         }
     }
 }

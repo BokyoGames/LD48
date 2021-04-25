@@ -19,6 +19,10 @@ public class Movable : MonoBehaviour
         get => ai.enabled;
     }
 
+    public int MovementSpeed {
+        get => ai.Speed;
+    }
+
     void Start() {
         ai = GetComponent<MovementAI>();
         anim = spriteRenderer.GetComponent<Animator>();
