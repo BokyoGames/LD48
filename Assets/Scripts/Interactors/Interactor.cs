@@ -12,8 +12,11 @@ public class Interactor : AbstractSelectable
     //public UseSelectable InteractionTarget;
     public DamageReceiver DamageReceiver;
 
+    Movable movable;
+
     void Start() {
         DamageReceiver = GetComponent<DamageReceiver>();
+        movable = GetComponent<Movable>();
     }
 
     // If we are already interacting with it or not
@@ -23,6 +26,7 @@ public class Interactor : AbstractSelectable
 
     public void StartInteraction() {
         isInteracting = true;
+        movable.StopMovement();
         // Do other stuff here if we need to start interaction animations, etc
     }
 
@@ -59,7 +63,8 @@ public class Interactor : AbstractSelectable
             OnStop();
             InteractionTarget = target;
         }
-        GetComponent<MovementAI>().enabled = true;
+        //GetComponent<MovementAI>().enabled = true;
+        movable.StartMovement(InteractionTarget);
     }
 
     public void OnStop() {

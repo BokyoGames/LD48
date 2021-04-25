@@ -8,39 +8,57 @@ public class MovementAI : MonoBehaviour
 
     public int Speed = 0;
 
-    Interactor interactor;
+    AbstractSelectable mover;
+    AbstractSelectable target;
     LayerHandler layerHandler;
 
     void Start() {
-        interactor = GetComponent<Interactor>();
+        mover = GetComponent<AbstractSelectable>();
         layerHandler = GameObject.FindGameObjectWithTag("LayerHandler").GetComponent<LayerHandler>();
     }
 
+    public void AssignTarget(AbstractSelectable target) {
+        this.target = target;
+    }
+
+    public void ClearTarget() {
+        this.target = null;
+    }
+
     void Update() {
-        // If we are interacting, it means we reached the target so we don't need
-        // to move anymore.
-        if(interactor.IsInteracting || interactor.InteractionTarget == null) {
-            this.enabled = false;
+        if(target == null) {
+            Debug.LogWarning(gameObject.name + ": We are trying to move without a target");
             return;
         }
+        // If we are interacting, it means we reached the target so we don't need
+        // to move anymore.
+        // TODO
+        //if(interactor.IsInteracting || interactor.InteractionTarget == null) {
+        //    this.enabled = false;
+        //    return;
+        //}
 
-        AbstractSelectable interactable = interactor.InteractionTarget;
-        Transform target = interactable.transform;
+        Transform targetLocation = target.transform;
         // We need to go down one layer
-        if(interactor.Depth < interactable.Depth) {
-            target = layerHandler.GetLadderOfLayer(interactor.Depth + 1);
+        if(mover.Depth < target.Depth) {
+            targetLocation = layerHandler.GetLadderOfLayer(mover.Depth + 1);
         }
         // We need to go up one layer
-        else if(interactor.Depth > interactable.Depth) {
-            target = layerHandler.GetLadderOfLayer(interactor.Depth);
+        else if(mover.Depth > target.Depth) {
+            targetLocation = layerHandler.GetLadderOfLayer(mover.Depth);
         } 
 
+        var movable = mover.GetComponent<Movable>();
         // Go to the target
-        if(interactor.transform.position.x > target.position.x) {
+        if(mover.transform.position.x > targetLocation.position.x) {
             // Need to go left
+            if(movable.IsFacingRight)
+                movable.OnFlip();
             this.transform.Translate(Vector3.left * Time.deltaTime * Speed);
         } else {
             // Need to go right
+            if(!movable.IsFacingRight)
+                movable.OnFlip();
             this.transform.Translate(Vector3.right * Time.deltaTime * Speed);
         }
     }
