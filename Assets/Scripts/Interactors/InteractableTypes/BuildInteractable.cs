@@ -81,13 +81,22 @@ public class BuildInteractable : AbstractInteractableLogic
     }
 
     public override void OnTick() {
-        if(structure != null)
-        {
+        if(structure != null) {
             if(Tracker != null && !Tracker.gameObject.activeInHierarchy) {
                 Tracker.gameObject.SetActive(true);
             }
             if(interactors.Count > 0 && build_time > 0) {
-                build_time -= interactors.Count;
+                var buildPower = 0;
+                foreach(var i in interactors) {
+                    var builder = i.GetComponent<Builder>();
+                    if(builder != null) {
+                        buildPower += builder.Power;
+                    } else {
+                        buildPower++;
+                    }
+
+                }
+                build_time -= buildPower;
                 if(Tracker != null) {
                     Tracker.CurrentValue = (Tracker.MaxValue - build_time);
                 }
