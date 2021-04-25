@@ -51,9 +51,16 @@ public class DamageReceiver : MonoBehaviour
     }
  
 
-    public void OnDamage(int damage) {
+    public void OnDamage(GameObject enemy, int damage) {
         if(weAlreadyDied)
             return;
+
+        var interactor = this.GetComponent<Interactor>();
+        if(interactor)
+        {
+            interactor.StartCombat(enemy.GetComponent<Enemy>());
+        }
+
         Debug.Log(gameObject.name +": We got " + damage + " of damage.");
         Health -= damage;
         if(Health - damage <= 0) {

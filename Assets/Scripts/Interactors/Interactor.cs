@@ -117,7 +117,7 @@ public class Interactor : AbstractSelectable
     public override void OnTick() {
         if(inCombat) {
             if(damageDealer.TickAndCheckIfWeShouldAttack()) {
-                combatTarget.OnDamage(damageDealer.AttackParameter);
+                combatTarget.OnDamage(this.gameObject, damageDealer.AttackParameter);
             }
         } 
     }

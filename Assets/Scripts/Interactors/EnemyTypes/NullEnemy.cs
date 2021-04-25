@@ -13,7 +13,7 @@ public class NullEnemy : AbstractEnemyLogic
 
         if(IsFighting) {
             if(damageDealer.TickAndCheckIfWeShouldAttack())
-                FightingTarget.DamageReceiver.OnDamage(damageDealer.AttackParameter);
+                FightingTarget.DamageReceiver.OnDamage(this.gameObject, damageDealer.AttackParameter);
             return;
         }
     }

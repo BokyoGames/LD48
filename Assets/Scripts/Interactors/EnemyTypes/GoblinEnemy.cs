@@ -23,7 +23,7 @@ public class GoblinEnemy : AbstractEnemyLogic
                     TargetChange();
                     return;
                 }
-                FightingTarget.DamageReceiver.OnDamage(damageDealer.AttackParameter);
+                FightingTarget.DamageReceiver.OnDamage(this.gameObject, damageDealer.AttackParameter);
             }
             return;
         }
