@@ -203,6 +203,11 @@ PrefabInstance:
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[7].y
       value: -1.4115765
       objectReference: {fileID: 0}
+    - target: {fileID: 9187004496990367807, guid: d3cf4fa093d12de4db4240913e9e5d7b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 9187004497562422676, guid: d3cf4fa093d12de4db4240913e9e5d7b,
         type: 3}
       propertyPath: m_Offset.x
@@ -222,6 +227,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Offset.y
       value: 0.87173855
+      objectReference: {fileID: 0}
+    - target: {fileID: 9187004497562422677, guid: d3cf4fa093d12de4db4240913e9e5d7b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9187004496879548912, guid: d3cf4fa093d12de4db4240913e9e5d7b, type: 3}
