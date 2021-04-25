@@ -299,8 +299,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 294d81612fda946bfa5f5d3612129142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max_spawn_time: 120
-  spawn_time: 120
+  max_spawn_time: 160
+  spawn_time: 160
   randomXSpawnVariance: 9
   Tracker: {fileID: 8829275382189782883}
   dwarf: {fileID: 7349646563752419451, guid: b0378c120dee9ac429a67b01e96ff459, type: 3}

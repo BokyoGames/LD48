@@ -284,7 +284,7 @@ MonoBehaviour:
   requested_resource_type: 0300000002000000
   min_level: 0
   expertise_required: 0
-  build_time: 50
+  build_time: 200
   type: 4
 --- !u!114 &-2690666864756415730
 MonoBehaviour:
@@ -298,7 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f84fb3173a8786e4c8e51f74537e98b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healing_capacity: 10
+  healing_capacity: 1
 --- !u!1 &6381147485737909875
 GameObject:
   m_ObjectHideFlags: 0
