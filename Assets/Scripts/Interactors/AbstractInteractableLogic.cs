@@ -35,7 +35,6 @@ public abstract class AbstractInteractableLogic : MonoBehaviour
 
     virtual public void StartDemolish() {
         StopAllWork();
-        Debug.Log("We demolished!");
 
         // Replace the demolished building iwth a buildinteractable instead
         GameObject instance = Instantiate(DataHandler.Handler.BuildablePrefab, this.gameObject.transform.position, this.gameObject.transform.rotation) as GameObject;

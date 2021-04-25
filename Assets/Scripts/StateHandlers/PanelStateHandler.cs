@@ -22,15 +22,19 @@ public class PanelStateHandler : MonoBehaviour
     void CheckUseButtonAndChangeIcon() {
         if(consistencyHandler.CurrentInteractableSelection == null)
             return; // ignore
+        var multiHolder = UseButton.GetComponent<MultipleButtonImageHolder>();
+        if(multiHolder == null)
+            return;
+
         switch(consistencyHandler.CurrentInteractableSelection.SelectableType) {
             case SelectableType.Ore:
-                Debug.Log("Ore type");
-            break;
-            case SelectableType.Building:
-                Debug.Log("Building type");
+                UseButton.GetComponent<Image>().sprite = multiHolder.ButtonImageList[0];
             break;
             case SelectableType.Enemy:
-                Debug.Log("Enemy type");
+                UseButton.GetComponent<Image>().sprite = multiHolder.ButtonImageList[1];
+            break;
+            case SelectableType.Building:
+                UseButton.GetComponent<Image>().sprite = multiHolder.ButtonImageList[2];
             break;
         }
     }
