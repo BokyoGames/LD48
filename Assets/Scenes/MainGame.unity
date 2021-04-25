@@ -4796,6 +4796,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DragSpeed: 200
+  LimitPerDepth: -8
+  MaxYValue: 10
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0

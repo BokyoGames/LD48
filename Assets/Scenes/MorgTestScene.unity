@@ -4051,7 +4051,7 @@ Transform:
   m_LocalScale: {x: 2.7762508, y: 2.7808018, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &458767683 stripped
 GameObject:
@@ -5317,7 +5317,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e0bb0ad2a13fc94f927804644fe6743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DragSpeed: 200
+  DragSpeed: 100
+  LimitPerDepth: -8
+  MaxYValue: 10
 --- !u!81 &555862053
 AudioListener:
   m_ObjectHideFlags: 0
@@ -7737,7 +7739,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &829181415
 GameObject:
@@ -15192,7 +15194,7 @@ Transform:
   - {fileID: 30510582}
   - {fileID: 1738787090}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1661477098
 GameObject:
