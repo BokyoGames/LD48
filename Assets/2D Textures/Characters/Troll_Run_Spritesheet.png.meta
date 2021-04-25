@@ -1,25 +1,31 @@
 fileFormatVersion: 2
-guid: 9fad03c3c69c2114e82a1b595834707c
+guid: e11ea225da092534ca6470d82d7d6285
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8094880787384612540
-    second: Goblin_Idle_Spritesheet_0
+      213: 7059354674720263183
+    second: Troll_Run_Spritesheet_0
   - first:
-      213: -1186568935457454661
-    second: Goblin_Idle_Spritesheet_1
+      213: 8980041502530710737
+    second: Troll_Run_Spritesheet_1
   - first:
-      213: -8934607175660685082
-    second: Goblin_Idle_Spritesheet_2
+      213: -4929690417785699840
+    second: Troll_Run_Spritesheet_2
   - first:
-      213: -4668345689481941353
-    second: Goblin_Idle_Spritesheet_3
+      213: -7814844783115550612
+    second: Troll_Run_Spritesheet_3
   - first:
-      213: 1855302117664673384
-    second: Goblin_Idle_Spritesheet_4
+      213: 540321352838207418
+    second: Troll_Run_Spritesheet_4
   - first:
-      213: -4025763113677215770
-    second: Goblin_Idle_Spritesheet_5
+      213: 8898600878847744135
+    second: Troll_Run_Spritesheet_5
+  - first:
+      213: 8050974376813505405
+    second: Troll_Run_Spritesheet_6
+  - first:
+      213: 7020781225793036887
+    second: Troll_Run_Spritesheet_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -79,7 +85,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -91,7 +97,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -105,7 +111,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Goblin_Idle_Spritesheet_0
+      name: Troll_Run_Spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +125,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4494ec8ffc439af80800000000000000
-      internalID: -8094880787384612540
+      spriteID: f0cc132bcadd7f160800000000000000
+      internalID: 7059354674720263183
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Idle_Spritesheet_1
+      name: Troll_Run_Spritesheet_1
       rect:
         serializedVersion: 2
         x: 512
@@ -140,14 +146,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb58b8407d5788fe0800000000000000
-      internalID: -1186568935457454661
+      spriteID: 1dcab921b248f9c70800000000000000
+      internalID: 8980041502530710737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Idle_Spritesheet_2
+      name: Troll_Run_Spritesheet_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -161,14 +167,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e8b61f7c16e10480800000000000000
-      internalID: -8934607175660685082
+      spriteID: 0028c330fa8369bb0800000000000000
+      internalID: -4929690417785699840
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Idle_Spritesheet_3
+      name: Troll_Run_Spritesheet_3
       rect:
         serializedVersion: 2
         x: 1536
@@ -182,14 +188,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79ee3b15454b63fb0800000000000000
-      internalID: -4668345689481941353
+      spriteID: c60459713181c8390800000000000000
+      internalID: -7814844783115550612
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Idle_Spritesheet_4
+      name: Troll_Run_Spritesheet_4
       rect:
         serializedVersion: 2
         x: 0
@@ -203,14 +209,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86ece6a327b5fb910800000000000000
-      internalID: 1855302117664673384
+      spriteID: ab7da7c586b9f7700800000000000000
+      internalID: 540321352838207418
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Idle_Spritesheet_5
+      name: Troll_Run_Spritesheet_5
       rect:
         serializedVersion: 2
         x: 512
@@ -224,8 +230,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e7266b07cd9128c0800000000000000
-      internalID: -4025763113677215770
+      spriteID: 788d2bd3a5e2e7b70800000000000000
+      internalID: 8898600878847744135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Troll_Run_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7badb13a8ecabf60800000000000000
+      internalID: 8050974376813505405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Troll_Run_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7522021c353de6160800000000000000
+      internalID: 7020781225793036887
       vertices: []
       indices: 
       edges: []
