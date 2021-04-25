@@ -61,6 +61,7 @@ public class BuildInteractable : AbstractInteractableLogic
     public void Complete()
     {
         Debug.Log("Complete the building");
+        SFXHandler.GetInstance().PlayFX("sfx_build");
         StopAllWork();
         GameObject instance = Instantiate(structure, this.gameObject.transform.position, this.gameObject.transform.rotation) as GameObject;
 

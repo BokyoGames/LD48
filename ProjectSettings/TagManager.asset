@@ -8,6 +8,7 @@ TagManager:
   - Interactable
   - LayerHandler
   - DataHandler
+  - SoundManager
   layers:
   - Default
   - TransparentFX
