@@ -50,6 +50,9 @@ TagManager:
   - name: Backgrounds
     uniqueID: 682945685
     locked: 0
+  - name: Ground
+    uniqueID: 2577454315
+    locked: 0
   - name: InteractableSprites
     uniqueID: 3651501207
     locked: 0
