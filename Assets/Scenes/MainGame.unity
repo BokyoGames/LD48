@@ -6291,13 +6291,13 @@ MonoBehaviour:
   gold: 0
   diamond: 0
   mithril: 0
-  happiness: 0
+  happiness: 2
   max_stone: 50
   max_iron: 10
   max_gold: 10
   max_diamond: 10
   max_mithril: 10
-  max_happiness: 100
+  max_happiness: 10
 --- !u!114 &726257215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18339,6 +18339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TickDurationInMilliseconds: 200
+  DepthReached: 0
 --- !u!4 &2087457252
 Transform:
   m_ObjectHideFlags: 0

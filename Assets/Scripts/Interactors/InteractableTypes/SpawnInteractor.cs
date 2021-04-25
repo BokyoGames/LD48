@@ -15,6 +15,14 @@ public class SpawnInteractor : AbstractInteractableLogic
     public ProgressTracker Tracker;
 
     public GameObject dwarf;
+
+    private ResourceHandler resources;
+
+    void Start()
+    {
+        resources = GameObject.Find("ResourceContainer").GetComponent<ResourceHandler>();
+    }
+
     public override void OnTick() {
         if(interactors.Count > 0) {
             spawn_time -= interactors.Count;
@@ -23,13 +31,18 @@ public class SpawnInteractor : AbstractInteractableLogic
             {
                 spawn_time = max_spawn_time;
                 Debug.Log("Spawned a little dwarf");
-                float randomX = Random.Range(0, randomXSpawnVariance) - randomXSpawnVariance / 2f;
-                GameObject instance = Instantiate(dwarf, this.gameObject.transform.position, this.gameObject.transform.rotation) as GameObject;
-                var dwarfParent = GameObject.FindGameObjectWithTag("DwarfHolder");
-                instance.transform.parent = dwarfParent.transform;
-                Vector3 newPosition = new Vector3(instance.transform.position.x + randomX, instance.transform.position.y, instance.transform.position.z);
-                instance.transform.position = newPosition;
-                instance.GetComponent<Interactor>().Depth = gameObject.GetComponent<Interactable>().Depth;
+
+                if(resources.getResourceType(ResourceType.happiness) <= resources.getResourceMaxType(ResourceType.happiness))
+                {
+                    resources.addResourceType(ResourceType.happiness, 1);
+                    float randomX = Random.Range(0, randomXSpawnVariance) - randomXSpawnVariance / 2f;
+                    GameObject instance = Instantiate(dwarf, this.gameObject.transform.position, this.gameObject.transform.rotation) as GameObject;
+                    var dwarfParent = GameObject.FindGameObjectWithTag("DwarfHolder");
+                    instance.transform.parent = dwarfParent.transform;
+                    Vector3 newPosition = new Vector3(instance.transform.position.x + randomX, instance.transform.position.y, instance.transform.position.z);
+                    instance.transform.position = newPosition;
+                    instance.GetComponent<Interactor>().Depth = gameObject.GetComponent<Interactable>().Depth;
+                }
             }
         }
         if(Tracker != null) {
