@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 4792458229275908920, guid: 660b81c9522c6f440b4218a9945ec842,
         type: 3}
       propertyPath: m_Name
-      value: Dwarf
+      value: DwarfWarrior
       objectReference: {fileID: 0}
     - target: {fileID: 4792458229275908923, guid: 660b81c9522c6f440b4218a9945ec842,
         type: 3}
@@ -67,10 +67,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4792458229525232490, guid: 660b81c9522c6f440b4218a9945ec842,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3678578791149151229, guid: 5469d07265138ce4599815badacfbf25,
+        type: 3}
     - target: {fileID: 5239580078945790629, guid: 660b81c9522c6f440b4218a9945ec842,
         type: 3}
       propertyPath: AttackParameter
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5894140855202270841, guid: 660b81c9522c6f440b4218a9945ec842,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 07ad21fd689b2524f9fb6a0e86e7e5e4,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 660b81c9522c6f440b4218a9945ec842, type: 3}
