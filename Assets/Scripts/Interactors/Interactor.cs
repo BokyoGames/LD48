@@ -86,6 +86,8 @@ public class Interactor : AbstractSelectable
 
     // Called by the selector when the panel "use" button is clicked
     public void OnUse(UseSelectable target) {
+        if(InteractionTarget == target)
+            return;
         target.ConnectOnUse(this);
 
         playUseAudio();
