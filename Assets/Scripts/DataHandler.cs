@@ -9,4 +9,5 @@ public class DataHandler : MonoBehaviour
     }
 
     public int TickDurationInMilliseconds = 0;
+    public int DepthReached = 0;
 }

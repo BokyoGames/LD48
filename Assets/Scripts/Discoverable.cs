@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Discoverable : MonoBehaviour
 {
+    DataHandler dataHandler; 
     public Rigidbody2D CaveCover;
     public Transform Ladder;
     public Transform ActiveObjects;
@@ -28,6 +29,7 @@ public class Discoverable : MonoBehaviour
         if(ActiveObjects != null && !ActiveObjects.gameObject.activeInHierarchy) {
             Debug.Log("Objects");
             ActiveObjects.gameObject.SetActive(true);
+            dataHandler.DepthReached++;
         }
         // TODO - Send events to other listeners that the layer has been discovered
     }

@@ -122,6 +122,9 @@ public class Interactor : AbstractSelectable
         // Tell the selectable panel that we died
         GameObject.FindGameObjectWithTag("Player").GetComponent<ConsistencyStateHandler>().OnInteractorDeath(this);
 
+        ResourceHandler resources = GameObject.Find("ResourceContainer").GetComponent<ResourceHandler>();
+        resources.addResourceType(ResourceType.happiness, -1);
+
         base.OnDeath();
         playDeathAudio();
     }
