@@ -4646,8 +4646,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 25
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 2
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -18505,6 +18505,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 631328696}
     m_Modifications:
+    - target: {fileID: 2337448127515580946, guid: ced15fb7f8ae96b4cb97c54c6ee96da3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2337448128951316645, guid: ced15fb7f8ae96b4cb97c54c6ee96da3,
         type: 3}
       propertyPath: CaveCover
