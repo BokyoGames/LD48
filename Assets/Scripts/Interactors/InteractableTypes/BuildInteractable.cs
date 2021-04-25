@@ -9,6 +9,7 @@ public enum StructureType
     spawn,
     deposit,
     hospital,
+    spawn_builder,
 }
 
 public class BuildInteractable : AbstractInteractableLogic
