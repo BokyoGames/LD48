@@ -36,4 +36,11 @@ public class Interactable : UseSelectable
     public override void OnTick() {
         InteractionResponder.OnTick();
     }
+
+    public override void Demolish() {
+        if(IsDestructible) {
+            InteractionResponder.StartDemolish();
+            SFXHandler.GetInstance().PlayFX("building_collapse");
+        }
+    }
 }

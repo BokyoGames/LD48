@@ -8,6 +8,7 @@ public class PanelStateHandler : MonoBehaviour
 
     public Button UseButton;
     public Button StopButton;
+    public Button DestroyButton;
     public GameObject ButtonGroup;
     public GameObject BuildPicker;
     public GameObject TutorialHandler;
@@ -33,8 +34,14 @@ public class PanelStateHandler : MonoBehaviour
 
         if(consistencyHandler.CurrentInteractableSelection != null) {
             UseButton.interactable = true;
+            if(consistencyHandler.CurrentInteractableSelection.IsDestructible) {
+                DestroyButton.interactable = true;
+            } else {
+                DestroyButton.interactable = false;
+            }
         } else {
             UseButton.interactable = false;
+            DestroyButton.interactable = false;
         }
 
         ButtonGroup.SetActive(true);
@@ -55,9 +62,31 @@ public class PanelStateHandler : MonoBehaviour
     }
 
     public void OnSelect(GameObject obj) {
-        Debug.Log("Select element");
         if(BuildPicker.GetComponent<PickerStatus>().build_reference)
             BuildPicker.GetComponent<PickerStatus>().Build(obj);
+        if(consistencyHandler.CurrentInteractorSelection == null) {
+            Debug.LogWarning("This shouldn't happen, use was clicked but no interactor was selected");
+            return;
+        }
+        if(consistencyHandler.CurrentInteractableSelection == null) {
+            Debug.LogWarning("This shouldn't happen, use was clicked but no interactable was selected");
+            return;
+        }
+        consistencyHandler.CurrentInteractorSelection.OnUse(consistencyHandler.CurrentInteractableSelection);
+    }
+
+    public void OnDestroyButton() {
+        if(consistencyHandler.CurrentInteractorSelection == null) {
+            Debug.LogWarning("This shouldn't happen, use was clicked but no interactor was selected");
+            return;
+        }
+        if(consistencyHandler.CurrentInteractableSelection == null) {
+            Debug.LogWarning("This shouldn't happen, use was clicked but no interactable was selected");
+            return;
+        }
+        // This is like normal OnUse but instead we try to destroy
+        consistencyHandler.CurrentInteractorSelection.OnUse(consistencyHandler.CurrentInteractableSelection, true);
+        consistencyHandler.SetDirty();
     }
 
     public void OnStop() {
