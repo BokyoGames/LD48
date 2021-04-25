@@ -20,8 +20,13 @@ public class PatrolEnemy : AbstractEnemyLogic
         }
 
         if(IsFighting) {
-            if(damageDealer.TickAndCheckIfWeShouldAttack())
+            if(damageDealer.TickAndCheckIfWeShouldAttack()) {
+                if(FightingTarget == null) {
+                    TargetChange();
+                    return;
+                }
                 FightingTarget.DamageReceiver.OnDamage(damageDealer.AttackParameter);
+            }
             return;
         }
     }

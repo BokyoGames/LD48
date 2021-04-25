@@ -13,15 +13,18 @@ public class GoblinEnemy : AbstractEnemyLogic
     }
 
     public override void OnTick() {
-        // Example state machine here
         if(HasFightingTarget && !IsFighting) {
-            // Walk is handled in update out of ticks
             return;
         }
 
         if(IsFighting) {
-            if(damageDealer.TickAndCheckIfWeShouldAttack())
+            if(damageDealer.TickAndCheckIfWeShouldAttack()) {
+                if(FightingTarget == null) {
+                    TargetChange();
+                    return;
+                }
                 FightingTarget.DamageReceiver.OnDamage(damageDealer.AttackParameter);
+            }
             return;
         }
     }
