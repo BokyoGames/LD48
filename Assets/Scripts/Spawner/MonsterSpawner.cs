@@ -30,7 +30,7 @@ public class MonsterSpawner : MonoBehaviour
     void OnTick()
     {
         delay--;
-        if(delay <= 0 && (spawned > 0|| max_number_of_monster != -1))
+        if(delay <= 0 && (spawned > 0 || max_number_of_monster == -1))
         {
             delay = max_delay;
             spawned--;
