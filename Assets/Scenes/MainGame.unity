@@ -539,7 +539,7 @@ MonoBehaviour:
   ButtonImageList:
   - {fileID: 21300000, guid: 002993e7d46dd8bc18393228e102203d, type: 3}
   - {fileID: 21300000, guid: 2d96a994096fb648a966649a44ddd1e4, type: 3}
-  - {fileID: 21300000, guid: ca9f354d0ca475f068b8bb598839ce53, type: 3}
+  - {fileID: 21300000, guid: 9e3d052977f70b17b971c0d2790bcb04, type: 3}
 --- !u!1 &82705930
 GameObject:
   m_ObjectHideFlags: 0
@@ -2433,7 +2433,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9a3c6c03c7c0c7c45a966b186f8d00de, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eb1e8279965f8a4ac9664dff21fe5a24, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
