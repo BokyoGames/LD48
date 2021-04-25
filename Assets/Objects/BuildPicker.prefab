@@ -34,7 +34,7 @@ RectTransform:
   - {fileID: 1495817808037262565}
   - {fileID: 3678681759551847520}
   m_Father: {fileID: 1501399629603544410}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -192,9 +192,9 @@ RectTransform:
   - {fileID: 8794011937650177087}
   - {fileID: 3324959414981827167}
   - {fileID: 3181627970058368894}
-  - {fileID: 7601128443480292947}
-  - {fileID: 7384239197740797372}
   - {fileID: 7532859258907436714}
+  - {fileID: 7384239197740797372}
+  - {fileID: 7601128443480292947}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 1501399630133141356}
   - component: {fileID: 1501399630133141363}
   m_Layer: 5
-  m_Name: CarpentersGuild
+  m_Name: Masonry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1375,7 +1375,7 @@ RectTransform:
   - {fileID: 3327060584355307388}
   - {fileID: 3325344378640946000}
   m_Father: {fileID: 1501399629603544410}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1608,8 +1608,8 @@ RectTransform:
   m_Children:
   - {fileID: 1501399630183335569}
   - {fileID: 4652523568594821853}
-  - {fileID: 3805196353768342513}
   - {fileID: 9059597417949019444}
+  - {fileID: 3805196353768342513}
   m_Father: {fileID: 1501399629603544410}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2093,7 +2093,7 @@ PrefabInstance:
     - target: {fileID: 7751726954188547558, guid: 252f988f20cf823038844e33a46c61e7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7751726954188547558, guid: 252f988f20cf823038844e33a46c61e7,
         type: 3}
@@ -2433,7 +2433,7 @@ PrefabInstance:
     - target: {fileID: 1498498678251711394, guid: 252f988f20cf823038844e33a46c61e7,
         type: 3}
       propertyPath: m_Text
-      value: '10
+      value: '20
 
 '
       objectReference: {fileID: 0}
@@ -2441,7 +2441,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 7edad66a09f629002aeb75b48d5f11b0,
+      objectReference: {fileID: 21300000, guid: b7deb17116016394486497f50f187611,
         type: 3}
     - target: {fileID: 7751726954188547558, guid: 252f988f20cf823038844e33a46c61e7,
         type: 3}
@@ -2702,13 +2702,13 @@ PrefabInstance:
     - target: {fileID: 1498498678251711394, guid: 252f988f20cf823038844e33a46c61e7,
         type: 3}
       propertyPath: m_Text
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2238950157290662966, guid: 252f988f20cf823038844e33a46c61e7,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 477fdbdcb1511b6488ce8524629c3fb8,
+      objectReference: {fileID: 21300000, guid: 7edad66a09f629002aeb75b48d5f11b0,
         type: 3}
     - target: {fileID: 7751726954188547558, guid: 252f988f20cf823038844e33a46c61e7,
         type: 3}
@@ -2846,7 +2846,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 477fdbdcb1511b6488ce8524629c3fb8,
+      objectReference: {fileID: 21300000, guid: b7deb17116016394486497f50f187611,
         type: 3}
     - target: {fileID: 7751726954188547558, guid: 252f988f20cf823038844e33a46c61e7,
         type: 3}
@@ -2886,7 +2886,7 @@ PrefabInstance:
     - target: {fileID: 7751726954188547558, guid: 252f988f20cf823038844e33a46c61e7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7751726954188547558, guid: 252f988f20cf823038844e33a46c61e7,
         type: 3}
@@ -3354,11 +3354,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: resource
       objectReference: {fileID: 0}
+    - target: {fileID: 1498498678251711394, guid: 252f988f20cf823038844e33a46c61e7,
+        type: 3}
+      propertyPath: m_Text
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 2238950157290662966, guid: 252f988f20cf823038844e33a46c61e7,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b7deb17116016394486497f50f187611,
+      objectReference: {fileID: 21300000, guid: 477fdbdcb1511b6488ce8524629c3fb8,
         type: 3}
     - target: {fileID: 7751726954188547558, guid: 252f988f20cf823038844e33a46c61e7,
         type: 3}
