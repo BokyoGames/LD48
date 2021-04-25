@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df9eb841ffd2eed47b2543217fdaea0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FightingTarget: {fileID: 0}
+  IsFighting: 0
+  PatrolTarget: {fileID: 0}
+  PatrolManager: {fileID: 0}
 --- !u!1001 &7060611839503111025
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19,6 +23,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 760037934390373283, guid: d3cf4fa093d12de4db4240913e9e5d7b,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -677505001
+      objectReference: {fileID: 0}
+    - target: {fileID: 760037934390373283, guid: d3cf4fa093d12de4db4240913e9e5d7b,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 760037934390373283, guid: d3cf4fa093d12de4db4240913e9e5d7b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9187004496879548908, guid: d3cf4fa093d12de4db4240913e9e5d7b,
         type: 3}
       propertyPath: m_Name

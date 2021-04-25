@@ -65,6 +65,7 @@ public abstract class AbstractEnemyLogic : MonoBehaviour
 
     virtual public void OnStopAggro() {
         FightingTarget = null;
+        IsFighting = false;
         Movable movable = GetComponent<Movable>();
         if(movable == null) {
             Debug.LogWarning(gameObject.name + ": Does not have a movable component, ignoring.");
