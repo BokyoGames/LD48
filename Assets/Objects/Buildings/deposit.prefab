@@ -284,7 +284,7 @@ MonoBehaviour:
   min_level: 0
   expertise_required: 0
   build_time: 20
-  type: 0
+  type: 3
 --- !u!114 &6421449709608381937
 MonoBehaviour:
   m_ObjectHideFlags: 0

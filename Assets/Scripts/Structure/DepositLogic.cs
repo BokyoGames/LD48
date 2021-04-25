@@ -11,6 +11,9 @@ public class DepositLogic : MonoBehaviour
         resources = GameObject.Find("ResourceContainer").GetComponent<ResourceHandler>();
         resources.addResourceMaxType(ResourceType.stone, 20);
         resources.addResourceMaxType(ResourceType.iron, 20);
+        resources.addResourceMaxType(ResourceType.gold, 20);
+        resources.addResourceMaxType(ResourceType.diamond, 20);
+        resources.addResourceMaxType(ResourceType.mithril, 20);
     }
 
     // Update is called once per frame

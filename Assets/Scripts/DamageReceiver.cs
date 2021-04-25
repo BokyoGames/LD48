@@ -62,4 +62,17 @@ public class DamageReceiver : MonoBehaviour
         }
         UpdateHealthBarValue();
     }
+
+    public void OnHeal(int heal) 
+    {
+        if(weAlreadyDied)
+            return;
+        Debug.Log(gameObject.name +": We got " + heal + " of heal.");
+        Health += heal;
+        if(Health > MaxHealth) 
+        {
+            Health = MaxHealth;
+        }
+        UpdateHealthBarValue();
+    }
 }

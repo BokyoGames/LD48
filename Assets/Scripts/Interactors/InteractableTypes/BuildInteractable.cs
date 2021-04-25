@@ -5,7 +5,10 @@ using UnityEngine;
 public enum StructureType
 {
     undefined,
-    house
+    house,
+    spawn,
+    deposit,
+    hospital,
 }
 
 public class BuildInteractable : AbstractInteractableLogic
