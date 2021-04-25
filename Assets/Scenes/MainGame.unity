@@ -13927,6 +13927,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1645015617}
   - component: {fileID: 1645015618}
+  - component: {fileID: 1645015621}
+  - component: {fileID: 1645015620}
+  - component: {fileID: 1645015619}
   m_Layer: 0
   m_Name: SFXContainer
   m_TagString: Untagged
@@ -13963,6 +13966,57 @@ MonoBehaviour:
   Name: sfx_build
   Source: {fileID: 0}
   clip: {fileID: 8300000, guid: 539fa9ab68972ab41814f451dd9e806d, type: 3}
+  AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
+    type: 3}
+--- !u!114 &1645015619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645015616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7beb94afc4d973439905f73123caef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: okay3
+  Source: {fileID: 0}
+  clip: {fileID: 8300000, guid: 62937431225c1f44e8cde9f3e47da48b, type: 3}
+  AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
+    type: 3}
+--- !u!114 &1645015620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645015616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7beb94afc4d973439905f73123caef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: okay2
+  Source: {fileID: 0}
+  clip: {fileID: 8300000, guid: a64d90423b8f42245a7692d30f061c18, type: 3}
+  AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
+    type: 3}
+--- !u!114 &1645015621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645015616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7beb94afc4d973439905f73123caef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: okay1
+  Source: {fileID: 0}
+  clip: {fileID: 8300000, guid: aaea67a136eaf5846810fc5d33f4e12e, type: 3}
   AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
     type: 3}
 --- !u!1001 &1657134255

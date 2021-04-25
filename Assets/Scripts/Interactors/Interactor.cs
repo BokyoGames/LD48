@@ -6,6 +6,7 @@ using UnityEngine;
 public class Interactor : AbstractSelectable
 {
     private bool isInteracting = false;
+    private string[] useAudioClips = {"okay1", "okay2", "okay3"};
 
     // The thing we want to interact with
     //public UseSelectable InteractionTarget;
@@ -43,10 +44,16 @@ public class Interactor : AbstractSelectable
         selector.OnClicked(this);
     }
 
+    void playUseAudio() {
+        var randomIndex = Random.Range(0, useAudioClips.Length);
+        SFXHandler.GetInstance().PlayFX(useAudioClips[randomIndex]);
+    }
+
     // Called by the selector when the panel "use" button is clicked
     public void OnUse(UseSelectable target) {
         target.ConnectOnUse(this);
-        
+
+        playUseAudio();
         // TODO handle interrupting animations if necessary
         if(InteractionTarget != target) {
             OnStop();
