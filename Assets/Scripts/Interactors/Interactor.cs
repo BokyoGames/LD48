@@ -6,16 +6,24 @@ using UnityEngine;
 public class Interactor : AbstractSelectable
 {
     private bool isInteracting = false;
+
+    // If we are fighting an enemy, combat target is not null
+    DamageReceiver combatTarget;
+    private bool inCombat {
+        get => combatTarget != null;
+    }
+
     private string[] useAudioClips = {"okay1", "okay2", "okay3"};
 
-    // The thing we want to interact with
-    //public UseSelectable InteractionTarget;
     public DamageReceiver DamageReceiver;
+
+    DamageDealer damageDealer;
 
     Movable movable;
 
-    void Start() {
+    public override void OnStart() {
         DamageReceiver = GetComponent<DamageReceiver>();
+        damageDealer = GetComponent<DamageDealer>();
         movable = GetComponent<Movable>();
     }
 
@@ -28,6 +36,17 @@ public class Interactor : AbstractSelectable
         isInteracting = true;
         movable.StopMovement();
         // Do other stuff here if we need to start interaction animations, etc
+    }
+
+    // Special function called when an interactor attaches to an enemy
+    public void StartCombat(Enemy enemy) {
+        combatTarget = enemy.GetComponent<DamageReceiver>();
+    }
+
+    public void StopCombat() {
+        combatTarget = null;
+        // Not in combat anymore, reset the tick counter
+        damageDealer.ResetTicks();
     }
 
     public void StopInteraction() {
@@ -73,5 +92,13 @@ public class Interactor : AbstractSelectable
             ((UseSelectable)InteractionTarget).DisconnectInteractor(this);
         }
         InteractionTarget = null;
+    }
+
+    public override void OnTick() {
+        if(inCombat) {
+            if(damageDealer.TickAndCheckIfWeShouldAttack()) {
+                combatTarget.OnDamage(damageDealer.AttackParameter);
+            }
+        } 
     }
 }

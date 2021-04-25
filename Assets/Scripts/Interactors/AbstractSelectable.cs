@@ -5,6 +5,10 @@ using UnityEngine;
 public abstract class AbstractSelectable : MonoBehaviour
 {
 
+    DataHandler dataHandler; 
+    // Time accumulator for ticks
+    float accumulator = 0;
+
     public AbstractSelectable InteractionTarget;
 
     // This value indicates at which depth the object is in the layer hierarchy.
@@ -22,4 +26,29 @@ public abstract class AbstractSelectable : MonoBehaviour
         var selectable = GetComponentInChildren<UISelectableLogic>();
         selectable.ToggleSelectable(false);
     }
+
+    // Generic OnTick function, called when a tick passes for the given selectable
+    public virtual void OnTick() { }
+
+    // Use this instead of Start()
+    public virtual void OnStart() { }
+
+    void Start() {
+        dataHandler = DataHandler.Handler;
+        OnStart();
+    }
+
+    void Update() {
+        // Lazy initialization cause sometimes it messes up
+        if(dataHandler == null)  {
+            dataHandler = DataHandler.Handler;
+            return;
+        }
+        accumulator +=  (Time.deltaTime * 1000);
+        while(accumulator > dataHandler.TickDurationInMilliseconds) {
+            OnTick();
+            accumulator -= dataHandler.TickDurationInMilliseconds;
+        }
+    }
+
 }

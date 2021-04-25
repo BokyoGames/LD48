@@ -5,15 +5,10 @@ using UnityEngine;
 public class Enemy : UseSelectable
 {
 
-    DataHandler dataHandler; 
-
     public AbstractEnemyLogic EnemyLogic;
-
-    float accumulator = 0;
 
     void Start() {
         EnemyLogic = GetComponent<AbstractEnemyLogic>();
-        dataHandler = GameObject.FindGameObjectWithTag("DataHandler").GetComponent<DataHandler>();
     }
 
     public override void ConnectOnUse(Interactor interactor) {
@@ -21,19 +16,17 @@ public class Enemy : UseSelectable
     }
 
     public override void ConnectInteractor(Interactor interactor) {
+        interactor.StartCombat(this);
         EnemyLogic.OnStart(interactor);
     }
 
     public override void DisconnectInteractor(Interactor interactor) {
+        interactor.StopCombat();
         EnemyLogic.OnStop(interactor);
     }
 
-    // Enemy AI loop here
-    void Update() {
-        accumulator +=  (Time.deltaTime * 1000);
-        while(accumulator > dataHandler.TickDurationInMilliseconds) {
-            EnemyLogic.OnTick();
-            accumulator -= dataHandler.TickDurationInMilliseconds;
-        }
+    // Enemy AI Loop here
+    public override void OnTick() {
+        EnemyLogic.OnTick();
     }
 }

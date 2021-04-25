@@ -6,15 +6,11 @@ using UnityEngine;
 public class Interactable : UseSelectable
 {
 
-    DataHandler dataHandler;
     // The piece of logic that triggers an interaction
     public AbstractInteractableLogic InteractionResponder;
 
-    float accumulator = 0;
-
-    void Start() {
+    public override void OnStart() {
         InteractionResponder = GetComponent<AbstractInteractableLogic>();
-        dataHandler = GameObject.FindGameObjectWithTag("DataHandler").GetComponent<DataHandler>();
     }
 
     public override void ConnectOnUse(Interactor interactor) {
@@ -37,11 +33,7 @@ public class Interactable : UseSelectable
         base.TriggerUnselection();
     }
 
-    void Update() {
-        accumulator +=  (Time.deltaTime * 1000);
-        while(accumulator > dataHandler.TickDurationInMilliseconds) {
-            InteractionResponder.OnTick();
-            accumulator -= dataHandler.TickDurationInMilliseconds;
-        }
+    public override void OnTick() {
+        InteractionResponder.OnTick();
     }
 }
