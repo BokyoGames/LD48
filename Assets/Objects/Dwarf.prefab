@@ -76,6 +76,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractionTarget: {fileID: 0}
   Depth: 0
+  wantToDestroy: 0
   DamageReceiver: {fileID: 0}
 --- !u!114 &2711594127951248745
 MonoBehaviour:
@@ -89,8 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4ef379eaf5bb9e4db19a10256c51ee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 100
-  MaxHealth: 100
+  Health: 10
+  MaxHealth: 10
   life_bar: {fileID: 3410842264742243103}
 --- !u!114 &1645724501
 MonoBehaviour:
@@ -142,8 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d225ba59148a004c8933692da12d220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackParameter: 5
-  AttackInterval: 1
+  AttackParameter: 2
+  AttackInterval: 10
 --- !u!114 &2672118550779143775
 MonoBehaviour:
   m_ObjectHideFlags: 0

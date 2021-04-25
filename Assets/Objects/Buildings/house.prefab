@@ -285,7 +285,7 @@ MonoBehaviour:
   requested_resource_type: 0000000002000000
   min_level: 0
   expertise_required: 0
-  build_time: 20
+  build_time: 80
   type: 1
 --- !u!114 &-4760311264336788166
 MonoBehaviour:

@@ -285,7 +285,7 @@ MonoBehaviour:
   requested_resource_type: 00000000
   min_level: 0
   expertise_required: 0
-  build_time: 20
+  build_time: 80
   type: 2
 --- !u!114 &972588534
 MonoBehaviour:
@@ -299,8 +299,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 294d81612fda946bfa5f5d3612129142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max_spawn_time: 60
-  spawn_time: 60
+  max_spawn_time: 40
+  spawn_time: 40
   randomXSpawnVariance: 5
   Tracker: {fileID: 8829275382189782883}
   dwarf: {fileID: 4792458229275908920, guid: 660b81c9522c6f440b4218a9945ec842, type: 3}
