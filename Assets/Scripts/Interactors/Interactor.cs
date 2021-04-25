@@ -6,6 +6,7 @@ using UnityEngine;
 public class Interactor : AbstractSelectable
 {
     private bool isInteracting = false;
+    public bool wantToDestroy = false;
 
     // If we are fighting an enemy, combat target is not null
     DamageReceiver combatTarget;
@@ -37,6 +38,10 @@ public class Interactor : AbstractSelectable
         isInteracting = true;
         movable.StopMovement();
         // Do other stuff here if we need to start interaction animations, etc
+        if(wantToDestroy) {
+            // Force cast because we can, but we shouldn't
+            ((UseSelectable)InteractionTarget).Demolish();
+        }
     }
 
     // Special function called when an interactor attaches to an enemy
@@ -53,6 +58,7 @@ public class Interactor : AbstractSelectable
 
     public void StopInteraction() {
         isInteracting = false;
+        wantToDestroy = false;
     }
 
     public override void TriggerSelection() {
@@ -85,7 +91,7 @@ public class Interactor : AbstractSelectable
     }
 
     // Called by the selector when the panel "use" button is clicked
-    public void OnUse(UseSelectable target) {
+    public void OnUse(UseSelectable target, bool wantToDestroy = false) {
         if(InteractionTarget == target)
             return;
         target.ConnectOnUse(this);
@@ -96,7 +102,7 @@ public class Interactor : AbstractSelectable
             OnStop();
             InteractionTarget = target;
         }
-        //GetComponent<MovementAI>().enabled = true;
+        this.wantToDestroy = wantToDestroy;
         movable.StartMovement(InteractionTarget);
     }
 

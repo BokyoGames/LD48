@@ -33,6 +33,12 @@ public abstract class AbstractInteractableLogic : MonoBehaviour
         interactors.Clear();
     }
 
+    virtual public void StartDemolish() {
+        StopAllWork();
+        Debug.Log("We demolished!");
+        GameObject.Destroy(this);
+    }
+
     // Called every time there is a new tick of work (update resource, etc)
     public abstract void OnTick();
 }
