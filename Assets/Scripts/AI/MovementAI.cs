@@ -12,6 +12,11 @@ public class MovementAI : MonoBehaviour
     AbstractSelectable target;
     LayerHandler layerHandler;
 
+    void Awake() {
+        // Make sure we are disabled
+        this.enabled = false;
+    }
+
     void Start() {
         mover = GetComponent<AbstractSelectable>();
         layerHandler = GameObject.FindGameObjectWithTag("LayerHandler").GetComponent<LayerHandler>();

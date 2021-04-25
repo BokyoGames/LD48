@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 2910878903387109844}
   - component: {fileID: 2910878903387109845}
   - component: {fileID: 1537287748830219324}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: InteractableRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -340,3 +340,4 @@ MonoBehaviour:
   initial_quantity: 50
   mine_time: 5
   type: 0
+  ObstructionLayer: {fileID: 0}
