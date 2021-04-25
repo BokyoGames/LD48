@@ -37,12 +37,11 @@ public class DamageReceiver : MonoBehaviour
             SetHealthBarColor(Color.green);
         }
 
-        if(Health == MaxHealth) {
+        if(Health == MaxHealth || Health == 0) {
             life_bar.enabled = false;
         } else {
             life_bar.enabled = true;
         }
-        //x / 100 = y / value
 
         Vector3 scale = life_bar.transform.localScale;
         scale.x = originalLifeBarScaleX * ((float)Health / (float)MaxHealth);

@@ -12,6 +12,9 @@ public abstract class AbstractEnemyLogic : MonoBehaviour
     // Dwarf being targeted by the enemy
     public Interactor FightingTarget;
 
+    // Component that lets enemies deal attacks
+    protected DamageDealer damageDealer;
+
     public bool HasFightingTarget {
         get => (FightingTarget != null);
     }
@@ -61,4 +64,11 @@ public abstract class AbstractEnemyLogic : MonoBehaviour
     virtual public void OnStartFight() {
         IsFighting = true;
     }
+
+    void Start() {
+        damageDealer = GetComponent<DamageDealer>();
+        OnStart();
+    }
+
+    public abstract void OnStart();
 }

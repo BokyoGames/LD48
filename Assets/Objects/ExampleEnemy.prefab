@@ -277,6 +277,7 @@ GameObject:
   - component: {fileID: 9102817102022727255}
   - component: {fileID: 6190701271588631005}
   - component: {fileID: 4382870299609603878}
+  - component: {fileID: 3996697208085927276}
   m_Layer: 9
   m_Name: ExampleEnemy
   m_TagString: Untagged
@@ -332,8 +333,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FightingTarget: {fileID: 0}
   IsFighting: 0
-  AttackParameter: 0
-  Speed: 5
 --- !u!114 &9187004496879548911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,6 +408,20 @@ MonoBehaviour:
   Health: 20
   MaxHealth: 20
   life_bar: {fileID: 760037934390373283}
+--- !u!114 &3996697208085927276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9187004496879548908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d225ba59148a004c8933692da12d220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttackParameter: 20
+  AttackInterval: 1
 --- !u!1 &9187004496958040706
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,13 +511,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.6375251, y: 1.4414406}
+    - - {x: -3.5287957, y: 1.8417708}
       - {x: 15.715713, y: 6.4920425}
       - {x: 23.773926, y: 6.1764193}
       - {x: 27.672735, y: -1.3925791}
       - {x: 15.593781, y: -1.4317322}
-      - {x: -0.53377295, y: -1.4491153}
-      - {x: -1.631588, y: -0.05692005}
+      - {x: -3.1359158, y: -1.8494449}
+      - {x: -4.456137, y: -0.10140067}
 --- !u!114 &9187004496990367806
 MonoBehaviour:
   m_ObjectHideFlags: 0

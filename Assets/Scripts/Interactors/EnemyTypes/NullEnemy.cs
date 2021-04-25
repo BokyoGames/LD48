@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class NullEnemy : AbstractEnemyLogic
 {
-    public int AttackParameter = 0;
-    public int Speed = 5;
-
     public override void OnTick() {
         // Example state machine here
         if(HasFightingTarget && !IsFighting) {
@@ -15,7 +12,8 @@ public class NullEnemy : AbstractEnemyLogic
         }
 
         if(IsFighting) {
-            FightingTarget.DamageReceiver.OnDamage(AttackParameter);
+            if(damageDealer.TickAndCheckIfWeShouldAttack())
+                FightingTarget.DamageReceiver.OnDamage(damageDealer.AttackParameter);
             return;
         }
     }
@@ -26,5 +24,9 @@ public class NullEnemy : AbstractEnemyLogic
             // Walk until target is in range
             return;
         }
+    }
+
+    public override void OnStart() {
+        // Nothing to be done here
     }
 }

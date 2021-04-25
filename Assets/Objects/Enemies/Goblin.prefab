@@ -14,8 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FightingTarget: {fileID: 0}
   IsFighting: 0
-  AttackParameter: 20
-  Speed: 5
 --- !u!1001 &834838034878890671
 PrefabInstance:
   m_ObjectHideFlags: 0

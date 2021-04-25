@@ -5,13 +5,11 @@ using UnityEngine;
 public class GoblinEnemy : AbstractEnemyLogic
 {
 
-    public int AttackParameter = 1;
-    public int Speed = 5;
-
     Movable movable;
 
-    void Start() {
+    public override void OnStart() {
         movable = GetComponent<Movable>();
+        damageDealer = GetComponent<DamageDealer>();
     }
 
     public override void OnTick() {
@@ -22,7 +20,8 @@ public class GoblinEnemy : AbstractEnemyLogic
         }
 
         if(IsFighting) {
-            FightingTarget.DamageReceiver.OnDamage(AttackParameter);
+            if(damageDealer.TickAndCheckIfWeShouldAttack())
+                FightingTarget.DamageReceiver.OnDamage(damageDealer.AttackParameter);
             return;
         }
     }
