@@ -43,8 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ceadde18262535581f95f9c32c9593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monster: {fileID: 9187004496879548908, guid: d3cf4fa093d12de4db4240913e9e5d7b, type: 3}
+  monster: {fileID: 2198494276322323101, guid: 8959e83df3e4d7145b986b66ac77aa7c, type: 3}
   max_delay: 10
   Depth: 1
   max_number_of_monster: 10
   randomXSpawnVariance: 5
+  PatrolManager: {fileID: 0}

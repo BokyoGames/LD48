@@ -17,6 +17,7 @@ public class PatrolPoint : MonoBehaviour
                 Debug.LogWarning("Incorrect patrol point was returned from patrol manager.");
             }
             patrol.PatrolTarget = otherPoint;
+            patrol.GetComponentInChildren<Animator>().Play("Walk");
         }
     }
 }
