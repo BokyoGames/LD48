@@ -19,6 +19,22 @@ public class PanelStateHandler : MonoBehaviour
         consistencyHandler = GetComponent<ConsistencyStateHandler>();
     }
 
+    void CheckUseButtonAndChangeIcon() {
+        if(consistencyHandler.CurrentInteractableSelection == null)
+            return; // ignore
+        switch(consistencyHandler.CurrentInteractableSelection.SelectableType) {
+            case SelectableType.Ore:
+                Debug.Log("Ore type");
+            break;
+            case SelectableType.Building:
+                Debug.Log("Building type");
+            break;
+            case SelectableType.Enemy:
+                Debug.Log("Enemy type");
+            break;
+        }
+    }
+
     public void PanelButtonCheck() {
         if(consistencyHandler.CurrentInteractorSelection == null) {
             // Hide all panels cause we don't need them
@@ -34,6 +50,7 @@ public class PanelStateHandler : MonoBehaviour
 
         if(consistencyHandler.CurrentInteractableSelection != null) {
             UseButton.interactable = true;
+            CheckUseButtonAndChangeIcon();
             if(consistencyHandler.CurrentInteractableSelection.IsDestructible) {
                 DestroyButton.interactable = true;
             } else {

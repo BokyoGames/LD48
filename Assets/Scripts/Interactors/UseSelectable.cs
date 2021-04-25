@@ -2,9 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum SelectableType {
+    Ore,
+    Enemy,
+    Building,
+};
+
 public abstract class UseSelectable : AbstractSelectable
 {
     public bool IsDestructible = false;
+    public SelectableType SelectableType;
 
     public abstract void ConnectOnUse(Interactor interactor);
     public abstract void ConnectInteractor(Interactor interactor);
