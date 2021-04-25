@@ -10,6 +10,7 @@ public class PanelStateHandler : MonoBehaviour
     public Button StopButton;
     public GameObject ButtonGroup;
     public GameObject BuildPicker;
+    public GameObject TutorialHandler;
 
     private ConsistencyStateHandler consistencyHandler;
 

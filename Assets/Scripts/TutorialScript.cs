@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TutorialScript : MonoBehaviour
 {
     public int DisplayTime = 5000;
+    public Text text_field;
 
     // Start is called before the first frame update
     public string[] tutorials = new string[] {
@@ -23,7 +24,7 @@ public class TutorialScript : MonoBehaviour
         if(DataHandler.Handler.DepthReached < tutorials.Length)
         {
             gameObject.SetActive(true);
-            GetComponent<Text>().text =  tutorials[DataHandler.Handler.DepthReached];
+            text_field.text =  tutorials[DataHandler.Handler.DepthReached];
 
             Invoke("HideTutorial", 10f);
         }
