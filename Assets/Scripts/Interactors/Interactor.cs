@@ -125,4 +125,11 @@ public class Interactor : AbstractSelectable
         base.OnDeath();
         playDeathAudio();
     }
+
+    // In case the interactable thing dies before we get there
+    void LateUpdate() {
+        if(InteractionTarget == null && !isInteracting && movable.IsMoving && combatTarget == null) {
+            movable.StopMovement();
+        }
+    }
 }

@@ -35,13 +35,6 @@ public class MovementAI : MonoBehaviour
             Debug.LogWarning(gameObject.name + ": We are trying to move without a target");
             return;
         }
-        // If we are interacting, it means we reached the target so we don't need
-        // to move anymore.
-        // TODO
-        //if(interactor.IsInteracting || interactor.InteractionTarget == null) {
-        //    this.enabled = false;
-        //    return;
-        //}
 
         Transform targetLocation = target.transform;
         // We need to go down one layer
