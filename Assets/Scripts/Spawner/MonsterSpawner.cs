@@ -30,16 +30,17 @@ public class MonsterSpawner : MonoBehaviour
     void OnTick()
     {
         delay--;
-        if(delay <= 0 && (spawned > 0|| spawned != -1))
+        if(delay <= 0 && (spawned > 0|| max_number_of_monster != -1))
         {
             delay = max_delay;
+            spawned--;
             GameObject instance = Instantiate(monster, this.gameObject.transform.position, this.gameObject.transform.rotation) as GameObject;
-            instance.transform.parent = this.transform.parent;
+            instance.transform.parent = this.gameObject.transform;
             float randomX = Random.Range(0, randomXSpawnVariance) - randomXSpawnVariance / 2f;
             Vector3 newPosition = new Vector3(instance.transform.position.x + randomX, instance.transform.position.y, instance.transform.position.z);
             instance.transform.position = newPosition;
 
-            instance.GetComponent<Interactable>().Depth = Depth;
+            instance.GetComponent<Enemy>().Depth = Depth;
         }
     }
 
