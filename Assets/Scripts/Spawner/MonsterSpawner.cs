@@ -19,6 +19,8 @@ public class MonsterSpawner : MonoBehaviour
     private int spawned;
     private float accumulator;
 
+    public PatrolManager PatrolManager;
+
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +43,12 @@ public class MonsterSpawner : MonoBehaviour
             instance.transform.position = newPosition;
 
             instance.GetComponent<Enemy>().Depth = Depth;
+
+            // Attach patrol manager if it exists
+            if(PatrolManager != null) {
+                var patrol = instance.GetComponent<PatrolEnemy>();
+                patrol.PatrolManager = PatrolManager;
+            }
         }
     }
 
