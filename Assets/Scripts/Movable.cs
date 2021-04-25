@@ -15,6 +15,10 @@ public class Movable : MonoBehaviour
         get => !spriteRenderer.flipX;
     }
 
+    public bool IsMoving {
+        get => ai.enabled;
+    }
+
     void Start() {
         ai = GetComponent<MovementAI>();
         anim = spriteRenderer.GetComponent<Animator>();

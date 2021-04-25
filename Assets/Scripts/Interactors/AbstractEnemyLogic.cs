@@ -41,6 +41,7 @@ public abstract class AbstractEnemyLogic : MonoBehaviour
             i.StopInteraction();
         }
         interactors.Clear();
+        GameObject.Destroy(this.gameObject);
     }
 
     // Select a new target
@@ -55,7 +56,6 @@ public abstract class AbstractEnemyLogic : MonoBehaviour
     // is not yet busy fighting someone else.
     virtual public void OnAggro(Interactor interactor) {
         FightingTarget = interactor;
-        Debug.Log(FightingTarget.name);
     }
 
     virtual public void OnStartFight() {

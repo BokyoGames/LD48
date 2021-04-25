@@ -1,0 +1,41 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GoblinEnemy : AbstractEnemyLogic
+{
+
+    public int AttackParameter = 1;
+    public int Speed = 5;
+
+    Movable movable;
+
+    void Start() {
+        movable = GetComponent<Movable>();
+    }
+
+    public override void OnTick() {
+        // Example state machine here
+        if(HasFightingTarget && !IsFighting) {
+            // Walk is handled in update out of ticks
+            return;
+        }
+
+        if(IsFighting) {
+            FightingTarget.DamageReceiver.OnDamage(AttackParameter);
+            return;
+        }
+    }
+
+    void Update() {
+        // Movement logic here
+        if(HasFightingTarget && !IsFighting && !movable.IsMoving) {
+            movable.StartMovement(FightingTarget);
+            return;
+        }
+        if(IsFighting && movable.IsMoving) {
+            movable.StopMovement();
+            return;
+        }
+    }
+}

@@ -33,7 +33,6 @@ public class MineInteractor : AbstractInteractableLogic
                 return;
             }
 
-            Debug.Log("Ticked!");
             tick_count += interactors.Count;
 
             if(tick_count > mine_time) {
