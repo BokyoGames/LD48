@@ -927,7 +927,7 @@ PrefabInstance:
     - target: {fileID: 5017061948341979161, guid: 31d0181836092a859a2b41d010380a8b,
         type: 3}
       propertyPath: max_number_of_monster
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5017061948341979161, guid: 31d0181836092a859a2b41d010380a8b,
         type: 3}
@@ -948,7 +948,7 @@ PrefabInstance:
     - target: {fileID: 5017061948341979161, guid: 31d0181836092a859a2b41d010380a8b,
         type: 3}
       propertyPath: max_delay
-      value: 100
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31d0181836092a859a2b41d010380a8b, type: 3}
