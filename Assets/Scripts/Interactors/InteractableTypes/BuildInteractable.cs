@@ -17,6 +17,8 @@ public class BuildInteractable : AbstractInteractableLogic
     private int build_time;
     private ResourceHandler resources;
 
+    public ProgressTracker Tracker;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +33,7 @@ public class BuildInteractable : AbstractInteractableLogic
             base.OnUse(interactor);
             Debug.Log("Ask to use this builder");
             build_picker.SetActive(true);
-            build_picker.GetComponent<PickerStatus>().build_reference = this;        
+            build_picker.GetComponent<PickerStatus>().build_reference = this;
         }
     }
 
@@ -48,6 +50,8 @@ public class BuildInteractable : AbstractInteractableLogic
     {
         structure = obj;
         build_time = structure.GetComponent<GenericStructure>().build_time;
+        if(Tracker != null)
+            Tracker.MaxValue = build_time;
         build_picker.SetActive(false);
 
         var structure_info = structure.GetComponent<GenericStructure>();
@@ -60,9 +64,9 @@ public class BuildInteractable : AbstractInteractableLogic
 
     public void Complete()
     {
-        Debug.Log("Complete the building");
         StopAllWork();
         GameObject instance = Instantiate(structure, this.gameObject.transform.position, this.gameObject.transform.rotation) as GameObject;
+        instance.transform.parent = this.transform.parent;
 
         instance.GetComponent<Interactable>().Depth = gameObject.GetComponent<Interactable>().Depth;
         gameObject.SetActive(false);
@@ -76,13 +80,19 @@ public class BuildInteractable : AbstractInteractableLogic
     public override void OnTick() {
         if(structure != null)
         {
+            if(Tracker != null && !Tracker.gameObject.activeInHierarchy) {
+                Tracker.gameObject.SetActive(true);
+            }
             if(interactors.Count > 0 && build_time > 0) {
                 build_time -= interactors.Count;
+                if(Tracker != null) {
+                    Tracker.CurrentValue = (Tracker.MaxValue - build_time);
+                }
                 if(build_time <= 0)
                 {
                     Complete();
                 }
             }
-        }
+        } 
     }
 }

@@ -9,6 +9,8 @@ public class SpawnInteractor : AbstractInteractableLogic
     public int max_spawn_time = 60;
     public int spawn_time = 60;
 
+    public ProgressTracker Tracker;
+
     public GameObject dwarf;
     public override void OnTick() {
         if(interactors.Count > 0) {
@@ -17,10 +19,14 @@ public class SpawnInteractor : AbstractInteractableLogic
             if(spawn_time <= 0)
             {
                 spawn_time = max_spawn_time;
-                Debug.Log("Spawn a little dwarf");
+                Debug.Log("Spawned a little dwarf");
                 GameObject instance = Instantiate(dwarf, this.gameObject.transform.position, this.gameObject.transform.rotation) as GameObject;
                 instance.GetComponent<Interactor>().Depth = gameObject.GetComponent<Interactable>().Depth;
             }
+        }
+        if(Tracker != null) {
+            Tracker.MaxValue = max_spawn_time;
+            Tracker.CurrentValue = max_spawn_time - spawn_time;
         }
     }
 
