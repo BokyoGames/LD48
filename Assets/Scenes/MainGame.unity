@@ -4446,7 +4446,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1952014683
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4516,21 +4516,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c75d5ec2af0bab4483b69015b62073a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DisplayTime: 5000
+  DisplayTime: 10
   text_field: {fileID: 1945682971}
   tutorials:
-  - Click on the dwarf and on a target and tell him to go dig
-  - 'You can build houses so more dwarves can move into your city
-
-    Click on the
-    dwarf and on a building target and tell him what to build.'
-  - Some special houses let you spawn new units. Try building one and assigning one
-    of your dwarves to operate it.
-  - "Be careful! You never know what you\u2019ll find the deeper you dig.\nTo attact
-    an enemy select a dwarf and an enemy and click use to attack."
-  - If you are injured, try building a hospital.
-  - Some units can specialize in building or fighting, allocate your resources carefully.
-  - Never dig straight down.
+  - Dwarves can dig resources, which are needed for buildings. Sometimes they will
+    also open a passage to a new layer while digging.
+  - Houses are where new Dwarves grow. Send a Dwarf to a House to increase your population.
+  - Deposits increase storage capacity. Taverns increase the amount of Dwarves that
+    can live in your city.
+  - These mines are filled with hostile Goblins, slay them before you proceed!
+  - Sending Dwarves to the Masonry will let you recruit specialized Builders.
+  - Dwarves can go to the Barracks to train specialized Soldiers.
+  - 
+  - Trolls in the cavern, be careful!
+  - Injured Dwarves can be sent to a Hospital to heal.
+  - 
+  - Giant Spiders?! Prepare for an epic battle!
+  - 
+  - You found Mithril! Defeat the monsters and dig as much as you can!
 --- !u!4 &1989171742 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3753384279816502611, guid: 60d8c5bb78405be429525350cf3d4bfc,
