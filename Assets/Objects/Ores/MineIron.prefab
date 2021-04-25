@@ -45,8 +45,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.15566471, y: -0.14271975}
-  m_Size: {x: 9.219009, y: 5.508299}
+  m_Offset: {x: 0.05863536, y: 0.011061901}
+  m_Size: {x: 2.5013404, y: 2.5013404}
   m_Direction: 1
 --- !u!114 &4568871519088832962
 MonoBehaviour:
@@ -112,6 +112,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractionTarget: {fileID: 0}
   Depth: 2
+  IsDestructible: 0
+  SelectableType: 0
   InteractionResponder: {fileID: 0}
 --- !u!50 &2855802924222251313
 Rigidbody2D:
@@ -231,7 +233,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -643466089
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b7deb17116016394486497f50f187611, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -313,7 +315,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -677505001
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 239b739b47257ce439391f56086fba8c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

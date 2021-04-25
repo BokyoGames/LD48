@@ -142,8 +142,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.15566471, y: -0.14271975}
-  m_Size: {x: 9.219009, y: 5.508299}
+  m_Offset: {x: 0.02309228, y: 0.047662262}
+  m_Size: {x: 2.3025992, y: 2.3025992}
   m_Direction: 1
 --- !u!114 &2577433830577141600
 MonoBehaviour:
@@ -209,6 +209,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractionTarget: {fileID: 0}
   Depth: 0
+  IsDestructible: 0
+  SelectableType: 0
   InteractionResponder: {fileID: 0}
 --- !u!50 &4252206987324262291
 Rigidbody2D:

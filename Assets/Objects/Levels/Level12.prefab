@@ -2198,6 +2198,11 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 2.2810273
       objectReference: {fileID: 0}
+    - target: {fileID: 2230668890206513728, guid: 077c7abc4b786be20af34d623e6165c8,
+        type: 3}
+      propertyPath: Depth
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 2230668890206513730, guid: 077c7abc4b786be20af34d623e6165c8,
         type: 3}
       propertyPath: m_Name
