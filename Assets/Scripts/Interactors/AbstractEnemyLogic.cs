@@ -52,6 +52,8 @@ public abstract class AbstractEnemyLogic : MonoBehaviour
         if(interactors.Count > 0 && FightingTarget == null) {
             // Get a new random target
             FightingTarget = interactors.ToList()[Random.Range(0, interactors.Count)];
+        } else if(FightingTarget == null) {
+            OnStopAggro();
         }
     }
 
@@ -59,6 +61,16 @@ public abstract class AbstractEnemyLogic : MonoBehaviour
     // is not yet busy fighting someone else.
     virtual public void OnAggro(Interactor interactor) {
         FightingTarget = interactor;
+    }
+
+    virtual public void OnStopAggro() {
+        FightingTarget = null;
+        Movable movable = GetComponent<Movable>();
+        if(movable == null) {
+            Debug.LogWarning(gameObject.name + ": Does not have a movable component, ignoring.");
+            return;
+        }
+        movable.StopMovement();
     }
 
     virtual public void OnStartFight() {

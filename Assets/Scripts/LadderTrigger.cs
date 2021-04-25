@@ -11,6 +11,11 @@ public class LadderTrigger : MonoBehaviour
     void OnTriggerStay2D(Collider2D col) {
         // We need to figure out if we want to go up or down (or nowhere)
         LadderClimber climber = col.GetComponentInParent<LadderClimber>();
+        if(climber == null) {
+            // Probably someone that shouldn't be climbing ladders
+            Debug.LogWarning(col.gameObject.name + ": We can't climb ladders.");
+            return;
+        }
         climber.TryClimbLadder(Top.transform, Bottom.transform);
     }
 

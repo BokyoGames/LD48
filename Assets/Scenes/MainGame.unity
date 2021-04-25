@@ -17833,7 +17833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9ace3cfb0ca9e542bb082fe834d5297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TickDurationInMilliseconds: 1000
+  TickDurationInMilliseconds: 200
 --- !u!4 &2087457252
 Transform:
   m_ObjectHideFlags: 0

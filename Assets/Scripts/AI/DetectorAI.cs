@@ -22,4 +22,11 @@ public class DetectorAI : MonoBehaviour
         }
         TargetDetected(col.GetComponentInParent<Interactor>());
     }
+
+    void OnTriggerExit2D(Collider2D col) {
+        if(enemy.EnemyLogic.HasFightingTarget && enemy.EnemyLogic.FightingTarget == col.GetComponentInParent<Interactor>()) {
+            enemy.EnemyLogic.FightingTarget = null;
+            enemy.EnemyLogic.TargetChange();
+        }
+    }
 }
