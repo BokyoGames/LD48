@@ -61,12 +61,16 @@ public class BuildInteractable : AbstractInteractableLogic
     public void Complete()
     {
         Debug.Log("Complete the building");
-        SFXHandler.GetInstance().PlayFX("sfx_build");
         StopAllWork();
         GameObject instance = Instantiate(structure, this.gameObject.transform.position, this.gameObject.transform.rotation) as GameObject;
 
         instance.GetComponent<Interactable>().Depth = gameObject.GetComponent<Interactable>().Depth;
         gameObject.SetActive(false);
+    }
+
+    public override void StopAllWork() {
+        base.StopAllWork();
+        SFXHandler.GetInstance().PlayFX("sfx_build");
     }
 
     public override void OnTick() {

@@ -44,4 +44,11 @@ public class MineInteractor : AbstractInteractableLogic
             }
         }
     }
+
+    public override void StopAllWork() {
+        base.StopAllWork();
+        // TODO: temporary audio cue, gotta fix with the real one
+        SFXHandler.GetInstance().PlayFX("sfx_build");
+    }
+
 }
