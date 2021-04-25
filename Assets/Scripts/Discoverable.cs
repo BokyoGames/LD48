@@ -27,6 +27,8 @@ public class Discoverable : MonoBehaviour
         if(ActiveObjects != null && !ActiveObjects.gameObject.activeInHierarchy) {
             ActiveObjects.gameObject.SetActive(true);
             DataHandler.Handler.DepthReached++;
+            
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PanelStateHandler>().TutorialHandler.GetComponent<TutorialScript>().DisplayTutorial();
         }
         // TODO - Send events to other listeners that the layer has been discovered
     }
