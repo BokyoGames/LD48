@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TutorialScript : MonoBehaviour
 {
@@ -19,9 +20,20 @@ public class TutorialScript : MonoBehaviour
 
     public void DisplayTutorial()
     {
-        //DataHandler.Handler.DepthReached
+        if(DataHandler.Handler.DepthReached < tutorials.Length)
+        {
+            gameObject.SetActive(true);
+            GetComponent<Text>().text =  tutorials[DataHandler.Handler.DepthReached];
+
+            Invoke("HideTutorial", 10f);
+        }
     }
-    
+
+    private void HideTutorial()
+    {
+        gameObject.SetActive(false);
+    }
+
     void Start()
     {
     }

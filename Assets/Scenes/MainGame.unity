@@ -16528,6 +16528,7 @@ GameObject:
   - component: {fileID: 1952014683}
   - component: {fileID: 1952014685}
   - component: {fileID: 1952014684}
+  - component: {fileID: 1952014686}
   m_Layer: 5
   m_Name: Tutorial
   m_TagString: Untagged
@@ -16592,6 +16593,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1952014682}
   m_CullTransparentMesh: 0
+--- !u!114 &1952014686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952014682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c75d5ec2af0bab4483b69015b62073a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DisplayTime: 5000
+  tutorials:
+  - Click on the dwarf and on a target and tell him to go dig
+  - 'You can build houses so more dwarves can move into your city
+
+    Click on the
+    dwarf and on a building target and tell him what to build.'
+  - Some special houses let you spawn new units. Try building one and assigning one
+    of your dwarves to operate it.
+  - "Be careful! You never know what you\u2019ll find the deeper you dig.\nTo attact
+    an enemy select a dwarf and an enemy and click use to attack."
+  - If you are injured, try building a hospital.
+  - Some units can specialize in building or fighting, allocate your resources carefully.
+  - Never dig straight down.
 --- !u!1 &1953570471
 GameObject:
   m_ObjectHideFlags: 0
@@ -18579,6 +18606,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Level0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4208982302806679121, guid: ced15fb7f8ae96b4cb97c54c6ee96da3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7386296912906325924, guid: ced15fb7f8ae96b4cb97c54c6ee96da3,
         type: 3}
