@@ -207,12 +207,22 @@ PrefabInstance:
     - target: {fileID: 6236161536017155613, guid: 8959e83df3e4d7145b986b66ac77aa7c,
         type: 3}
       propertyPath: AttackParameter
-      value: 30
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6236161536017155613, guid: 8959e83df3e4d7145b986b66ac77aa7c,
         type: 3}
       propertyPath: AttackInterval
-      value: 2
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6714656349526363223, guid: 8959e83df3e4d7145b986b66ac77aa7c,
+        type: 3}
+      propertyPath: Health
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6714656349526363223, guid: 8959e83df3e4d7145b986b66ac77aa7c,
+        type: 3}
+      propertyPath: MaxHealth
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8959e83df3e4d7145b986b66ac77aa7c, type: 3}

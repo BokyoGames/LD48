@@ -7,6 +7,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2711594127951248745, guid: 660b81c9522c6f440b4218a9945ec842,
+        type: 3}
+      propertyPath: Health
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2711594127951248745, guid: 660b81c9522c6f440b4218a9945ec842,
+        type: 3}
+      propertyPath: MaxHealth
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4792458229275908920, guid: 660b81c9522c6f440b4218a9945ec842,
         type: 3}
       propertyPath: m_Name
@@ -76,7 +86,12 @@ PrefabInstance:
     - target: {fileID: 5239580078945790629, guid: 660b81c9522c6f440b4218a9945ec842,
         type: 3}
       propertyPath: AttackParameter
-      value: 10
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239580078945790629, guid: 660b81c9522c6f440b4218a9945ec842,
+        type: 3}
+      propertyPath: AttackInterval
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5894140855202270841, guid: 660b81c9522c6f440b4218a9945ec842,
         type: 3}

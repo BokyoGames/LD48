@@ -340,6 +340,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initial_quantity: 50
-  mine_time: 5
+  mine_time: 10
   type: 0
   ObstructionLayer: {fileID: 0}

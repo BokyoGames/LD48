@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 2672118550779143775, guid: 660b81c9522c6f440b4218a9945ec842,
         type: 3}
       propertyPath: Power
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4792458229275908920, guid: 660b81c9522c6f440b4218a9945ec842,
         type: 3}
@@ -78,6 +78,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -4381151160247323851, guid: 1a46e360cb8151640bbddb2990c62a40,
         type: 3}
+    - target: {fileID: 5239580078945790629, guid: 660b81c9522c6f440b4218a9945ec842,
+        type: 3}
+      propertyPath: AttackInterval
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 5894140855202270841, guid: 660b81c9522c6f440b4218a9945ec842,
         type: 3}
       propertyPath: m_Controller

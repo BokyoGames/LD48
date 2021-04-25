@@ -38,6 +38,26 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3996697208085927276, guid: d3cf4fa093d12de4db4240913e9e5d7b,
+        type: 3}
+      propertyPath: AttackParameter
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996697208085927276, guid: d3cf4fa093d12de4db4240913e9e5d7b,
+        type: 3}
+      propertyPath: AttackInterval
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4382870299609603878, guid: d3cf4fa093d12de4db4240913e9e5d7b,
+        type: 3}
+      propertyPath: Health
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4382870299609603878, guid: d3cf4fa093d12de4db4240913e9e5d7b,
+        type: 3}
+      propertyPath: MaxHealth
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 9187004495930674732, guid: d3cf4fa093d12de4db4240913e9e5d7b,
         type: 3}
       propertyPath: m_Offset.x
