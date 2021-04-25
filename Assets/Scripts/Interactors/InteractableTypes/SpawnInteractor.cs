@@ -32,7 +32,7 @@ public class SpawnInteractor : AbstractInteractableLogic
                 spawn_time = max_spawn_time;
                 Debug.Log("Spawned a little dwarf");
 
-                if(resources.getResourceType(ResourceType.happiness) <= resources.getResourceMaxType(ResourceType.happiness))
+                if(resources.getResourceType(ResourceType.happiness) < resources.getResourceMaxType(ResourceType.happiness))
                 {
                     resources.addResourceType(ResourceType.happiness, 1);
                     float randomX = Random.Range(0, randomXSpawnVariance) - randomXSpawnVariance / 2f;
