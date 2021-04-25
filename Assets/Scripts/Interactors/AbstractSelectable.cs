@@ -33,6 +33,11 @@ public abstract class AbstractSelectable : MonoBehaviour
     // Use this instead of Start()
     public virtual void OnStart() { }
 
+    // Called when this element needs to disappear/die
+    public virtual void OnDeath() {
+        GameObject.Destroy(this.gameObject);
+    }
+
     void Start() {
         dataHandler = DataHandler.Handler;
         OnStart();

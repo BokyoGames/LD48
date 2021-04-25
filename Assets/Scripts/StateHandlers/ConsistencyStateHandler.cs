@@ -33,4 +33,13 @@ public class ConsistencyStateHandler : MonoBehaviour
             isDirty = false;
         }
     }
+
+    // When an interactor dies, we check if we have some broken state or not in the panel
+    public void OnInteractorDeath(Interactor interactor) {
+        if(CurrentInteractorSelection == interactor) {
+            CurrentInteractorSelection = null;
+            CurrentInteractableSelection = null;
+            SetDirty();
+        }
+    }
 }

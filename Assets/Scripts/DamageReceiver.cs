@@ -8,6 +8,7 @@ public class DamageReceiver : MonoBehaviour
     // TODO
     public int Health = 0;
     public int MaxHealth = 0;
+    bool weAlreadyDied = false;
 
     float originalLifeBarScaleX = 0;
 
@@ -18,7 +19,8 @@ public class DamageReceiver : MonoBehaviour
     }
 
     void OnDeath() {
-        Debug.Log("We died");
+        weAlreadyDied = true;
+        GetComponent<AbstractSelectable>().OnDeath();
         // TODO Handle death here
     }
 
@@ -50,13 +52,14 @@ public class DamageReceiver : MonoBehaviour
  
 
     public void OnDamage(int damage) {
+        if(weAlreadyDied)
+            return;
         Debug.Log(gameObject.name +": We got " + damage + " of damage.");
+        Health -= damage;
         if(Health - damage <= 0) {
             OnDeath();
             Health = 0;
-            return;
         }
-        Health -= damage;
         UpdateHealthBarValue();
     }
 }

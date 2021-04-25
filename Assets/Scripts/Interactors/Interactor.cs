@@ -14,9 +14,10 @@ public class Interactor : AbstractSelectable
     }
 
     private string[] useAudioClips = {"okay1", "okay2", "okay3"};
+    private string[] battleAudioClips = {"battle1", "battle2", "battle3"};
+    private string[] deathAudioClips = {"death1", "death2", "death3"};
 
     public DamageReceiver DamageReceiver;
-
     DamageDealer damageDealer;
 
     Movable movable;
@@ -41,6 +42,7 @@ public class Interactor : AbstractSelectable
     // Special function called when an interactor attaches to an enemy
     public void StartCombat(Enemy enemy) {
         combatTarget = enemy.GetComponent<DamageReceiver>();
+        playBattleAudio();
     }
 
     public void StopCombat() {
@@ -72,6 +74,16 @@ public class Interactor : AbstractSelectable
         SFXHandler.GetInstance().PlayFX(useAudioClips[randomIndex]);
     }
 
+    void playBattleAudio() {
+        var randomIndex = Random.Range(0, battleAudioClips.Length);
+        SFXHandler.GetInstance().PlayFX(battleAudioClips[randomIndex]);
+    }
+
+    void playDeathAudio() {
+        var randomIndex = Random.Range(0, deathAudioClips.Length);
+        SFXHandler.GetInstance().PlayFX(deathAudioClips[randomIndex]);
+    }
+
     // Called by the selector when the panel "use" button is clicked
     public void OnUse(UseSelectable target) {
         target.ConnectOnUse(this);
@@ -100,5 +112,15 @@ public class Interactor : AbstractSelectable
                 combatTarget.OnDamage(damageDealer.AttackParameter);
             }
         } 
+    }
+
+    public override void OnDeath() {
+        OnStop();
+
+        // Tell the selectable panel that we died
+        GameObject.FindGameObjectWithTag("Player").GetComponent<ConsistencyStateHandler>().OnInteractorDeath(this);
+
+        base.OnDeath();
+        playDeathAudio();
     }
 }

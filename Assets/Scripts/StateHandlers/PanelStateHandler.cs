@@ -67,4 +67,5 @@ public class PanelStateHandler : MonoBehaviour
         consistencyHandler.CurrentInteractorSelection.OnStop();
         consistencyHandler.SetDirty();
     }
+
 }
