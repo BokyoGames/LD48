@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initial_quantity: -1
-  mine_time: 100
+  mine_time: 10
   type: 4
   ObstructionLayer: {fileID: 0}
 --- !u!1 &2230668890225765784
