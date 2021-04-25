@@ -36,7 +36,12 @@ public abstract class AbstractInteractableLogic : MonoBehaviour
     virtual public void StartDemolish() {
         StopAllWork();
         Debug.Log("We demolished!");
-        GameObject.Destroy(this);
+
+        // Replace the demolished building iwth a buildinteractable instead
+        GameObject instance = Instantiate(DataHandler.Handler.BuildablePrefab, this.gameObject.transform.position, this.gameObject.transform.rotation) as GameObject;
+        instance.transform.parent = this.transform.parent;
+        instance.GetComponent<Interactable>().Depth = gameObject.GetComponent<Interactable>().Depth;
+        gameObject.SetActive(false);
     }
 
     // Called every time there is a new tick of work (update resource, etc)

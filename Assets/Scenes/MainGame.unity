@@ -6163,7 +6163,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1354093499}
-        m_MethodName: OnStop
+        m_MethodName: OnDestroyButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15843,23 +15843,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0e8746e50f02274e94a3522e435c9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Layers:
-  - {fileID: 925663945}
-  - {fileID: 1211989668}
-  - {fileID: 615918150}
-  - {fileID: 176006704}
-  - {fileID: 2071059214}
-  - {fileID: 1294391446}
-  - {fileID: 158828852}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
---- !u!4 &1802579171
+  TickDurationInMilliseconds: 200
+  DepthReached: 0
+  BuildablePrefab: {fileID: 3637614781795748445, guid: b9aba50f238602d42909fec9cdaa53e9,
+    type: 3}
+--- !u!4 &2087457252
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
