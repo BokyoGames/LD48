@@ -932,6 +932,12 @@ PrefabInstance:
       propertyPath: PatrolManager
       value: 
       objectReference: {fileID: 533434648297484741}
+    - target: {fileID: 5017061948341979161, guid: 31d0181836092a859a2b41d010380a8b,
+        type: 3}
+      propertyPath: monster
+      value: 
+      objectReference: {fileID: 5056564176344036947, guid: ecba3cc66c7bb0a4cace5f987a11eb78,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31d0181836092a859a2b41d010380a8b, type: 3}
 --- !u!4 &968706846023714581 stripped
