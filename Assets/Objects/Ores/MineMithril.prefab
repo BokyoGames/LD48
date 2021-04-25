@@ -211,6 +211,7 @@ MonoBehaviour:
   InteractionTarget: {fileID: 0}
   Depth: 0
   IsDestructible: 0
+  SelectableType: 0
   InteractionResponder: {fileID: 0}
 --- !u!50 &4252206987324262291
 Rigidbody2D:
