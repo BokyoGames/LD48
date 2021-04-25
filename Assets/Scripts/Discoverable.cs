@@ -38,6 +38,7 @@ public class Discoverable : MonoBehaviour
     }
 }
 
+ #if UNITY_EDITOR
 [UnityEditor.CustomEditor(typeof(Discoverable))]
 public class DiscoverableEditor : UnityEditor.Editor {
     override public void OnInspectorGUI() {
@@ -48,3 +49,5 @@ public class DiscoverableEditor : UnityEditor.Editor {
         DrawDefaultInspector();
     }
 }
+
+#endif 

@@ -12,7 +12,7 @@ public class MouseDraggableCamera : MonoBehaviour
 
             var newPosition = new Vector3();
 
-            newPosition.x = Input.GetAxis("Mouse X") * DragSpeed * Time.deltaTime;
+            //newPosition.x = Input.GetAxis("Mouse X") * DragSpeed * Time.deltaTime;
             newPosition.y = Input.GetAxis("Mouse Y") * DragSpeed * Time.deltaTime;
 
             // translates to the opposite direction of mouse position.
