@@ -29,19 +29,12 @@ public class ResourceHandler : MonoBehaviour
     public int max_mithril = 10;
     public int max_happiness = 100;
 
-    void Start()
-    {
-        
-    }
-
-    public int getResourceType(ResourceType type)
-    {
+    public int getResourceType(ResourceType type) {
         return this.getResourceType(type.ToString());
     }
-    public int getResourceType(string type)
-    {
-        switch(type)
-        {
+
+    public int getResourceType(string type) {
+        switch(type) {
             case "stone":
                 return stone;
             case "iron":
@@ -59,14 +52,12 @@ public class ResourceHandler : MonoBehaviour
         }
     }
 
-    public int addResourceType(ResourceType type, int quantity)
-    {
+    public int addResourceType(ResourceType type, int quantity) {
         return this.addResourceType(type.ToString(), quantity);
     }
-    public int addResourceType(string type, int quantity)
-    {
-        switch(type)
-        {
+
+    public int addResourceType(string type, int quantity) {
+        switch(type) {
             case "stone":
                 var x = this.getRemainingResource(stone, max_stone, quantity);
                 stone += x.Item1;
@@ -97,20 +88,18 @@ public class ResourceHandler : MonoBehaviour
     }
 
     // Return [used, remaining];
-    private (int,int) getRemainingResource(int base_quantity, int max, int quantity)
-    {
+    private (int,int) getRemainingResource(int base_quantity, int max, int quantity) {
         if(base_quantity + quantity > max)
             return (max - base_quantity, base_quantity + quantity - max);
         
         return (quantity, 0);
     }
 
-    public int getResourceMaxType(ResourceType type)
-    {
+    public int getResourceMaxType(ResourceType type) {
         return this.getResourceMaxType(type.ToString());
     }
-    public int getResourceMaxType(string type)
-    {
+
+    public int getResourceMaxType(string type) {
         switch(type)
         {
             case "stone":
@@ -130,12 +119,18 @@ public class ResourceHandler : MonoBehaviour
         }
     }
 
-    public void addResourceMaxType(ResourceType type, int quantity)
-    {
+    public void addResourceMaxType(ResourceType type, int quantity) {
         this.addResourceMaxType(type.ToString(), quantity);
     }
-    public void addResourceMaxType(string type, int quantity)
-    {
+
+    public void addResourceMaxType(string type, int quantity) {
+        // Play tavern sound
+        if(type == "happiness") {
+            SFXHandler.GetInstance().PlayFX("max_tavern");
+        // Play mine sound
+        } else {
+            SFXHandler.GetInstance().PlayFX("max_ore");
+        }
         switch(type)
         {
             case "stone":
@@ -157,10 +152,5 @@ public class ResourceHandler : MonoBehaviour
                 max_happiness += quantity;
                 break;
         }
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

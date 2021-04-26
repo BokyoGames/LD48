@@ -4384,6 +4384,8 @@ GameObject:
   - component: {fileID: 1645015653}
   - component: {fileID: 1645015652}
   - component: {fileID: 1645015651}
+  - component: {fileID: 1645015656}
+  - component: {fileID: 1645015655}
   m_Layer: 0
   m_Name: SFXContainer
   m_TagString: Untagged
@@ -5032,6 +5034,40 @@ MonoBehaviour:
   Name: goblin_grunt1
   Source: {fileID: 0}
   clip: {fileID: 8300000, guid: d67d9579ffc8c564e90987226796a26f, type: 3}
+  AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
+    type: 3}
+--- !u!114 &1645015655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645015616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7beb94afc4d973439905f73123caef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: max_ore
+  Source: {fileID: 0}
+  clip: {fileID: 8300000, guid: e59bfe5c5455e424aa6b6b60121ab755, type: 3}
+  AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
+    type: 3}
+--- !u!114 &1645015656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645015616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7beb94afc4d973439905f73123caef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: max_tavern
+  Source: {fileID: 0}
+  clip: {fileID: 8300000, guid: 9cf0ff0d61f32964baee3c466e9636c3, type: 3}
   AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
     type: 3}
 --- !u!1 &1715213308
