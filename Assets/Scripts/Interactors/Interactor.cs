@@ -15,6 +15,8 @@ public class Interactor : AbstractSelectable
         get => combatTarget != null;
     }
 
+    public string Job = "Miner";
+
     private string[] useAudioClips = {"okay4", "okay5", "okay6", "okay7", "okay8"};
     private string[] battleAudioClips = {"battle4", "battle5", "battle6", "battle7"};
     private string[] deathAudioClips = {"death4", "death5", "death6", "death7", "death8", "death9"};
