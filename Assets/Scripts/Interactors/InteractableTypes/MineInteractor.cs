@@ -49,7 +49,17 @@ public class MineInteractor : AbstractInteractableLogic
                 return;
             }
 
-            tick_count += interactors.Count;
+            var buildPower = 0;
+            foreach(var i in interactors) {
+                var builder = i.GetComponent<Builder>();
+                if(builder != null) {
+                    buildPower += builder.Power;
+                } else {
+                    buildPower++;
+                }
+            }
+            
+            tick_count += buildPower;
 
             if(tick_count > mine_time) {
                 int unused = resources.addResourceType(type, tick_count/mine_time);
