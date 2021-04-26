@@ -76,6 +76,8 @@ public abstract class AbstractEnemyLogic : MonoBehaviour
 
     virtual public void OnStartFight() {
         IsFighting = true;
+        Movable movable = GetComponent<Movable>();
+        movable.anim.Play("Interacting");
     }
 
     void Start() {

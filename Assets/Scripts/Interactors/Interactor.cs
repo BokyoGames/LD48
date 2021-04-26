@@ -125,8 +125,8 @@ public class Interactor : AbstractSelectable
         ResourceHandler resources = GameObject.Find("ResourceContainer").GetComponent<ResourceHandler>();
         resources.addResourceType(ResourceType.happiness, -1);
 
-        base.OnDeath();
         SFXHandler.GetInstance().PlayRandomFX(deathAudioClips);
+        base.OnDeath();
     }
 
     // In case the interactable thing dies before we get there

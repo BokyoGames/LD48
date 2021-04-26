@@ -43,7 +43,11 @@ public class Movable : MonoBehaviour
     public void StopMovement() {
         ai.ClearTarget();
         ai.enabled = false;
-        anim.Play("Idle");
+        if(GetComponent<Enemy>() == null) {
+            anim.Play("Idle");
+        } else {
+            anim.Play("Walk");
+        }
     }
 
 }

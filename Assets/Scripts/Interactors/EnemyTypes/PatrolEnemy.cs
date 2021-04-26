@@ -16,6 +16,7 @@ public class PatrolEnemy : AbstractEnemyLogic
         if(PatrolTarget == null) {
             PatrolTarget = PatrolManager.PointA;
         }
+        movable.anim.Play("Walk");
     }
 
     public override void OnTick() {
@@ -34,6 +35,14 @@ public class PatrolEnemy : AbstractEnemyLogic
                 FightingTarget.DamageReceiver.OnDamage(this.gameObject, damageDealer.AttackParameter);
             }
             return;
+        }
+    }
+
+    public override void OnStop(Interactor interactor) {
+        base.OnStop(interactor);
+        if(!HasFightingTarget) {
+            IsFighting = false;
+            movable.anim.Play("Walk");
         }
     }
 
