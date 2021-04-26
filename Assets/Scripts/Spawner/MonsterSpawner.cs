@@ -15,6 +15,8 @@ public class MonsterSpawner : MonoBehaviour
     [Range(0, 10f)]
     public float randomXSpawnVariance = 5f;
 
+    public float randomWalkspeedVariance = 1f;
+
     private int delay;
     private int spawned;
     private float accumulator;
@@ -43,6 +45,8 @@ public class MonsterSpawner : MonoBehaviour
             instance.transform.position = newPosition;
 
             instance.GetComponent<Enemy>().Depth = Depth;
+            var movementAI = instance.GetComponent<MovementAI>();
+            movementAI.Speed = movementAI.Speed * Random.Range(0.2f, randomWalkspeedVariance);
 
             // Attach patrol manager if it exists
             if(PatrolManager != null) {
