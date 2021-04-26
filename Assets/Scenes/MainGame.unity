@@ -2513,7 +2513,7 @@ MonoBehaviour:
   gold: 0
   diamond: 0
   mithril: 0
-  happiness: 2
+  happiness: 1
   max_stone: 50
   max_iron: 10
   max_gold: 10

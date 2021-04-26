@@ -12,6 +12,8 @@ public class MonsterSpawner : MonoBehaviour
 
     public int max_number_of_monster;
 
+    public int max_number_of_alive_monster = 4;
+
     [Range(0, 10f)]
     public float randomXSpawnVariance = 5f;
 
@@ -37,6 +39,12 @@ public class MonsterSpawner : MonoBehaviour
         if(delay <= 0 && (spawned > 0 || max_number_of_monster == -1))
         {
             delay = max_delay;
+
+            var number_of_spawned = transform.childCount;
+            
+            if(number_of_spawned >= max_number_of_alive_monster)
+                return;
+
             spawned--;
             GameObject instance = Instantiate(monster, this.gameObject.transform.position, this.gameObject.transform.rotation) as GameObject;
             instance.transform.parent = this.gameObject.transform;
