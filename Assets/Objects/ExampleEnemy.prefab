@@ -321,6 +321,9 @@ MonoBehaviour:
   IsDestructible: 0
   SelectableType: 1
   EnemyLogic: {fileID: 0}
+  GruntSFX:
+  - goblin_grunt1
+  - goblin_grunt2
 --- !u!114 &9187004496879548912
 MonoBehaviour:
   m_ObjectHideFlags: 0

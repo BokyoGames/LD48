@@ -2626,9 +2626,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2af2dd4452ffed046a5db2836e1cfdc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SfxIntervalRandomizer: 2000
   BattleSFXInterval: 1500
   AttackSFXInterval: 1000
   SpawnSFXInterval: 1000
+  EnemyGruntSFXInterval: 3000
 --- !u!4 &752574419
 Transform:
   m_ObjectHideFlags: 0
@@ -4378,6 +4380,10 @@ GameObject:
   - component: {fileID: 1645015649}
   - component: {fileID: 1645015648}
   - component: {fileID: 1645015647}
+  - component: {fileID: 1645015654}
+  - component: {fileID: 1645015653}
+  - component: {fileID: 1645015652}
+  - component: {fileID: 1645015651}
   m_Layer: 0
   m_Name: SFXContainer
   m_TagString: Untagged
@@ -4958,6 +4964,74 @@ MonoBehaviour:
   Name: dwarf_spawn1
   Source: {fileID: 0}
   clip: {fileID: 8300000, guid: 2cca2325fdf65294c8c81f806c2e0335, type: 3}
+  AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
+    type: 3}
+--- !u!114 &1645015651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645015616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7beb94afc4d973439905f73123caef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: troll_grunt1
+  Source: {fileID: 0}
+  clip: {fileID: 8300000, guid: b23b6de3f4651db4098d65efc9683104, type: 3}
+  AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
+    type: 3}
+--- !u!114 &1645015652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645015616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7beb94afc4d973439905f73123caef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: spider_grunt1
+  Source: {fileID: 0}
+  clip: {fileID: 8300000, guid: a0773044bec6ba549bbda378dc733776, type: 3}
+  AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
+    type: 3}
+--- !u!114 &1645015653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645015616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7beb94afc4d973439905f73123caef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: goblin_grunt2
+  Source: {fileID: 0}
+  clip: {fileID: 8300000, guid: 50b67291adce634458f3311fb9eddb84, type: 3}
+  AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
+    type: 3}
+--- !u!114 &1645015654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645015616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7beb94afc4d973439905f73123caef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: goblin_grunt1
+  Source: {fileID: 0}
+  clip: {fileID: 8300000, guid: d67d9579ffc8c564e90987226796a26f, type: 3}
   AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
     type: 3}
 --- !u!1 &1715213308

@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class SFXHandler : MonoBehaviour
 {
+
+    [Range(0, 4000)]
+    public float SfxIntervalRandomizer = 0f;
+
     public float BattleSFXInterval;
     private float lastBattleSFX = 0f;
 
@@ -12,6 +16,9 @@ public class SFXHandler : MonoBehaviour
 
     public float SpawnSFXInterval;
     private float lastSpawnSFX = 0f;
+
+    public float EnemyGruntSFXInterval;
+    private float lastEnemyGruntSFX = 0f;
 
     public static SFXHandler GetInstance() {
         return GameObject.FindGameObjectsWithTag("SoundManager")[0].GetComponent<SFXHandler>();
@@ -68,9 +75,18 @@ public class SFXHandler : MonoBehaviour
         return SFXs[name].Source.isPlaying;
     }
 
+    bool CanPlayGeneric(float interval, float last, bool randomizer = false) {
+        if(randomizer) {
+            float value = Random.Range(-1 * SfxIntervalRandomizer / 2 , SfxIntervalRandomizer / 2);
+            return (Time.time - last) * 1000 > (interval + value);
+        }
+        else
+            return (Time.time - last) * 1000 > interval;
+    }
+
     public bool CanPlayBattleSFX {
         get {
-            if((Time.time - lastBattleSFX) * 1000 > BattleSFXInterval) {
+            if(CanPlayGeneric(BattleSFXInterval, lastBattleSFX)) { 
                 lastBattleSFX = Time.time;
                 return true;
             }
@@ -80,7 +96,7 @@ public class SFXHandler : MonoBehaviour
 
     public bool CanPlayAttackSFX {
         get {
-            if((Time.time - lastAttackSFX) * 1000 > AttackSFXInterval) {
+            if(CanPlayGeneric(AttackSFXInterval, lastAttackSFX)) { 
                 lastAttackSFX = Time.time;
                 return true;
             }
@@ -90,8 +106,17 @@ public class SFXHandler : MonoBehaviour
 
     public bool CanPlaySpawnSFX {
         get {
-            if((Time.time - lastSpawnSFX) * 1000 > SpawnSFXInterval) {
+            if(CanPlayGeneric(SpawnSFXInterval, lastSpawnSFX)) { 
                 lastSpawnSFX = Time.time;
+                return true;
+            }
+            return false;
+        }
+    }
+    public bool CanPlayEnemyGruntSFX {
+        get {
+            if(CanPlayGeneric(EnemyGruntSFXInterval, lastEnemyGruntSFX, true)) { 
+                lastEnemyGruntSFX = Time.time;
                 return true;
             }
             return false;

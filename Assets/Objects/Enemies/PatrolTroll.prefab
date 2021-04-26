@@ -128,6 +128,16 @@ PrefabInstance:
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
       value: 1.7665144
       objectReference: {fileID: 0}
+    - target: {fileID: 2198494276322323072, guid: 8959e83df3e4d7145b986b66ac77aa7c,
+        type: 3}
+      propertyPath: GruntSFX.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2198494276322323072, guid: 8959e83df3e4d7145b986b66ac77aa7c,
+        type: 3}
+      propertyPath: GruntSFX.Array.data[0]
+      value: troll_grunt1
+      objectReference: {fileID: 0}
     - target: {fileID: 2198494276322323101, guid: 8959e83df3e4d7145b986b66ac77aa7c,
         type: 3}
       propertyPath: m_Name
