@@ -1694,7 +1694,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 471906645}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.3, y: 4.38, z: -7}
+  m_LocalPosition: {x: -4.3, y: 4.38, z: -100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2626,6 +2626,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2af2dd4452ffed046a5db2836e1cfdc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BattleSFXInterval: 1500
+  AttackSFXInterval: 1000
 --- !u!4 &752574419
 Transform:
   m_ObjectHideFlags: 0
@@ -2965,7 +2967,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 908251227}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.3, y: 4.38, z: -7}
+  m_LocalPosition: {x: -4.3, y: 4.38, z: -100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4370,6 +4372,7 @@ GameObject:
   - component: {fileID: 1645015643}
   - component: {fileID: 1645015642}
   - component: {fileID: 1645015641}
+  - component: {fileID: 1645015646}
   m_Layer: 0
   m_Name: SFXContainer
   m_TagString: Untagged
@@ -4865,6 +4868,23 @@ MonoBehaviour:
   Name: okay4
   Source: {fileID: 0}
   clip: {fileID: 8300000, guid: 90907a666c229654586b7d3b5277a671, type: 3}
+  AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
+    type: 3}
+--- !u!114 &1645015646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645015616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7beb94afc4d973439905f73123caef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: dwarf_attack
+  Source: {fileID: 0}
+  clip: {fileID: 8300000, guid: 2fa55218dae3a2f4ab90baba89464b8d, type: 3}
   AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
     type: 3}
 --- !u!1 &1715213308
@@ -5542,7 +5562,6 @@ MonoBehaviour:
   DepthReached: 0
   BuildablePrefab: {fileID: 3637614781795748445, guid: b9aba50f238602d42909fec9cdaa53e9,
     type: 3}
-  BattleSFXInterval: 1500
 --- !u!4 &2087457252
 Transform:
   m_ObjectHideFlags: 0

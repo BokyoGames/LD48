@@ -18,6 +18,8 @@ public class SpawnInteractor : AbstractInteractableLogic
 
     private ResourceHandler resources;
 
+    private string[] spawnAudioClips = {"dwarf_spawn1", "dwarf_spawn2", "dwarf_spawn3", "dwarf_spawn4"};
+
     void Start()
     {
         resources = GameObject.Find("ResourceContainer").GetComponent<ResourceHandler>();
@@ -27,13 +29,12 @@ public class SpawnInteractor : AbstractInteractableLogic
         if(interactors.Count > 0) {
             spawn_time -= interactors.Count;
             
-            if(spawn_time <= 0)
-            {
+            if(spawn_time <= 0) {
                 spawn_time = max_spawn_time;
-                Debug.Log("Spawned a little dwarf");
-
-                if(resources.getResourceType(ResourceType.happiness) < resources.getResourceMaxType(ResourceType.happiness))
-                {
+                if(resources.getResourceType(ResourceType.happiness) < resources.getResourceMaxType(ResourceType.happiness)) {
+                    if(SFXHandler.GetInstance().CanPlaySpawnSFX) {
+                        SFXHandler.GetInstance().PlayRandomFX(spawnAudioClips);
+                    }
                     resources.addResourceType(ResourceType.happiness, 1);
                     float randomX = Random.Range(0, randomXSpawnVariance) - randomXSpawnVariance / 2f;
                     GameObject instance = Instantiate(dwarf, this.gameObject.transform.position, this.gameObject.transform.rotation) as GameObject;

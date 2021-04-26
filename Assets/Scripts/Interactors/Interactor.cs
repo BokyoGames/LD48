@@ -47,8 +47,8 @@ public class Interactor : AbstractSelectable
     // Special function called when an interactor attaches to an enemy
     public void StartCombat(Enemy enemy) {
         combatTarget = enemy.GetComponent<DamageReceiver>();
-        if(DataHandler.Handler.CanPlayBattleSFX)
-            playBattleAudio();
+        if(SFXHandler.GetInstance().CanPlayBattleSFX)
+            SFXHandler.GetInstance().PlayRandomFX(battleAudioClips);
     }
 
     public void StopCombat() {
@@ -76,20 +76,6 @@ public class Interactor : AbstractSelectable
         selector.OnClicked(this);
     }
 
-    void playUseAudio() {
-        var randomIndex = Random.Range(0, useAudioClips.Length);
-        SFXHandler.GetInstance().PlayFX(useAudioClips[randomIndex]);
-    }
-
-    void playBattleAudio() {
-        var randomIndex = Random.Range(0, battleAudioClips.Length);
-        SFXHandler.GetInstance().PlayFX(battleAudioClips[randomIndex]);
-    }
-
-    void playDeathAudio() {
-        var randomIndex = Random.Range(0, deathAudioClips.Length);
-        SFXHandler.GetInstance().PlayFX(deathAudioClips[randomIndex]);
-    }
 
     // Called by the selector when the panel "use" button is clicked
     public void OnUse(UseSelectable target, bool wantToDestroy = false) {
@@ -97,7 +83,7 @@ public class Interactor : AbstractSelectable
             return;
         target.ConnectOnUse(this);
 
-        playUseAudio();
+        SFXHandler.GetInstance().PlayRandomFX(useAudioClips);
         // TODO handle interrupting animations if necessary
         if(InteractionTarget != target) {
             OnStop();
@@ -118,6 +104,8 @@ public class Interactor : AbstractSelectable
     public override void OnTick() {
         if(inCombat) {
             if(damageDealer.TickAndCheckIfWeShouldAttack()) {
+                if(SFXHandler.GetInstance().CanPlayAttackSFX)
+                    SFXHandler.GetInstance().PlayFX("dwarf_attack");
                 combatTarget.OnDamage(this.gameObject, damageDealer.AttackParameter);
             }
         } 
@@ -133,7 +121,7 @@ public class Interactor : AbstractSelectable
         resources.addResourceType(ResourceType.happiness, -1);
 
         base.OnDeath();
-        playDeathAudio();
+        SFXHandler.GetInstance().PlayRandomFX(deathAudioClips);
     }
 
     // In case the interactable thing dies before we get there
