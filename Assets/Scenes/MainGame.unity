@@ -188,6 +188,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2818051627310185548, guid: f8b53a08fe381d82c9475a32f512cf50,
+        type: 3}
+      propertyPath: Ladder
+      value: 
+      objectReference: {fileID: 958003884}
     - target: {fileID: 9029942008575587169, guid: f8b53a08fe381d82c9475a32f512cf50,
         type: 3}
       propertyPath: ObstructionLayer
@@ -1957,6 +1962,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8374081274151130376, guid: 583acc543b439243d965b26a8bff3dea,
+        type: 3}
+      propertyPath: Ladder
+      value: 
+      objectReference: {fileID: 5264223187494208702}
     - target: {fileID: 8374081274151130382, guid: 583acc543b439243d965b26a8bff3dea,
         type: 3}
       propertyPath: m_Name
@@ -3302,6 +3312,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 631328696}
     m_Modifications:
+    - target: {fileID: 1230143129685305315, guid: ac0535a722b18ade2886e9a137067426,
+        type: 3}
+      propertyPath: Ladder
+      value: 
+      objectReference: {fileID: 489725140}
     - target: {fileID: 1230143129685305316, guid: ac0535a722b18ade2886e9a137067426,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7019,6 +7034,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level11
       objectReference: {fileID: 0}
+    - target: {fileID: 6512459235512998013, guid: 2ca6a99fba5fe2f69b4ef207e9813887,
+        type: 3}
+      propertyPath: Ladder
+      value: 
+      objectReference: {fileID: 9016604737358395222}
     - target: {fileID: 6512459235581267859, guid: 2ca6a99fba5fe2f69b4ef207e9813887,
         type: 3}
       propertyPath: m_IsActive
@@ -7202,7 +7222,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Ladder
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 20128623}
     - target: {fileID: 7191208806005892218, guid: 2bede839e2ad03f4eac774422fa09a3e,
         type: 3}
       propertyPath: m_IsActive

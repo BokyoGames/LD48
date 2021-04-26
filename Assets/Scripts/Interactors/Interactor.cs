@@ -7,6 +7,7 @@ public class Interactor : AbstractSelectable
 {
     private bool isInteracting = false;
     public bool wantToDestroy = false;
+    public string DwarfName = "";
 
     // If we are fighting an enemy, combat target is not null
     DamageReceiver combatTarget;
@@ -14,9 +15,9 @@ public class Interactor : AbstractSelectable
         get => combatTarget != null;
     }
 
-    private string[] useAudioClips = {/*"okay1", "okay2", "okay3",*/ "okay4", "okay5", "okay6", "okay7", "okay8"};
-    private string[] battleAudioClips = {/*"battle1", "battle2", "battle3",*/ "battle4", "battle5", "battle6", "battle7"};
-    private string[] deathAudioClips = {/*"death1", "death2", "death3",*/ "death4", "death5", "death6", "death7", "death8", "death9"};
+    private string[] useAudioClips = {"okay4", "okay5", "okay6", "okay7", "okay8"};
+    private string[] battleAudioClips = {"battle4", "battle5", "battle6", "battle7"};
+    private string[] deathAudioClips = {"death4", "death5", "death6", "death7", "death8", "death9"};
 
     public DamageReceiver DamageReceiver;
     DamageDealer damageDealer;
@@ -127,6 +128,12 @@ public class Interactor : AbstractSelectable
 
         SFXHandler.GetInstance().PlayRandomFX(deathAudioClips);
         base.OnDeath();
+    }
+
+    void Update() {
+        if(DwarfName == "") {
+            DwarfName = GetComponent<Namable>().GetFullName();
+        }
     }
 
     // In case the interactable thing dies before we get there

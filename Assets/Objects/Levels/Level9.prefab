@@ -1521,6 +1521,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ladder
       objectReference: {fileID: 0}
+    - target: {fileID: 4754311260695637931, guid: d44eb31b14911cf42815ce7207dc2363,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d44eb31b14911cf42815ce7207dc2363, type: 3}
 --- !u!4 &5830169537914028036 stripped
