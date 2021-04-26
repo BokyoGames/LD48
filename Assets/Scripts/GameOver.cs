@@ -73,10 +73,9 @@ public class GameOver : MonoBehaviour
 
     public void StartGame()
     {
-
         start_sound[0].Play();
         button_text.text = "Loading...";
-        enabled = false;
+        gameObject.GetComponent<Button>().interactable = false;
         SceneManager.LoadSceneAsync("MainGame", LoadSceneMode.Single);
     }
 }
