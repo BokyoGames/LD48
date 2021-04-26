@@ -10,6 +10,7 @@ TagManager:
   - DataHandler
   - SoundManager
   - DwarfHolder
+  - MusicManager
   layers:
   - Default
   - TransparentFX

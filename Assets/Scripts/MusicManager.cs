@@ -5,6 +5,9 @@ using UnityEngine;
 public class MusicManager : MonoBehaviour
 {
     public AudioSource Music;
+    public AudioSource MusicMithril;
+    [Range(0f,1f)]
+    public float MithrilVolume = 0.3f;
 
     public List<AudioSource> MusicDepth;
 
@@ -13,6 +16,14 @@ public class MusicManager : MonoBehaviour
 
     void Start() {
         Music.playOnAwake = true;
+    }
+
+    public void PlayMithril() {
+        MusicMithril.volume = MithrilVolume;
+    }
+
+    public void StopMithril() {
+        MusicMithril.volume = 0f;
     }
 
     void Update()  {
