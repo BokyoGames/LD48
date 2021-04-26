@@ -53,13 +53,12 @@ public class PanelStateHandler : MonoBehaviour
             StopButton.interactable = false;
         }
 
-        // Special buildpicker check
-        var buildingMaybe = consistencyHandler.CurrentInteractableSelection.GetComponent<BuildInteractable>();
-        if(buildingMaybe == null || (BuildPicker.activeInHierarchy && BuildPicker.GetComponent<PickerStatus>().build_reference != buildingMaybe)) {
-            BuildPicker.SetActive(false);
-        }
-
         if(consistencyHandler.CurrentInteractableSelection != null) {
+            // Special buildpicker check
+            var buildingMaybe = consistencyHandler.CurrentInteractableSelection.GetComponent<BuildInteractable>();
+            if(buildingMaybe == null || (BuildPicker.activeInHierarchy && BuildPicker.GetComponent<PickerStatus>().build_reference != buildingMaybe)) {
+                BuildPicker.SetActive(false);
+            }
             // We can't interact with this but we can still destroy it
             if(consistencyHandler.CurrentInteractableSelection.GetComponent<NullInteractable>() != null) {
                 UseButton.interactable = false;
