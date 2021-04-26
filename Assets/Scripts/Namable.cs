@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 public class Namable : MonoBehaviour
 {
@@ -69,29 +68,19 @@ public class Namable : MonoBehaviour
         "Skotdrugret Orcbelly"
     };
     
-    private List<string> first_names;
-    private List<string> last_name;
+    private List<string> first_names = new List<string>();
+    private List<string> last_name = new List<string>();
 
-    public string GetFullName()
-    {
-        var random = new System.Random();
-        
-        return first_names[random.Next(first_names.Count)]+" "+last_name[random.Next(last_name.Count)];
+    public string GetFullName() {
+        var firstNameIndex = Random.Range(0, first_names.Count);
+        var lastNameIndex = Random.Range(0, last_name.Count);
+        return first_names[firstNameIndex]+" "+last_name[lastNameIndex];
     }
 
-    void Start()
-    {
-        foreach(string name in full_names)
-        {
+    void Start() {
+        foreach(string name in full_names) {
             first_names.Add(name.Split(' ')[0]);
             last_name.Add(name.Split(' ')[1]);
         }
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
