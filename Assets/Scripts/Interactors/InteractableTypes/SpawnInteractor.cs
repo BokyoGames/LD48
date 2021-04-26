@@ -27,12 +27,12 @@ public class SpawnInteractor : AbstractInteractableLogic
 
     public override void OnTick() {
         if(interactors.Count > 0) {
-            spawn_time -= interactors.Count;
-            
-            if(spawn_time <= 0) {
-                spawn_time = max_spawn_time;
-                if(resources.getResourceType(ResourceType.happiness) < resources.getResourceMaxType(ResourceType.happiness)) {
-                    if(SFXHandler.GetInstance().CanPlaySpawnSFX) {
+            if(resources.getResourceType(ResourceType.happiness) < resources.getResourceMaxType(ResourceType.happiness)) {
+                spawn_time -= interactors.Count;
+                
+                if(spawn_time <= 0) {
+                    spawn_time = max_spawn_time;
+                    if (SFXHandler.GetInstance().CanPlaySpawnSFX) {
                         SFXHandler.GetInstance().PlayRandomFX(spawnAudioClips);
                     }
                     resources.addResourceType(ResourceType.happiness, 1);
