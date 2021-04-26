@@ -65,7 +65,8 @@ public class Namable : MonoBehaviour
         "Whulounelynn Alebrow",
         "Dalofemora Flatdigger",
         "Grooseani Opaljaw",
-        "Skotdrugret Orcbelly"
+        "Skotdrugret Orcbelly",
+        "Durin Stonejaw",
     };
     
     private List<string> first_names = new List<string>();
