@@ -39,6 +39,10 @@ public class SelectionStateHandler : MonoBehaviour
     }
 
     public void OnClicked(UseSelectable interactable) {
+        // Cannot click on something else when build picker is open
+        if(GetComponent<PanelStateHandler>().BuildPicker.activeInHierarchy) {
+            return;
+        }
         if(consistencyHandler.CurrentInteractorSelection == null) {
             // We can't select an interactable if the interactor is not active
             consistencyHandler.SetDirty();
