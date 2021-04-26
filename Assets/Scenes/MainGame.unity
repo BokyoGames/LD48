@@ -1092,9 +1092,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a900ad764f8147349bf0751683b34459, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 159f2cfb91fa650a2896327f9aa65616, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.4
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4431,7 +4431,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 539fa9ab68972ab41814f451dd9e806d, type: 3}
   AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
     type: 3}
-  Volume: 0.8
+  Volume: 0.7
 --- !u!114 &1645015619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4629,7 +4629,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 1007b4d705ef891449093bb2cea795b3, type: 3}
   AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
     type: 3}
-  Volume: 0.5
+  Volume: 0.4
 --- !u!114 &1645015630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4647,7 +4647,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 26b7b16793878424189adeb37c62ecb3, type: 3}
   AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
     type: 3}
-  Volume: 0.5
+  Volume: 0.25
 --- !u!114 &1645015631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5043,7 +5043,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: a0773044bec6ba549bbda378dc733776, type: 3}
   AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
     type: 3}
-  Volume: 0.6
+  Volume: 0.8
 --- !u!114 &1645015653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5061,7 +5061,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 50b67291adce634458f3311fb9eddb84, type: 3}
   AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
     type: 3}
-  Volume: 0.6
+  Volume: 0.5
 --- !u!114 &1645015654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5079,7 +5079,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: d67d9579ffc8c564e90987226796a26f, type: 3}
   AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
     type: 3}
-  Volume: 0.6
+  Volume: 0.5
 --- !u!114 &1645015655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5097,7 +5097,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: e59bfe5c5455e424aa6b6b60121ab755, type: 3}
   AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
     type: 3}
-  Volume: 0.3
+  Volume: 0.25
 --- !u!114 &1645015656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5205,7 +5205,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 359e350d4d5c08f42b33b32959e081c4, type: 3}
   AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
     type: 3}
-  Volume: 0.6
+  Volume: 0.5
 --- !u!114 &1645015662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5223,7 +5223,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 6ba85b035ba135e47b7969e4306ffca0, type: 3}
   AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
     type: 3}
-  Volume: 0.6
+  Volume: 0.5
 --- !u!1 &1715213308
 GameObject:
   m_ObjectHideFlags: 0
