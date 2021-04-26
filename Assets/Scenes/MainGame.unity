@@ -1270,7 +1270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Music: {fileID: 405569604}
   MusicMithril: {fileID: 405569610}
-  MithrilVolume: 0.3
+  MithrilVolume: 0.5
   MusicDepth:
   - {fileID: 405569607}
   - {fileID: 405569609}
