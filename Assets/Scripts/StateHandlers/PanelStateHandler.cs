@@ -27,7 +27,7 @@ public class PanelStateHandler : MonoBehaviour
             return;
 
         switch(consistencyHandler.CurrentInteractableSelection.SelectableType) {
-            case SelectableType.Ore:
+            case SelectableType.Ore: 
                 UseButton.GetComponent<Image>().sprite = multiHolder.ButtonImageList[0];
             break;
             case SelectableType.Enemy:
@@ -43,6 +43,7 @@ public class PanelStateHandler : MonoBehaviour
         if(consistencyHandler.CurrentInteractorSelection == null) {
             // Hide all panels cause we don't need them
             ButtonGroup.SetActive(false);
+            BuildPicker.SetActive(false);
             return;
         }
 
@@ -50,6 +51,12 @@ public class PanelStateHandler : MonoBehaviour
             StopButton.interactable = true;
         } else {
             StopButton.interactable = false;
+        }
+
+        // Special buildpicker check
+        var buildingMaybe = consistencyHandler.CurrentInteractableSelection.GetComponent<BuildInteractable>();
+        if(buildingMaybe == null || (BuildPicker.activeInHierarchy && BuildPicker.GetComponent<PickerStatus>().build_reference != buildingMaybe)) {
+            BuildPicker.SetActive(false);
         }
 
         if(consistencyHandler.CurrentInteractableSelection != null) {
@@ -73,6 +80,7 @@ public class PanelStateHandler : MonoBehaviour
             UseButton.interactable = false;
             DestroyButton.interactable = false;
             DestroyButton.gameObject.SetActive(false);
+            BuildPicker.SetActive(false);
         }
 
         ButtonGroup.SetActive(true);
@@ -130,6 +138,7 @@ public class PanelStateHandler : MonoBehaviour
             return;
         }
         consistencyHandler.CurrentInteractorSelection.OnStop();
+        BuildPicker.SetActive(false);
         consistencyHandler.SetDirty();
     }
 
