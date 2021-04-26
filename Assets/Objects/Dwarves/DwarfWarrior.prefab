@@ -88,6 +88,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3678578791149151229, guid: 5469d07265138ce4599815badacfbf25,
         type: 3}
+    - target: {fileID: 4792458229525232490, guid: 660b81c9522c6f440b4218a9945ec842,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5239580078945790629, guid: 660b81c9522c6f440b4218a9945ec842,
         type: 3}
       propertyPath: AttackParameter
