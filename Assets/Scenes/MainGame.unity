@@ -2628,6 +2628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BattleSFXInterval: 1500
   AttackSFXInterval: 1000
+  SpawnSFXInterval: 1000
 --- !u!4 &752574419
 Transform:
   m_ObjectHideFlags: 0
@@ -4373,6 +4374,10 @@ GameObject:
   - component: {fileID: 1645015642}
   - component: {fileID: 1645015641}
   - component: {fileID: 1645015646}
+  - component: {fileID: 1645015650}
+  - component: {fileID: 1645015649}
+  - component: {fileID: 1645015648}
+  - component: {fileID: 1645015647}
   m_Layer: 0
   m_Name: SFXContainer
   m_TagString: Untagged
@@ -4885,6 +4890,74 @@ MonoBehaviour:
   Name: dwarf_attack
   Source: {fileID: 0}
   clip: {fileID: 8300000, guid: 2fa55218dae3a2f4ab90baba89464b8d, type: 3}
+  AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
+    type: 3}
+--- !u!114 &1645015647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645015616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7beb94afc4d973439905f73123caef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: dwarf_spawn4
+  Source: {fileID: 0}
+  clip: {fileID: 8300000, guid: 078e079cd555ef844ae9a15ca64c4773, type: 3}
+  AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
+    type: 3}
+--- !u!114 &1645015648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645015616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7beb94afc4d973439905f73123caef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: dwarf_spawn3
+  Source: {fileID: 0}
+  clip: {fileID: 8300000, guid: 25fa042844621bd4ea6cc83904224286, type: 3}
+  AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
+    type: 3}
+--- !u!114 &1645015649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645015616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7beb94afc4d973439905f73123caef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: dwarf_spawn2
+  Source: {fileID: 0}
+  clip: {fileID: 8300000, guid: d4ae20cb6bebe8f448eda1dcc776872c, type: 3}
+  AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
+    type: 3}
+--- !u!114 &1645015650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645015616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7beb94afc4d973439905f73123caef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: dwarf_spawn1
+  Source: {fileID: 0}
+  clip: {fileID: 8300000, guid: 2cca2325fdf65294c8c81f806c2e0335, type: 3}
   AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
     type: 3}
 --- !u!1 &1715213308
