@@ -282,7 +282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   structure_name: house
   requested_resource_quantity: 1e00000014000000
-  requested_resource_type: 0300000002000000
+  requested_resource_type: 0200000003000000
   min_level: 0
   expertise_required: 0
   build_time: 200
