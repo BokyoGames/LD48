@@ -24,6 +24,14 @@ public class TutorialScript : MonoBehaviour
         "",
         "You found Mithril! Defeat the monsters and dig as much as you can!"
     };
+    // void Start() {
+    //     Debug.Log("Start");
+    //     DisplayTutorial();
+    // }
+    // void Awake() {
+    //     Debug.Log("Awake");
+    //     DisplayTutorial();
+    // }
 
     public void DisplayTutorial() {
         if(DataHandler.Handler.DepthReached < tutorials.Length) {
