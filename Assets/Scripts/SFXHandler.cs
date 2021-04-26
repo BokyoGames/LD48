@@ -40,7 +40,7 @@ public class SFXHandler : MonoBehaviour
         }
         var fx = SFXs[name].Source;
         if(!loop) {
-            fx.PlayOneShot(fx.clip);
+            fx.PlayOneShot(fx.clip, SFXs[name].Volume);
         } else {
             if(!fx.isPlaying) {
                 fx.loop = true;
