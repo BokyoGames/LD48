@@ -77,6 +77,13 @@ public class ResourceHandler : MonoBehaviour
             case "mithril":
                 var g = this.getRemainingResource(mithril, max_mithril, quantity);
                 mithril += g.Item1;
+
+                if(mithril >= 10)
+                {
+                    GameObject.Find("EventSystem").GetComponent<GameOver>().EndGame();
+                    Debug.Log("You win");
+                }
+
                 return g.Item2;
             case "happiness":
                 var f = this.getRemainingResource(happiness, max_happiness, quantity);
