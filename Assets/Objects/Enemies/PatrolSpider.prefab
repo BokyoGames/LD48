@@ -36,12 +36,22 @@ PrefabInstance:
     - target: {fileID: 5056564176344036942, guid: ecba3cc66c7bb0a4cace5f987a11eb78,
         type: 3}
       propertyPath: GruntSFX.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5056564176344036942, guid: ecba3cc66c7bb0a4cace5f987a11eb78,
         type: 3}
       propertyPath: GruntSFX.Array.data[0]
       value: spider_grunt1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5056564176344036942, guid: ecba3cc66c7bb0a4cace5f987a11eb78,
+        type: 3}
+      propertyPath: GruntSFX.Array.data[1]
+      value: spider_grunt2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5056564176344036942, guid: ecba3cc66c7bb0a4cace5f987a11eb78,
+        type: 3}
+      propertyPath: GruntSFX.Array.data[2]
+      value: spider_grunt3
       objectReference: {fileID: 0}
     - target: {fileID: 5056564176344036945, guid: ecba3cc66c7bb0a4cace5f987a11eb78,
         type: 3}
