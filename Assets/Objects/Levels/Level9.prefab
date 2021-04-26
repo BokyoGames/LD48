@@ -2436,6 +2436,11 @@ PrefabInstance:
       propertyPath: PatrolManager
       value: 
       objectReference: {fileID: 8482869762251608083}
+    - target: {fileID: 5017061948341979161, guid: 31d0181836092a859a2b41d010380a8b,
+        type: 3}
+      propertyPath: max_number_of_alive_monster
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31d0181836092a859a2b41d010380a8b, type: 3}
 --- !u!4 &9200747765070259907 stripped

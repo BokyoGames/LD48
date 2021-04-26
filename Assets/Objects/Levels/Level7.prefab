@@ -1316,7 +1316,7 @@ PrefabInstance:
     - target: {fileID: 5017061948341979161, guid: 31d0181836092a859a2b41d010380a8b,
         type: 3}
       propertyPath: max_number_of_monster
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5017061948341979161, guid: 31d0181836092a859a2b41d010380a8b,
         type: 3}
