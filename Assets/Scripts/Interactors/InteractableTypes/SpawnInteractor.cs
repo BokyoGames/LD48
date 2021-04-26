@@ -40,7 +40,7 @@ public class SpawnInteractor : AbstractInteractableLogic
                     GameObject instance = Instantiate(dwarf, this.gameObject.transform.position, this.gameObject.transform.rotation) as GameObject;
                     var dwarfParent = GameObject.FindGameObjectWithTag("DwarfHolder");
                     instance.transform.parent = dwarfParent.transform;
-                    Vector3 newPosition = new Vector3(instance.transform.position.x + randomX, instance.transform.position.y, instance.transform.position.z);
+                    Vector3 newPosition = new Vector3(instance.transform.position.x + randomX, instance.transform.position.y, -1);
                     instance.transform.position = newPosition;
                     instance.GetComponent<Interactor>().Depth = gameObject.GetComponent<Interactable>().Depth;
                 }
