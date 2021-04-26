@@ -14,11 +14,25 @@ public class MineInteractor : AbstractInteractableLogic
     private ResourceHandler resources;
     private int tick_count = 0;
 
-    void Start()
-    {
+    void Start() {
         quantity = initial_quantity;
         resources = GameObject.Find("ResourceContainer").GetComponent<ResourceHandler>();
     }
+
+    public override void OnStop(Interactor interactor){
+        base.OnStop(interactor);
+        if(type == ResourceType.mithril && interactors.Count == 0) {
+            GameObject.FindGameObjectWithTag("MusicManager").GetComponent<MusicManager>().StopMithril();
+        }
+    }
+
+    public override void OnStart(Interactor interactor) {
+        if(type == ResourceType.mithril && interactors.Count == 0) {
+            GameObject.FindGameObjectWithTag("MusicManager").GetComponent<MusicManager>().PlayMithril();
+        }
+        base.OnStart(interactor);
+    }
+
 
     public override void OnTick() {
         if(interactors.Count > 0) {
@@ -36,7 +50,6 @@ public class MineInteractor : AbstractInteractableLogic
             tick_count += interactors.Count;
 
             if(tick_count > mine_time) {
-                Debug.Log("We have mined some " + type.ToString() + " interactors.");
                 int unused = resources.addResourceType(type, tick_count/mine_time);
                 quantity -= tick_count/mine_time + unused;
                 tick_count = tick_count % mine_time;
