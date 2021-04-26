@@ -96,6 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   XAnimationIntensity: 0.5
   YAnimationIntensity: 0.5
+  YAnimationMovementIntensity: 0.5
   AnimationSpeed: 1400
 --- !u!1 &2230668888551129739
 GameObject:
@@ -566,7 +567,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0.46858314, g: 0.764151, b: 0.7610832, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5072,8 +5073,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1717512981
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
