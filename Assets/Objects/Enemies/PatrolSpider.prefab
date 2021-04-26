@@ -7,6 +7,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 396696001820184729, guid: ecba3cc66c7bb0a4cace5f987a11eb78,
+        type: 3}
+      propertyPath: Health
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 396696001820184729, guid: ecba3cc66c7bb0a4cace5f987a11eb78,
+        type: 3}
+      propertyPath: MaxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019312523433319123, guid: ecba3cc66c7bb0a4cace5f987a11eb78,
+        type: 3}
+      propertyPath: AttackParameter
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019312523433319123, guid: ecba3cc66c7bb0a4cace5f987a11eb78,
+        type: 3}
+      propertyPath: AttackInterval
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 5056564175107850640, guid: ecba3cc66c7bb0a4cace5f987a11eb78,
         type: 3}
       propertyPath: m_Sprite
