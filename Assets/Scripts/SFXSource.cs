@@ -9,6 +9,8 @@ public class SFXSource : MonoBehaviour
     public AudioSource Source;
     public AudioClip clip;
     public GameObject AudioPrefabInstantiator;
+    [Range(0.0f,1.0f)]
+    public float Volume = 1.0f;
 
     void Start () {
         //Source = GetComponent<AudioSource>();
