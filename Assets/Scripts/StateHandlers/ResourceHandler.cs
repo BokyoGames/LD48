@@ -81,6 +81,13 @@ public class ResourceHandler : MonoBehaviour
             case "happiness":
                 var f = this.getRemainingResource(happiness, max_happiness, quantity);
                 happiness += f.Item1;
+                
+                if(happiness == 0)
+                {
+                    GameObject.Find("EventSystem").GetComponent<GameOver>().EndNoDwarves();
+                    Debug.Log("Game Over");
+                }
+
                 return f.Item2;
             default:
                 return quantity;
