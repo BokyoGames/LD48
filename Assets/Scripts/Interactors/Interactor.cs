@@ -132,14 +132,11 @@ public class Interactor : AbstractSelectable
         base.OnDeath();
     }
 
-    void Update() {
+    void LateUpdate() {
         if(DwarfName == "") {
             DwarfName = GetComponent<Namable>().GetFullName();
         }
-    }
-
-    // In case the interactable thing dies before we get there
-    void LateUpdate() {
+        // In case the interactable thing dies before we get there
         if(InteractionTarget == null && !isInteracting && movable.IsMoving && combatTarget == null) {
             movable.StopMovement();
         }
