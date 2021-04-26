@@ -1090,6 +1090,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BuildInteractable (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3637614781795748447, guid: b9aba50f238602d42909fec9cdaa53e9,
+        type: 3}
+      propertyPath: Depth
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3637614783487304342, guid: b9aba50f238602d42909fec9cdaa53e9,
         type: 3}
       propertyPath: m_Offset.y
@@ -1429,6 +1434,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BuildInteractable
+      objectReference: {fileID: 0}
+    - target: {fileID: 3637614781795748447, guid: b9aba50f238602d42909fec9cdaa53e9,
+        type: 3}
+      propertyPath: Depth
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3637614783487304342, guid: b9aba50f238602d42909fec9cdaa53e9,
         type: 3}
@@ -3026,6 +3036,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BuildInteractable (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3637614781795748447, guid: b9aba50f238602d42909fec9cdaa53e9,
+        type: 3}
+      propertyPath: Depth
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3637614783487304342, guid: b9aba50f238602d42909fec9cdaa53e9,
         type: 3}
       propertyPath: m_Offset.x
@@ -3396,6 +3411,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BuildInteractable (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3637614781795748447, guid: b9aba50f238602d42909fec9cdaa53e9,
+        type: 3}
+      propertyPath: Depth
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3637614783487304342, guid: b9aba50f238602d42909fec9cdaa53e9,
         type: 3}
