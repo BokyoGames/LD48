@@ -34,8 +34,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c46363a9aab6b5132bb101313c435647,
+      objectReference: {fileID: 21300000, guid: 85a1cbefec915ae41b68bb031116b09b,
         type: 3}
+    - target: {fileID: 7968180182707696972, guid: 0679d5a9ab7045142ba493a56e15e039,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.39215687
+      objectReference: {fileID: 0}
     - target: {fileID: 7968180182726259344, guid: 0679d5a9ab7045142ba493a56e15e039,
         type: 3}
       propertyPath: SelectableType
