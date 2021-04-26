@@ -52,6 +52,14 @@ public class GameOver : MonoBehaviour
         // SceneManager.LoadSceneAsync("SampleScene", LoadSceneMode.Single);
     }
 
+    public void EndNoDwarves()
+    {
+        Debug.Log ("Ending no dwarves!");
+        // Application.Quit();
+        // SceneManager.LoadSceneAsync("SampleScene", LoadSceneMode.Single);
+    }
+
+
     public void StartGame()
     {
         start_sound[0].Play();
