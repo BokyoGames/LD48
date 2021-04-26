@@ -367,8 +367,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 161cd1f08e60e19cfb6420fdcfd36449, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wait_time: 12
-  fade_in_time: 2
+  wait_time: 10
+  fade_in_time: 1
 --- !u!114 &138476600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460,8 +460,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 161cd1f08e60e19cfb6420fdcfd36449, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wait_time: 8
-  fade_in_time: 2
+  wait_time: 6
+  fade_in_time: 1
 --- !u!114 &230175176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,7 +554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 161cd1f08e60e19cfb6420fdcfd36449, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wait_time: 28
+  wait_time: 27
   fade_in_time: 2
 --- !u!114 &541319711
 MonoBehaviour:
@@ -799,8 +799,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 161cd1f08e60e19cfb6420fdcfd36449, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wait_time: 4
-  fade_in_time: 2
+  wait_time: 3
+  fade_in_time: 1
 --- !u!114 &1064504912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1044,8 +1044,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 161cd1f08e60e19cfb6420fdcfd36449, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wait_time: 16
-  fade_in_time: 2
+  wait_time: 14
+  fade_in_time: 1
 --- !u!114 &1429830286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1138,8 +1138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 161cd1f08e60e19cfb6420fdcfd36449, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wait_time: 24
-  fade_in_time: 2
+  wait_time: 22
+  fade_in_time: 1
 --- !u!114 &1513086439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1276,7 +1276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wait_time: 0
-  fade_in_time: 2
+  fade_in_time: 1
 --- !u!1 &1812508830
 GameObject:
   m_ObjectHideFlags: 0
@@ -1467,8 +1467,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 161cd1f08e60e19cfb6420fdcfd36449, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wait_time: 20
-  fade_in_time: 2
+  wait_time: 18
+  fade_in_time: 1
 --- !u!114 &2138000275
 MonoBehaviour:
   m_ObjectHideFlags: 0
