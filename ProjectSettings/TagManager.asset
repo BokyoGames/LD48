@@ -11,6 +11,7 @@ TagManager:
   - SoundManager
   - DwarfHolder
   - MusicManager
+  - PulsingLayer
   layers:
   - Default
   - TransparentFX

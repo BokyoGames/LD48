@@ -23,12 +23,14 @@ public class MineInteractor : AbstractInteractableLogic
         base.OnStop(interactor);
         if(type == ResourceType.mithril && interactors.Count == 0) {
             GameObject.FindGameObjectWithTag("MusicManager").GetComponent<MusicManager>().StopMithril();
+            GameObject.FindGameObjectWithTag("PulsingLayer").GetComponent<PulsingLayerComponent>().StopPulse();
         }
     }
 
     public override void OnStart(Interactor interactor) {
         if(type == ResourceType.mithril && interactors.Count == 0) {
             GameObject.FindGameObjectWithTag("MusicManager").GetComponent<MusicManager>().PlayMithril();
+            GameObject.FindGameObjectWithTag("PulsingLayer").GetComponent<PulsingLayerComponent>().StartPulse();
         }
         base.OnStart(interactor);
     }
