@@ -4647,7 +4647,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 26b7b16793878424189adeb37c62ecb3, type: 3}
   AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
     type: 3}
-  Volume: 0.6
+  Volume: 0.5
 --- !u!114 &1645015631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5097,7 +5097,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: e59bfe5c5455e424aa6b6b60121ab755, type: 3}
   AudioPrefabInstantiator: {fileID: 8196631263627282267, guid: 330dd1038199f7946b4a226378e26a1e,
     type: 3}
-  Volume: 0.6
+  Volume: 0.3
 --- !u!114 &1645015656
 MonoBehaviour:
   m_ObjectHideFlags: 0
