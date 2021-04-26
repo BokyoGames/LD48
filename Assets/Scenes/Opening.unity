@@ -1002,7 +1002,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '[press C for commands]'
+  m_Text: '[hold C for commands]'
 --- !u!222 &1455903074
 CanvasRenderer:
   m_ObjectHideFlags: 0

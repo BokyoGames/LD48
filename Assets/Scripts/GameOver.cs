@@ -12,6 +12,7 @@ public class GameOver : MonoBehaviour
     bool overlay = false;
 
     float time_delay = 4f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -74,6 +75,7 @@ public class GameOver : MonoBehaviour
     {
         start_sound[0].Play();
         button_text.text = "Loading...";
+        gameObject.GetComponent<Button>().interactable = false;
         SceneManager.LoadSceneAsync("MainGame", LoadSceneMode.Single);
     }
 }
