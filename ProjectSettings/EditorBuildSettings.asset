@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Opening.unity
+    guid: 739e8e3a72367d0d0a3fedf5c2e381d8
+  - enabled: 1
+    path: Assets/Scenes/MainGame.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/EndNoDwarves.unity
+    guid: 3a7277b56c6523a0dabe829efc9f4f6a
+  - enabled: 1
+    path: Assets/Scenes/EndBalrog.unity
+    guid: 04fbcd2717050985aab10483f33a0fed
   m_configObjects: {}
