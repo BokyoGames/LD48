@@ -61,6 +61,11 @@ public class GameOver : MonoBehaviour
     public void EndGame()
     {
         Debug.Log ("Ending no dwarves!");
+        Invoke("EndGameNoWait", 3f);
+    }
+
+    public void EndGameNoWait()
+    {
         SceneManager.LoadSceneAsync("EndBalrog", LoadSceneMode.Single);
     }
 
