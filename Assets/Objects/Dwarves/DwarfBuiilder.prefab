@@ -17,6 +17,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DwarfBuiilder
       objectReference: {fileID: 0}
+    - target: {fileID: 4792458229275908922, guid: 660b81c9522c6f440b4218a9945ec842,
+        type: 3}
+      propertyPath: Job
+      value: Builder
+      objectReference: {fileID: 0}
     - target: {fileID: 4792458229275908923, guid: 660b81c9522c6f440b4218a9945ec842,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -16,12 +16,14 @@ public class ConsistencyStateHandler : MonoBehaviour
 
     SelectionStateHandler selectionHandler;
     PanelStateHandler panelHandler;
+    NamePanelStateHandler namePanelHandler;
 
     // Start is called before the first frame update
     void Start()
     {
         selectionHandler = GetComponent<SelectionStateHandler>();
         panelHandler = GetComponent<PanelStateHandler>();
+        namePanelHandler = GetComponent<NamePanelStateHandler>();
     }
 
     // Update is called once per frame
@@ -31,6 +33,7 @@ public class ConsistencyStateHandler : MonoBehaviour
             selectionHandler.PreviewCameraInteractorCheck();
             selectionHandler.PreviewCameraTargetCheck();
             panelHandler.PanelButtonCheck();
+            namePanelHandler.NamePanelCheck();
             isDirty = false;
         }
     }
