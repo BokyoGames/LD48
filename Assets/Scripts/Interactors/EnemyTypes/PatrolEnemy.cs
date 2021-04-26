@@ -42,7 +42,8 @@ public class PatrolEnemy : AbstractEnemyLogic
         base.OnStop(interactor);
         if(!HasFightingTarget) {
             IsFighting = false;
-            movable.anim.Play("Walk");
+            if(movable != null && movable.anim != null)
+                movable.anim.Play("Walk");
         }
     }
 
