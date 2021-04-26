@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    Text final_score;
+    AudioSource[] start_sound;
+    public Text button_text;
 
     bool overlay = false;
 
@@ -14,6 +15,7 @@ public class GameOver : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        start_sound = GetComponents<AudioSource>();
     }
 
     // Update is called once per frame
@@ -27,7 +29,6 @@ public class GameOver : MonoBehaviour
         
         if(Input.GetKey("c"))
         {
-            Debug.Log ("Press command [c]");
             if(!overlay)
             {
                 overlay=true;
@@ -36,7 +37,6 @@ public class GameOver : MonoBehaviour
         }
         else
         {
-            Debug.Log ("Press not command [c]");
             if(overlay)
             {
                 overlay=false;
@@ -52,7 +52,10 @@ public class GameOver : MonoBehaviour
         // SceneManager.LoadSceneAsync("SampleScene", LoadSceneMode.Single);
     }
 
-    public void DownloadTrack()
+    public void StartGame()
     {
+        start_sound[0].Play();
+        button_text.text = "Loading...";
+        SceneManager.LoadSceneAsync("MainGame", LoadSceneMode.Single);
     }
 }
