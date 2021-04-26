@@ -28,6 +28,7 @@ public class ConsistencyStateHandler : MonoBehaviour
     void Update()
     {
         if(isDirty)  {
+            selectionHandler.PreviewCameraInteractorCheck();
             selectionHandler.PreviewCameraTargetCheck();
             panelHandler.PanelButtonCheck();
             isDirty = false;

@@ -6,7 +6,9 @@ using UnityEngine;
 public class SelectionStateHandler : MonoBehaviour
 {
     public Camera PreviewTargetCamera;
+    public Camera PreviewInteractorCamera;
     public GameObject PreviewTargetCameraGroup;
+    public GameObject PreviewInteractorCameraGroup;
 
     private ConsistencyStateHandler consistencyHandler;
 
@@ -76,6 +78,20 @@ public class SelectionStateHandler : MonoBehaviour
             // No interactor selected, hide the camera preview.
             PreviewTargetCameraGroup.SetActive(false);
         }
+    }
+
+    public void PreviewCameraInteractorCheck() {
+        // If no interactor is selected, hide camera
+        if(consistencyHandler.CurrentInteractorSelection == null) {
+            PreviewInteractorCameraGroup.SetActive(false);
+        }
+
+        // Make sure the camera is pointing to our interaction target
+        Vector3 newPosition = consistencyHandler.CurrentInteractorSelection.transform.position;
+        newPosition.z = PreviewInteractorCamera.transform.position.z;
+        PreviewInteractorCamera.transform.position = newPosition;
+        // Show the camera preview
+        PreviewInteractorCameraGroup.SetActive(true);
     }
 
 }
