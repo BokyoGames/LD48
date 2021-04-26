@@ -25,13 +25,11 @@ public class TutorialScript : MonoBehaviour
         "You found Mithril! Defeat the monsters and dig as much as you can!"
     };
 
-    public void DisplayTutorial()
-    {
-        if(DataHandler.Handler.DepthReached < tutorials.Length)
-        {
-            if(tutorials[DataHandler.Handler.DepthReached] != "")
-            {
+    public void DisplayTutorial() {
+        if(DataHandler.Handler.DepthReached < tutorials.Length) {
+            if(tutorials[DataHandler.Handler.DepthReached] != "") {
                 gameObject.SetActive(true);
+                SFXHandler.GetInstance().PlayFX("ui_message");
                 text_field.text =  tutorials[DataHandler.Handler.DepthReached];
 
                 Invoke("HideTutorial", DisplayTime);
@@ -39,18 +37,7 @@ public class TutorialScript : MonoBehaviour
         }
     }
 
-    private void HideTutorial()
-    {
+    private void HideTutorial() {
         gameObject.SetActive(false);
-    }
-
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

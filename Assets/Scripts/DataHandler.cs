@@ -11,4 +11,17 @@ public class DataHandler : MonoBehaviour
     public int TickDurationInMilliseconds = 0;
     public int DepthReached = 0;
     public GameObject BuildablePrefab;
+
+    public float BattleSFXInterval;
+    private float lastBattleSFX = 0f;
+
+    public bool CanPlayBattleSFX {
+        get {
+            if((Time.time - lastBattleSFX) * 1000 > BattleSFXInterval) {
+                lastBattleSFX = Time.time;
+                return true;
+            }
+            return false;
+        }
+    }
 }

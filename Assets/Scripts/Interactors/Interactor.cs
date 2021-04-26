@@ -14,9 +14,9 @@ public class Interactor : AbstractSelectable
         get => combatTarget != null;
     }
 
-    private string[] useAudioClips = {"okay1", "okay2", "okay3"};
-    private string[] battleAudioClips = {"battle1", "battle2", "battle3"};
-    private string[] deathAudioClips = {"death1", "death2", "death3"};
+    private string[] useAudioClips = {/*"okay1", "okay2", "okay3",*/ "okay4", "okay5", "okay6", "okay7", "okay8"};
+    private string[] battleAudioClips = {/*"battle1", "battle2", "battle3",*/ "battle4", "battle5", "battle6", "battle7"};
+    private string[] deathAudioClips = {/*"death1", "death2", "death3",*/ "death4", "death5", "death6", "death7", "death8", "death9"};
 
     public DamageReceiver DamageReceiver;
     DamageDealer damageDealer;
@@ -47,7 +47,8 @@ public class Interactor : AbstractSelectable
     // Special function called when an interactor attaches to an enemy
     public void StartCombat(Enemy enemy) {
         combatTarget = enemy.GetComponent<DamageReceiver>();
-        playBattleAudio();
+        if(DataHandler.Handler.CanPlayBattleSFX)
+            playBattleAudio();
     }
 
     public void StopCombat() {

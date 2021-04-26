@@ -84,6 +84,7 @@ public class SelectionStateHandler : MonoBehaviour
         // If no interactor is selected, hide camera
         if(consistencyHandler.CurrentInteractorSelection == null) {
             PreviewInteractorCameraGroup.SetActive(false);
+            return;
         }
 
         // Make sure the camera is pointing to our interaction target
@@ -92,6 +93,16 @@ public class SelectionStateHandler : MonoBehaviour
         PreviewInteractorCamera.transform.position = newPosition;
         // Show the camera preview
         PreviewInteractorCameraGroup.SetActive(true);
+    }
+
+    void LateUpdate() {
+        if(PreviewInteractorCameraGroup.activeInHierarchy && consistencyHandler.CurrentInteractorSelection != null) {
+            // Make sure the camera is pointing to our interaction target
+            Vector3 newPosition = consistencyHandler.CurrentInteractorSelection.transform.position;
+            newPosition.z = PreviewInteractorCamera.transform.position.z;
+            PreviewInteractorCamera.transform.position = newPosition;
+        }
+
     }
 
 }

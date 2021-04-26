@@ -73,6 +73,7 @@ public class PanelStateHandler : MonoBehaviour
 
     // Event called when the "use" button is clicked on the panel
     public void OnUse() {
+        SFXHandler.GetInstance().PlayFX("ui_click");
         if(consistencyHandler.CurrentInteractorSelection == null) {
             Debug.LogWarning("This shouldn't happen, use was clicked but no interactor was selected");
             return;
@@ -86,6 +87,7 @@ public class PanelStateHandler : MonoBehaviour
     }
 
     public void OnSelect(GameObject obj) {
+        SFXHandler.GetInstance().PlayFX("ui_click");
         if(BuildPicker.GetComponent<PickerStatus>().build_reference)
             BuildPicker.GetComponent<PickerStatus>().Build(obj);
         if(consistencyHandler.CurrentInteractorSelection == null) {
@@ -100,6 +102,7 @@ public class PanelStateHandler : MonoBehaviour
     }
 
     public void OnDestroyButton() {
+        SFXHandler.GetInstance().PlayFX("ui_click");
         if(consistencyHandler.CurrentInteractorSelection == null) {
             Debug.LogWarning("This shouldn't happen, use was clicked but no interactor was selected");
             return;
@@ -114,6 +117,7 @@ public class PanelStateHandler : MonoBehaviour
     }
 
     public void OnStop() {
+        SFXHandler.GetInstance().PlayFX("ui_click");
         if(consistencyHandler.CurrentInteractorSelection == null) {
             Debug.LogWarning("This shouldn't happen, stop was clicked but no interactor was selected");
             return;
