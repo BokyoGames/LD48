@@ -5603,7 +5603,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1952014683
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5679,7 +5679,7 @@ MonoBehaviour:
   - Dwarves can dig resources, which are needed for buildings. Sometimes they will
     also open a passage to a new layer while digging.
   - Houses are where new Dwarves grow. Send a Dwarf to a House to increase your population.
-  - Deposits increase storage capacity. Taverns increase the amount of Dwarves that
+  - Deposits increase storage capacity. Taverns increase the number of Dwarves that
     can live in your city.
   - These mines are filled with hostile Goblins, slay them before you proceed!
   - Sending Dwarves to the Masonry will let you recruit specialized Builders.
