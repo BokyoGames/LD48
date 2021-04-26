@@ -7,7 +7,7 @@ public class Movable : MonoBehaviour
 {
 
     public SpriteRenderer spriteRenderer;
-    Animator anim;
+    public Animator anim;
 
     MovementAI ai;
 
@@ -43,7 +43,6 @@ public class Movable : MonoBehaviour
     public void StopMovement() {
         ai.ClearTarget();
         ai.enabled = false;
-        // TODO: Need to handle more complex states like attack/etc
         anim.Play("Idle");
     }
 

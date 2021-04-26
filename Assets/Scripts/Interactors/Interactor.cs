@@ -41,6 +41,8 @@ public class Interactor : AbstractSelectable
         if(wantToDestroy) {
             // Force cast because we can, but we shouldn't
             ((UseSelectable)InteractionTarget).Demolish();
+        } else {
+            movable.anim.Play("Interacting");
         }
     }
 
@@ -49,17 +51,20 @@ public class Interactor : AbstractSelectable
         combatTarget = enemy.GetComponent<DamageReceiver>();
         if(SFXHandler.GetInstance().CanPlayBattleSFX)
             SFXHandler.GetInstance().PlayRandomFX(battleAudioClips);
+        movable.anim.Play("Interacting");
     }
 
     public void StopCombat() {
         combatTarget = null;
         // Not in combat anymore, reset the tick counter
         damageDealer.ResetTicks();
+        movable.anim.Play("Idle");
     }
 
     public void StopInteraction() {
         isInteracting = false;
         wantToDestroy = false;
+        movable.anim.Play("Idle");
     }
 
     public override void TriggerSelection() {
