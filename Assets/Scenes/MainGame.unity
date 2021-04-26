@@ -7710,6 +7710,11 @@ PrefabInstance:
       propertyPath: ObstructionLayer
       value: 
       objectReference: {fileID: 725234045}
+    - target: {fileID: 9219397675279885706, guid: e1779ba308a3dd751b2be8347ff8cda3,
+        type: 3}
+      propertyPath: max_number_of_monster
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1779ba308a3dd751b2be8347ff8cda3, type: 3}
 --- !u!4 &9016604737358395222 stripped
