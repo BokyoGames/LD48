@@ -17,7 +17,6 @@ public class GameOver : MonoBehaviour
     void Start()
     {
         start_sound = GetComponents<AudioSource>();
-        button_text.enabled = true;
     }
 
     // Update is called once per frame
@@ -77,7 +76,7 @@ public class GameOver : MonoBehaviour
 
         start_sound[0].Play();
         button_text.text = "Loading...";
-        button_text.enabled = false;
+        enabled = false;
         SceneManager.LoadSceneAsync("MainGame", LoadSceneMode.Single);
     }
 }
