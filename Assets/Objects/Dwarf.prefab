@@ -78,6 +78,8 @@ MonoBehaviour:
   InteractionTarget: {fileID: 0}
   Depth: 0
   wantToDestroy: 0
+  DwarfName: 
+  Job: Miner
   DamageReceiver: {fileID: 0}
 --- !u!114 &2711594127951248745
 MonoBehaviour:

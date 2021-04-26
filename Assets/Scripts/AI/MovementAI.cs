@@ -6,7 +6,8 @@ using UnityEngine;
 public class MovementAI : MonoBehaviour
 {
 
-    public int Speed = 0;
+    [Range(1f,10f)]
+    public float Speed = 0;
 
     AbstractSelectable mover;
     AbstractSelectable target;

@@ -19,7 +19,7 @@ public class Movable : MonoBehaviour
         get => ai.enabled;
     }
 
-    public int MovementSpeed {
+    public float MovementSpeed {
         get => ai.Speed;
     }
 
