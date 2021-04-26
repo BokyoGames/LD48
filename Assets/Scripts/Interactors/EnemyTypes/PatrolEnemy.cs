@@ -29,6 +29,8 @@ public class PatrolEnemy : AbstractEnemyLogic
                     TargetChange();
                     return;
                 }
+                if(SFXHandler.GetInstance().CanPlayAttackSFX)
+                    SFXHandler.GetInstance().PlayFX("dwarf_attack");
                 FightingTarget.DamageReceiver.OnDamage(this.gameObject, damageDealer.AttackParameter);
             }
             return;
